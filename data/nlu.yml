@@ -89,3 +89,10 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: is_bot
+  examples: |
+    - Bist du ein Bot? 
+    - Bist du ein Mensch oder ein Bot? 
+    - Rede ich mit einem Bot? 
+    - Du bist aber kein Bot, oder?  

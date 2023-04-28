@@ -28,3 +28,8 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: ask if bot or not
+  steps:
+  - intent: is_bot
+  - action: utter_iamabot

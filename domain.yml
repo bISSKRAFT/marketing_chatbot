@@ -9,6 +9,8 @@ intents:
   - mood_unhappy
   - bot_challenge
 
+  - is_bot 
+
 responses:
   utter_greet:
   - text: "Hey! How are you?"
@@ -27,7 +29,7 @@ responses:
   - text: "Bye"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "Ja, ich bin ein Bot und wurde mit Rasa entwickelt." 
 
 session_config:
   session_expiration_time: 60
