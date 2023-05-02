@@ -32,7 +32,9 @@ pipeline:
 #   - name: FallbackClassifier
 #     threshold: 0.3
 #     ambiguity_threshold: 0.1
-  - name: WhitespaceTokenizer
+  - name: "SpacyNLP"
+    model: "de_core_news_md"
+  - name: "SpacyTokenizer"
   - name: LanguageModelFeaturizer
     # Name of the language model to use
     model_name: "roberta"
