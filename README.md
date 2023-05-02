@@ -1,5 +1,5 @@
 # TRAINING
-** to train on a specific GPU please use**
+**to train on a specific GPU please use**
 
 ```
 export CUDA_VISIBLE_DEVICES=X
