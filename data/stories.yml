@@ -33,3 +33,8 @@ stories:
   steps:
   - intent: is_bot
   - action: utter_iamabot
+
+- story: ask zeiten
+  steps:
+  - intent: zeiten
+  - action: utter_zeiten

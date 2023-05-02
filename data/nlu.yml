@@ -113,3 +113,14 @@ nlu:
     - am I talking to a human?
     - bist du ein bot?
     - bist du eine maschine?
+
+- intent: zeiten
+  examples: |
+    - Öffnungszeiten?
+    - Wann habt ihr offen?
+    - Wann ist das museum geöffnet?
+    - Weihnachten auch offen?
+    - Silvester offen?
+    - Gönn Öffnungszeiten!
+    - Offen?
+    - Zu?
