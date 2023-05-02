@@ -4,11 +4,11 @@ recipe: default.v1
 
 # The assistant project unique identifier
 # This default value must be replaced with a unique assistant name within your deployment
-assistant_id: placeholder_default
+assistant_id: 20230502-083135-either-capitol
 
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
-language: en
+language: "de"
 
 pipeline:
 # # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
@@ -24,21 +24,44 @@ pipeline:
 #     max_ngram: 4
 #   - name: DIETClassifier
 #     epochs: 100
+#     constrain_similarities: true
 #   - name: EntitySynonymMapper
 #   - name: ResponseSelector
 #     epochs: 100
+#     constrain_similarities: true
 #   - name: FallbackClassifier
 #     threshold: 0.3
 #     ambiguity_threshold: 0.1
-
+  - name: "SpacyNLP"
+    model: "de_core_news_md"
+  - name: "SpacyTokenizer"
+  - name: LanguageModelFeaturizer
+    # Name of the language model to use
+    model_name: "roberta"
+    # Pre-Trained weights to be loaded
+    model_weights: "roberta-base"
+  - name: DIETClassifier
+    epochs: 300
+  # - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 300
+  #   constrain_similarities: true
+  # - name: FallbackClassifier
+  #   threshold: 0.3
+  #   ambiguity_threshold: 0.1
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
-policies:
+
+policies: null
 # # No configuration for policies was provided. The following default policies were used to train your model.
 # # If you'd like to customize them, uncomment and adjust the policies.
 # # See https://rasa.com/docs/rasa/policies for more information.
 #   - name: MemoizationPolicy
+#   - name: RulePolicy
+#   - name: UnexpecTEDIntentPolicy
+#     max_history: 5
+#     epochs: 100
 #   - name: TEDPolicy
 #     max_history: 5
 #     epochs: 100
-#   - name: RulePolicy
+#     constrain_similarities: true

@@ -8,6 +8,8 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - zeiten
+  - is_bot 
 
 responses:
   utter_greet:
@@ -27,7 +29,10 @@ responses:
   - text: "Bye"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "Ja, ich bin ein Bot und wurde mit Rasa entwickelt." 
+
+  utter_zeiten:
+  - text: "Der letzte Einlass ist immer 45 Minuten vor Schließung."
 
 session_config:
   session_expiration_time: 60
