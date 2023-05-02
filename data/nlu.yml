@@ -6,16 +6,19 @@ nlu:
     - hey
     - hello
     - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - Hallo du
+    - Guten Morgen
+    - Guten Tag
+    - Guten Abend
+    - Grüß Gott
+    - Grüß dich
+    - Grüß Sie
+    - Grüß euch
+    - Grüß dich Gott
+    - Grüß Gott, Servus
+    - Grüß Gott, Grüß dich
+    - Grüß Gott, Grüß Sie
+    - Grüß Gott, Grüß euch
     - grüße
     - was geht?
     - Hallo Meister
