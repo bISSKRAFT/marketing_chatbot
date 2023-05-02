@@ -37,9 +37,9 @@ pipeline:
   - name: "SpacyTokenizer"
   - name: LanguageModelFeaturizer
     # Name of the language model to use
-    model_name: "roberta"
+    model_name: "gpt2"
     # Pre-Trained weights to be loaded
-    model_weights: "roberta-base"
+    model_weights: "gpt2"
   - name: DIETClassifier
     epochs: 300
   # - name: EntitySynonymMapper
