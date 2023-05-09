@@ -25,3 +25,18 @@
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
+from typing import Text
+from bs4 import BeautifulSoup
+import requests
+from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk import Action, Tracker
+
+# source: https://learning.rasa.com/conversational-ai-with-rasa/custom-actions/
+
+class ActionGetOpeningTimes(Action):
+
+    def name(self) -> Text:
+        return "action_get_opening_times"
+    
+    def run(self, dispather: CollectingDispatcher, tracker: Tracker):
+        pass

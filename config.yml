@@ -42,7 +42,7 @@ pipeline:
     model_weights: "roberta-base"
   - name: DIETClassifier
     epochs: 300
-  # - name: EntitySynonymMapper
+ # - name: EntitySynonymMapper
   - name: ResponseSelector
     epochs: 300
   #   constrain_similarities: true

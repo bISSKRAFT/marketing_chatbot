@@ -34,7 +34,9 @@ stories:
   - intent: is_bot
   - action: utter_iamabot
 
-# - story: ask zeiten
-#   steps:
-#   - intent: zeiten
-#   - action: utter_zeiten
+- story: wenn nach Zeiten gefragt wird BASIS
+  steps:
+  - intent: zeiten
+  - action: utter_zeiten
+
+# TODO: preis story
