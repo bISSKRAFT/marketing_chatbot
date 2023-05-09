@@ -22,6 +22,9 @@ nlu:
     - grüße
     - was geht?
     - Hallo Meister
+    - Servus
+    - Servusla
+    - Servus Meister
 
 - intent: goodbye
   examples: |
@@ -127,3 +130,11 @@ nlu:
     - Gönn Öffnungszeiten!
     - Offen?
     - Zu?
+    - Guten Tag, haben Sie heute offen?
+    - Guten Tag, haben Sie heute geöffnet?
+    - Hallo, kann ich heute vorbei kommen? 
+    - Grüße, heute offen?
+    - Meister, heute offen?
+    - Hallo, morgen auch offen?
+    - Hallo, morgen auch geöffnet?
+    - Grüß Gott, haben Sie auch ein Weihnachten offen?
