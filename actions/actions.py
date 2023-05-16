@@ -39,4 +39,5 @@ class ActionGetOpeningTimes(Action):
         return "action_get_opening_times"
     
     def run(self, dispather: CollectingDispatcher, tracker: Tracker):
+        #TODO: tracker gives chat history
         pass
