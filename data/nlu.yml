@@ -125,16 +125,29 @@ nlu:
     - Öffnungszeiten?
     - Wann habt ihr offen?
     - Wann ist das museum geöffnet?
-    - Weihnachten auch offen?
-    - Silvester offen?
-    - Gönn Öffnungszeiten!
+    - [Weihnachten]{"entity": "holiday", "value": "weihnachten"} auch offen?
+    - [Heiligabend]{"entity": "holiday", "value": "weihnachten"} offen?
+    - Haben Sie an [Weihnachten]{"entity": "holiday", "value": "weihnachten"} offen?
+    - Haben Sie an [Heiligabend]{"entity": "holiday", "value": "weihnachten"} offen?
+    - Haben Sie an [Weihnachten]{"entity": "holiday", "value": "weihnachten"} geöffnet?
+    - Haben Sie an [Heiligabend]{"entity": "holiday", "value": "weihnachten"} geöffnet?
+    - [Silvester]{"entity": "holiday", "value": "silvester"} offen?
+    - [Neujahr]{"entity": "holiday", "value": "silvester"} offen?
+    - Haben Sie an [Silvester]{"entity": "holiday", "value": "silvester"} offen?
+    - Haben Sie an [Neujahr]{"entity": "holiday", "value": "silvester"} offen?
+    - Haben Sie an [Silvester]{"entity": "holiday", "value": "silvester"} geöffnet?
+    - Haben Sie an [Neujahr]{"entity": "holiday", "value": "silvester"} geöffnet?
     - Offen?
     - Zu?
-    - Guten Tag, haben Sie heute offen?
-    - Guten Tag, haben Sie heute geöffnet?
-    - Hallo, kann ich heute vorbei kommen? 
-    - Grüße, heute offen?
-    - Meister, heute offen?
-    - Hallo, morgen auch offen?
-    - Hallo, morgen auch geöffnet?
-    - Grüß Gott, haben Sie auch ein Weihnachten offen?
+    - Guten Tag, haben Sie [heute]{"entity": "time", "value": "today"} offen?
+    - Guten Tag, haben Sie [heute]{"entity": "time", "value": "today"} geöffnet?
+    - Hallo, kann ich [heute]{"entity": "time", "value": "today"} vorbei kommen? 
+    - Grüße, [heute]{"entity": "time", "value": "today"} offen?
+    - Meister, [heute]{"entity": "time", "value": "today"} offen?
+    - Hallo, [morgen]{"entity": "time", "value": "morgen"} auch offen?
+    - Hallo, [morgen]{"entity": "time", "value": "morgen"} auch geöffnet?
+    - Grüß Gott, haben Sie auch ein [Weihnachten]{"entity": "holiday", "value": "weihnachten"} offen?
+    - Ab wann ist geöffnet?
+    - Bis wann ist geöffnet?
+    - Bis wann ist offen?
+
