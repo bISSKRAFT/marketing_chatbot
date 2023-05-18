@@ -99,6 +99,9 @@ responses:
 
   utter_museumsshop:
   - text: museumsshop
+  
+  utter_kontakt:
+  - text: kontakt
 
 
 session_config:
