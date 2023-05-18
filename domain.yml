@@ -26,6 +26,7 @@ intents:
   - sonderausstellung_information
   - sonderausstellung_archiv
   - museumsshop
+  - kontakt
 
 
 responses:
