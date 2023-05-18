@@ -62,3 +62,38 @@ class ActionGetOpeningTimes(Action):
             msg = "Es tut mir leid, das habe ich nicht richtig verstanden. Wenn du etwas über die Öffnungszeiten wissen möchtest, dann frage einfach nach Öffnungszeiten"
             dispather.utter_message(text=msg)
         pass
+
+
+class ActionGetPrices(Action):
+
+    def name(self) -> Text:
+        return "action_get_price"
+
+    def run(self, dispather: CollectingDispatcher, tracker: Tracker):
+        prices = self.scrape_prices()
+        msg = self.prices_to_string(prices)
+        dispather.utter_message(text=msg)
+
+
+    def scrape_prices():
+        url = "https://www.kriminalmuseum.eu/besucherplaner/preise/"
+        html = requests.get(url).text
+
+        data = []
+        soup = BeautifulSoup(html, "html.parser")
+        table = soup.find_all("table")[0]
+        table_body = table.find('tbody')
+
+        rows = table_body.find_all('tr')
+        for row in rows:
+            cols = row.find_all('td')
+            cols = [ele.text.strip() for ele in cols]
+            data.append([ele for ele in cols if ele]) # Get rid of empty values
+
+        return data
+    
+    def prices_to_string(prices):
+        price_string = ""
+        for price in prices:
+            price_string += price[0] + ": " + price[1] + "\n"
+

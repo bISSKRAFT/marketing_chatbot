@@ -57,3 +57,4 @@ session_config:
   carry_over_slots_to_new_session: true
 
 actions:
+- action_get_price
