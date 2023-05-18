@@ -20,7 +20,7 @@ rules:
 - rule: preise
   steps:
   - intent: preise
-  - action: utter_preise
+  - action: action_get_price
 
 - rule: anreise
   steps:

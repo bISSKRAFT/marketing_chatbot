@@ -3,36 +3,36 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
-  - Guten Tag
-  - Hallo
-  - Grüß Gott!
-  - Guten Morgen!
-  - Schönen guten Tag!
-  - Guten Tag allerseits
-  - Herzlich willkommen!
-  - Einen schönen Tag!
-  - Guten Tag, wie geht es Ihnen?
-  - Seien Sie herzlich gegrüßt
-  - Guten Tag, wie kann ich Ihnen helfen?
-  - Schön, Sie zu sehen
-  - Freut mich, Ihnen guten Tag zu sagen!
-  - Ich wünsche Ihnen einen angenehmen Tag
-  - Guten Tag, wie steht es um Ihr Wohlbefinden?
-  - Ich hoffe, Sie haben einen großartigen Tag!
-  - Einen wundervollen Tag wünsche ich Ihnen!
-  - Möge Ihr Tag erfüllt sein von Freude und Erfolg
-  - Guten Tag, ich hoffe, Sie haben gut geschlafen
-  - Guten Tag, es ist schön, Sie hier zu haben
-  - Ich begrüße Sie herzlich und wünsche Ihnen einen guten Tag!
-  - Guten Tag, ich hoffe, Sie genießen den heutigen Tag
-  - Guten Tag, ich wünsche Ihnen einen gelungenen Start in den Tag
-  - Hallo und einen sonnigen Tag wünsche ich Ihnen!
-  - Guten Tag, mögen Ihre Vorhaben erfolgreich sein
-  - Schönen guten Tag, ich hoffe, Ihnen geht es gut
-  - Guten Tag, ich hoffe, Sie haben eine angenehme Zeit hier!
-  - Einen schönen guten Tag wünsche ich Ihnen von Herzen
-  - Guten Tag, ich hoffe, Sie haben einen schönen Tag vor sich
-  - Herzlich willkommen und einen wundervollen Tag wünsche ich Ihnen
+    - Guten Tag
+    - Hallo
+    - Grüß Gott!
+    - Guten Morgen!
+    - Schönen guten Tag!
+    - Guten Tag allerseits
+    - Herzlich willkommen!
+    - Einen schönen Tag!
+    - Guten Tag, wie geht es Ihnen?
+    - Seien Sie herzlich gegrüßt
+    - Guten Tag, wie kann ich Ihnen helfen?
+    - Schön, Sie zu sehen
+    - Freut mich, Ihnen guten Tag zu sagen!
+    - Ich wünsche Ihnen einen angenehmen Tag
+    - Guten Tag, wie steht es um Ihr Wohlbefinden?
+    - Ich hoffe, Sie haben einen großartigen Tag!
+    - Einen wundervollen Tag wünsche ich Ihnen!
+    - Möge Ihr Tag erfüllt sein von Freude und Erfolg
+    - Guten Tag, ich hoffe, Sie haben gut geschlafen
+    - Guten Tag, es ist schön, Sie hier zu haben
+    - Ich begrüße Sie herzlich und wünsche Ihnen einen guten Tag!
+    - Guten Tag, ich hoffe, Sie genießen den heutigen Tag
+    - Guten Tag, ich wünsche Ihnen einen gelungenen Start in den Tag
+    - Hallo und einen sonnigen Tag wünsche ich Ihnen!
+    - Guten Tag, mögen Ihre Vorhaben erfolgreich sein
+    - Schönen guten Tag, ich hoffe, Ihnen geht es gut
+    - Guten Tag, ich hoffe, Sie haben eine angenehme Zeit hier!
+    - Einen schönen guten Tag wünsche ich Ihnen von Herzen
+    - Guten Tag, ich hoffe, Sie haben einen schönen Tag vor sich
+    - Herzlich willkommen und einen wundervollen Tag wünsche ich Ihnen
 
 - intent: goodbye
   examples: |
@@ -133,7 +133,7 @@ nlu:
     - Öffnungszeiten?
     - Wann habt ihr offen?
     - Wann ist das museum geöffnet?
-    - [Weihnachten]{"entity": "holiday", "role": day} auch offen?
+    - [Weihnachten]{"entity": "holiday", "role": "day"} auch offen?
     - [Heiligabend]{"entity": "holiday", "value": "Heiligabend"} offen?
     - Haben Sie an [Weihnachten]{"entity": "holiday", "role": "day"} offen?
     - Haben Sie an [Heiligabend]{"entity": "holiday", "role": "day"} offen?
