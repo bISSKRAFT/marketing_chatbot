@@ -12,7 +12,39 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-# - rule: Say 'Oeffnungszeiten' anytime the user asks for it
-#   steps:
-#   - intent: zeiten
-#   - action: utter_zeiten
+- rule: zeiten
+  steps:
+  - intent: zeiten
+  - action: utter_zeiten
+
+- rule: preise
+  steps:
+  - intent: preise
+  - action: action_get_price
+
+- rule: anreise
+  steps:
+  - intent: anreise
+  - action: utter_anreise
+
+- rule: abteilungen
+  steps:
+  - intent: abteilungen
+  - action: utter_abteilungen
+
+- rule: kindgerecht
+  steps:
+  - intent: kindgerecht
+  - action: utter_kindgerecht
+
+- rule: barrierefrei
+  steps:
+  - intent: barrierefrei
+  - action: utter_barrierefrei
+
+- rule: cafeteria
+  steps:
+  - intent: cafeteria
+  - action: utter_cafeteria
+
+

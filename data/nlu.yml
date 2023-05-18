@@ -3,36 +3,36 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
-  - Guten Tag
-  - Hallo
-  - Grüß Gott!
-  - Guten Morgen!
-  - Schönen guten Tag!
-  - Guten Tag allerseits
-  - Herzlich willkommen!
-  - Einen schönen Tag!
-  - Guten Tag, wie geht es Ihnen?
-  - Seien Sie herzlich gegrüßt
-  - Guten Tag, wie kann ich Ihnen helfen?
-  - Schön, Sie zu sehen
-  - Freut mich, Ihnen guten Tag zu sagen!
-  - Ich wünsche Ihnen einen angenehmen Tag
-  - Guten Tag, wie steht es um Ihr Wohlbefinden?
-  - Ich hoffe, Sie haben einen großartigen Tag!
-  - Einen wundervollen Tag wünsche ich Ihnen!
-  - Möge Ihr Tag erfüllt sein von Freude und Erfolg
-  - Guten Tag, ich hoffe, Sie haben gut geschlafen
-  - Guten Tag, es ist schön, Sie hier zu haben
-  - Ich begrüße Sie herzlich und wünsche Ihnen einen guten Tag!
-  - Guten Tag, ich hoffe, Sie genießen den heutigen Tag
-  - Guten Tag, ich wünsche Ihnen einen gelungenen Start in den Tag
-  - Hallo und einen sonnigen Tag wünsche ich Ihnen!
-  - Guten Tag, mögen Ihre Vorhaben erfolgreich sein
-  - Schönen guten Tag, ich hoffe, Ihnen geht es gut
-  - Guten Tag, ich hoffe, Sie haben eine angenehme Zeit hier!
-  - Einen schönen guten Tag wünsche ich Ihnen von Herzen
-  - Guten Tag, ich hoffe, Sie haben einen schönen Tag vor sich
-  - Herzlich willkommen und einen wundervollen Tag wünsche ich Ihnen
+    - Guten Tag
+    - Hallo
+    - Grüß Gott!
+    - Guten Morgen!
+    - Schönen guten Tag!
+    - Guten Tag allerseits
+    - Herzlich willkommen!
+    - Einen schönen Tag!
+    - Guten Tag, wie geht es Ihnen?
+    - Seien Sie herzlich gegrüßt
+    - Guten Tag, wie kann ich Ihnen helfen?
+    - Schön, Sie zu sehen
+    - Freut mich, Ihnen guten Tag zu sagen!
+    - Ich wünsche Ihnen einen angenehmen Tag
+    - Guten Tag, wie steht es um Ihr Wohlbefinden?
+    - Ich hoffe, Sie haben einen großartigen Tag!
+    - Einen wundervollen Tag wünsche ich Ihnen!
+    - Möge Ihr Tag erfüllt sein von Freude und Erfolg
+    - Guten Tag, ich hoffe, Sie haben gut geschlafen
+    - Guten Tag, es ist schön, Sie hier zu haben
+    - Ich begrüße Sie herzlich und wünsche Ihnen einen guten Tag!
+    - Guten Tag, ich hoffe, Sie genießen den heutigen Tag
+    - Guten Tag, ich wünsche Ihnen einen gelungenen Start in den Tag
+    - Hallo und einen sonnigen Tag wünsche ich Ihnen!
+    - Guten Tag, mögen Ihre Vorhaben erfolgreich sein
+    - Schönen guten Tag, ich hoffe, Ihnen geht es gut
+    - Guten Tag, ich hoffe, Sie haben eine angenehme Zeit hier!
+    - Einen schönen guten Tag wünsche ich Ihnen von Herzen
+    - Guten Tag, ich hoffe, Sie haben einen schönen Tag vor sich
+    - Herzlich willkommen und einen wundervollen Tag wünsche ich Ihnen
 
 - intent: goodbye
   examples: |
@@ -133,7 +133,7 @@ nlu:
     - Öffnungszeiten?
     - Wann habt ihr offen?
     - Wann ist das museum geöffnet?
-    - [Weihnachten]{"entity": "holiday", "role": day} auch offen?
+    - [Weihnachten]{"entity": "holiday", "role": "day"} auch offen?
     - [Heiligabend]{"entity": "holiday", "value": "Heiligabend"} offen?
     - Haben Sie an [Weihnachten]{"entity": "holiday", "role": "day"} offen?
     - Haben Sie an [Heiligabend]{"entity": "holiday", "role": "day"} offen?
@@ -329,7 +329,7 @@ nlu:
     - Ist das Museum für Besucher mit unterschiedlichen Behinderungsarten zugänglich?
 
 
-- intent: barrierefrei
+- intent: cafeteria
   examples: |
     - Welche Angebote gibt es in der Cafeteria des Museums?
     - Was kann man in der Cafeteria des Museums genießen?
@@ -362,3 +362,110 @@ nlu:
     - Zu welchen Zeiten ist die Cafeteria geöffnet?
     - Welche Öffnungszeiten hat die Cafeteria?
     - Wann ist die Cafeteria geöffnet?
+
+    - Gibt es eine Cafeteria im Museum?
+    - Hat das Museum eine Cafeteria?
+    - Wo kann man im Museum etwas zu essen bekommen?
+    - Gibt es eine Möglichkeit, im Museum etwas zu essen zu kaufen?
+    - Ist im Museum eine Cafeteria vorhanden?
+    - Kannst du mir sagen, ob es im Museum eine Möglichkeit gibt, etwas zu essen?
+    - Wo finde ich im Museum einen Ort, wo man etwas essen kann?
+    - Ist es möglich, im Museum etwas zu essen zu bekommen?
+    - Gibt es im Museum eine Snackbar oder ein Café?
+    - Kann man im Museum Speisen und Getränke kaufen?
+    - Wo kann ich im Museum etwas zu essen finden?
+    - Kann man im Museum etwas zu trinken oder zu essen kaufen?
+    - Gibt es im Museum einen gastronomischen Bereich?
+    - Gibt es im Museum einen Ort, wo Besucher etwas essen können?
+    - Kannst du mir sagen, ob es im Museum eine Kantine gibt?
+    - Hat das Museum einen Restaurantbereich?
+    - Hat das Museum einen Platz, wo man etwas essen kann?
+    - Kannst du mir sagen, ob es im Museum eine Kantine gibt?
+    - Kannst du mir sagen, ob es im Museum eine Essgelegenheit gibt?
+    - Wo genau befindet sich die Cafeteria im Museum?
+    - Könntest du mir sagen, wo die Cafeteria im Museum liegt?
+    - In welchem Teil des Museums befindet sich die Cafeteria?
+    - Kannst du mir den Standort der Cafeteria im Museum verraten?
+    - Wo finde ich die Cafeteria im Museum?
+    - Kannst du mir bitte sagen, wo sich die Cafeteria im Museum befindet?
+    - Wo kann ich die Cafeteria im Museum finden?
+    - Wo ist der Standort der Cafeteria des Museums?
+    - Wo befindet sich der Essbereich im Museum?
+    - Wann hat die Cafeteria geöffnet?
+    - Könntest du mir bitte die Öffnungszeiten der Cafeteria mitteilen?
+    - Kannst du mir sagen, zu welchen Zeiten die Cafeteria geöffnet ist?
+    - Welche sind die Öffnungszeiten der Cafeteria?
+    - Wann kann man die Cafeteria besuchen?
+    - Wann kann man in der Cafeteria etwas zu essen bekommen?
+    - Zu welchen Uhrzeiten ist die Cafeteria in Betrieb?
+    - Könntest du mir bitte sagen, wann die Cafeteria geöffnet hat?
+
+- intent: fuehrung_buchen
+  examples: |
+    - Wo kann ich Informationen über Führungen im Museum finden?
+    - Wo finde ich Informationen über Führungen im Museum?"
+    - An wen kann ich mich wenden, um Informationen über Führungen im Museum zu erhalten?
+    - Gibt es eine Quelle, wo ich Informationen über Führungen im Museum nachschlagen kann?
+    - Wo erhalte ich Auskunft über Führungen im Museum?
+    - Gibt es eine zentrale Informationsstelle für Führungen im Museum?
+    - Wo kann ich mich informieren, wenn ich mehr über die Führungen im Museum erfahren möchte?
+    - An wen kann ich mich wenden, um detaillierte Informationen über die Führungen im Museum zu erhalten?
+    - Wo kann ich Hinweise über die Führungen im Museum finden?
+    - Wo kann ich einen Überblick über die verschiedenen Führungen im Museum bekommen?
+    - Wo finde ich Infos zu Führungen?
+    - Wo erfahre ich mehr zu Führungen?
+    - In welchen Sprachen werden die Führungen angeboten?
+    - In welchen Sprachen werden die Führungen durchgeführt?
+    - Werden im Museum Führungen organisiert?
+    - Bietet das Museum Führungen an?
+    - Gibt es im Museum die Möglichkeit, an Führungen teilzunehmen?
+    - Werden im Museum Führungen für Besucher angeboten?
+    - Können Besucher im Museum an Führungen teilnehmen?
+    - Finden im Museum Führungen statt?
+    - Wen kann ich bezüglich Führungen im Museum kontaktieren?
+    - An wen kann ich mich wenden, wenn ich Fragen zu Führungen im Museum habe?
+    - Wer ist der richtige Ansprechpartner für Informationen zu Führungen im Museum?
+    - Mit wem kann ich über Führungen im Museum sprechen?
+    - Welche Person ist zuständig für Anfragen zu Führungen im Museum?
+    - Bei wem finde ich weitere Informationen zu Führungen im Museum?
+    - Wer ist mein Ansprechpartner für Führungen im Museum?
+    - Mit wem kann ich mich in Verbindung setzen, um mehr über Führungen im Museum zu erfahren?
+    - Gibt es eine Kontaktperson, die für Führungen im Museum zuständig ist?
+    - Wen sollte ich kontaktieren, wenn ich Interesse an Führungen im Museum habe?
+    - An wen kann ich mich wenden, um einen Termin für eine Führung im Museum zu vereinbaren?
+    - Wer kann mir weiterhelfen, wenn ich Fragen zu den angebotenen Führungen im Museum habe?
+
+- intent: sonderausstellung
+  examples: |
+    - Gibt es eine Möglichkeit, Informationen überlaufende Sonderausstellungen zu erhalten?
+    - Wo könnte ich nach Informationen zu den aktuellen Sonderausstellungen suchen?
+    - Ist es möglich, Informationen über gegenwärtige Sonderausstellungen zu finden?
+    - Wo bekomme ich Auskunft über die aktuellen Sonderausstellungen?
+    - Gibt es eine Quelle, die mir Informationen über aktuelle Sonderausstellungen geben kann?
+    - Wo kann ich mich über die neuesten Sonderausstellungen informieren?
+    - Wo erhalte ich Informationen über die aktuellen Sonderausstellungen?
+    - Wo kann ich mich über die Sonderausstellungen, die gerade stattfinden, informieren?
+    - Wo finde ich aktuelle Informationen zu den Sonderausstellungen?
+    - Wo kann ich nach aktuellen Sonderausstellungen recherchieren?
+    - Wo kann ich nachschauen, um Details über die gegenwärtigen Sonderausstellungen zu erhalten?
+    - Wo kann ich nach den neuesten Informationen zu den Sonderausstellungen suchen?
+    - Gibt es eine spezielle Quelle für Informationen zu den aktuellen Sonderausstellungen?
+    - Wo könnte ich erfahren, was gerade an Sonderausstellungen angeboten wird?
+    - Wo kann ich mich über die aktuellen Sonderausstellungen informieren und welche Werke gezeigt werden?
+    - Wo kann ich erfahren, welche Sonderausstellungen gerade stattfinden und welche Themen sie behandeln?
+    - Wo finde ich Informationen über die Sonderausstellungen, die derzeit geöffnet sind?
+    - Gibt es eine zentrale Anlaufstelle, um Informationen über die aktuellen Sonderausstellungen zu erhalten?
+    - Wo kann ich aktuelle Informationen zu den laufenden Sonderausstellungen finden
+    - Gibt es eine Webseite, die mir Auskunft über die aktuellen Sonderausstellungen geben kann?
+    - Wo kann ich nachsehen, welche Sonderausstellungen gerade stattfinden und wann sie enden?
+    - Gibt es eine Möglichkeit, mich über die aktuellen Sonderausstellungen zu informieren?
+    - Wo finde ich eine Liste der aktuellen Sonderausstellungen und ihrer Austellungszeiten?
+    - Wo kann ich erfahren, welche besonderen Ausstellungen zurzeit präsentiert werden?
+    - Wo kann ich mich erkundigen, welche Sonderausstellungen gerade im Museum gezeigt werden?
+    - Welche Sonderausstellung findet momentan statt?
+    - Wo finde ich Informationen zu eurer Sonderausstellung?
+    - Wo finde ich Informationen zur aktuellen Sonderausstellung im Museum?
+    - Wo erhalte ich Auskunft über die Sonderausstellung im Museum?
+    - Kannst du mir sagen, wo ich Informationen zur Sonderausstellung im Museum erhalten kann?
+    - Gibt es ein Archiv der vergangenen Sonderausstellungen?
+    - Gibt es ein Archiv der vergangenen Sonderschauen?
