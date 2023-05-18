@@ -219,6 +219,12 @@ nlu:
     - Wie weit ist es zu Fuß vom Bahnhof zum Museum?
     - Welche Orientierungspunkte sollte ich beachten, um zum Museum zu gelangen?
 
+- intent: parken
+  examples: |
+    - Wo kann ich mein Auto parken?
+    - Gibt es Parkplätze in der Nähe des Museums?
+    - Wo kann ich mein Auto abstellen?
+
 - intent: abteilungen
   examples: |
     - Welche Abteilungen gibt es im Museum?
@@ -319,8 +325,7 @@ nlu:
     - Bietet das Museum barrierefreie Audioführungen?
     - Ist das Museum für Besucher mit unterschiedlichen Behinderungsarten zugänglich?
 
-
-- intent: cafeteria
+- intent: cafeteria_angebot
   examples: |
     - Welche Angebote gibt es in der Cafeteria des Museums?
     - Was kann man in der Cafeteria des Museums genießen?
@@ -332,35 +337,20 @@ nlu:
     - Was für kulinarische Genüsse kann man in der Cafeteria des Museums erwarten?
     - Welche Gerichte stehen in der Cafeteria des Museums zur Auswahl?
     - Was für gastronomische Optionen stehen den Besuchern in der Cafeteria des Museums zur Verfügung?
-    - Zu welchen Zeiten ist die Cafeteria des Museums geöffnet?
-    - Wie sind die Öffnungszeiten der Cafeteria im Museum?
-    - Wann kann man die Cafeteria im Museum besuchen?
-    - Welche Uhrzeiten gelten für die Öffnung der Cafeteria im Museum?
-    - Zu welchen Tageszeiten hat die Cafeteria des Museums geöffnet?
-    - Wann ist die Cafeteria im Museum für Besucher zugänglich?
-    - Welche Öffnungszeiten gelten für die Cafeteria des Museums?
-    - In welchem Zeitraum kann man die Cafeteria im Museum aufsuchen?
-    - Zu welchen Stunden ist die Cafeteria des Museums geöffnet?
-    - Wann darf man die Cafeteria im Museum betreten?
-    - Hat das Museum eine Cafeteria?
-    - Gibt es im Museum eine Cafeteria?
     - Was bietet die Cafeteria des Museums?
     - Was gibt es alles in der Cafeteria des Museums?
     - Was für Speisen und Getränke gibt es in der Cafeteria des Museums?
     - Was für kulinarische Angebote gibt es in der Cafeteria des Museums?
     - Was für gastronomische Angebote gibt es in der Cafeteria des Museums?
-    - Wann hat die Cafeteria offen?
-    - Zu welchen Zeiten ist die Cafeteria geöffnet?
-    - Welche Öffnungszeiten hat die Cafeteria?
-    - Wann ist die Cafeteria geöffnet?
-
+    
+- intent: cafeteria_information
+  examples: |
     - Gibt es eine Cafeteria im Museum?
     - Hat das Museum eine Cafeteria?
     - Wo kann man im Museum etwas zu essen bekommen?
     - Gibt es eine Möglichkeit, im Museum etwas zu essen zu kaufen?
     - Ist im Museum eine Cafeteria vorhanden?
     - Kannst du mir sagen, ob es im Museum eine Möglichkeit gibt, etwas zu essen?
-    - Wo finde ich im Museum einen Ort, wo man etwas essen kann?
     - Ist es möglich, im Museum etwas zu essen zu bekommen?
     - Gibt es im Museum eine Snackbar oder ein Café?
     - Kann man im Museum Speisen und Getränke kaufen?
@@ -373,6 +363,9 @@ nlu:
     - Hat das Museum einen Platz, wo man etwas essen kann?
     - Kannst du mir sagen, ob es im Museum eine Kantine gibt?
     - Kannst du mir sagen, ob es im Museum eine Essgelegenheit gibt?
+
+- intent: cafeteria_ort
+  examples: |
     - Wo genau befindet sich die Cafeteria im Museum?
     - Könntest du mir sagen, wo die Cafeteria im Museum liegt?
     - In welchem Teil des Museums befindet sich die Cafeteria?
@@ -382,6 +375,20 @@ nlu:
     - Wo kann ich die Cafeteria im Museum finden?
     - Wo ist der Standort der Cafeteria des Museums?
     - Wo befindet sich der Essbereich im Museum?
+    - Wo finde ich im Museum einen Ort, wo man etwas essen kann?
+    - An welchem genauen Ort befindet sich die Cafeteria im Museum?
+    - Könntest du mir bitte den Standort der Cafeteria im Museum mitteilen?
+    - In welchem Bereich des Museums findest du die Cafeteria?
+    - Kannst du mir verraten, wo sich die Cafeteria im Museum befindet?
+    - Wo genau ist die Cafeteria im Museum zu finden?
+    - Könntest du mir bitte sagen, wo genau sich die Cafeteria im Museum befindet?
+    - Wo kann ich die Cafeteria im Museum auffinden?
+    - Wo befindet sich der Standort der Cafeteria des Museums?
+    - Wo finde ich den Essbereich im Museum?
+    - Wo kann ich im Museum einen Ort finden, an dem man etwas essen kann?
+
+- intent: cafeteria_oeffnungszeiten
+  examples: |
     - Wann hat die Cafeteria geöffnet?
     - Könntest du mir bitte die Öffnungszeiten der Cafeteria mitteilen?
     - Kannst du mir sagen, zu welchen Zeiten die Cafeteria geöffnet ist?
@@ -390,8 +397,29 @@ nlu:
     - Wann kann man in der Cafeteria etwas zu essen bekommen?
     - Zu welchen Uhrzeiten ist die Cafeteria in Betrieb?
     - Könntest du mir bitte sagen, wann die Cafeteria geöffnet hat?
+    - Wann sind die Öffnungszeiten der Cafeteria?
+    - Könntest du mir bitte mitteilen, wann die Cafeteria geöffnet hat?
+    - Kannst du mir sagen, wann die Cafeteria zugänglich ist?
+    - Zu welchen Zeiten hat die Cafeteria geöffnet?
+    - Wann ist die Cafeteria für Besucher geöffnet?
+    - Könntest du mir bitte die Betriebszeiten der Cafeteria nennen?
+    - Kannst du mir sagen, wann man in der Cafeteria Essen bekommen kann?
+    - Welche Uhrzeiten gelten für den Betrieb der Cafeteria?
+    - Könntest du mir bitte mitteilen, zu welchen Zeiten die Cafeteria besucht werden kann?
+    - Wann hat die Cafeteria regulär geöffnet?
+    - Zu welchen Zeiten ist die Cafeteria geöffnet?
+    - Zu welchen Zeiten ist die Cafeteria des Museums geöffnet?
+    - Welche Öffnungszeiten hat die Cafeteria?
+    - Welche Öffnungszeiten gelten für die Cafeteria des Museums?
+    - Wie sind die Öffnungszeiten der Cafeteria im Museum?
+    - Zu welchen Tageszeiten hat die Cafeteria des Museums geöffnet?
+    - Wann ist die Cafeteria im Museum für Besucher zugänglich?
+    - In welchem Zeitraum kann man die Cafeteria im Museum aufsuchen?
+    - Zu welchen Stunden ist die Cafeteria des Museums geöffnet?
+    - Wann darf man die Cafeteria im Museum betreten?
+    - Wann hat die Cafeteria offen?
 
-- intent: fuehrung_buchen
+- intent: fuehrungen_information
   examples: |
     - Wo kann ich Informationen über Führungen im Museum finden?
     - Wo finde ich Informationen über Führungen im Museum?"
@@ -405,14 +433,15 @@ nlu:
     - Wo kann ich einen Überblick über die verschiedenen Führungen im Museum bekommen?
     - Wo finde ich Infos zu Führungen?
     - Wo erfahre ich mehr zu Führungen?
-    - In welchen Sprachen werden die Führungen angeboten?
-    - In welchen Sprachen werden die Führungen durchgeführt?
     - Werden im Museum Führungen organisiert?
     - Bietet das Museum Führungen an?
     - Gibt es im Museum die Möglichkeit, an Führungen teilzunehmen?
     - Werden im Museum Führungen für Besucher angeboten?
     - Können Besucher im Museum an Führungen teilnehmen?
     - Finden im Museum Führungen statt?
+
+- intent: fuehrungen_ansprechpartner
+  examples: |
     - Wen kann ich bezüglich Führungen im Museum kontaktieren?
     - An wen kann ich mich wenden, wenn ich Fragen zu Führungen im Museum habe?
     - Wer ist der richtige Ansprechpartner für Informationen zu Führungen im Museum?
@@ -426,7 +455,23 @@ nlu:
     - An wen kann ich mich wenden, um einen Termin für eine Führung im Museum zu vereinbaren?
     - Wer kann mir weiterhelfen, wenn ich Fragen zu den angebotenen Führungen im Museum habe?
 
-- intent: sonderausstellung
+- intent: fuehrungen_sprachen
+  examples: |
+    - In welchen Sprachen werden die Führungen angeboten?
+    - In welchen Sprachen werden die Führungen durchgeführt?
+    - Welche Sprachen werden bei den Führungen gesprochen?
+    - Welche Sprachen werden bei den Führungen verwendet?
+    - In welchen Sprachen werden die Führungen gehalten?
+    - Welche Sprachen werden für die Führungen angeboten?
+    - In welchen Sprachen sind die Führungen verfügbar?
+    - Für welche Sprachen gibt es Führungen?
+    - In welchen Sprachen werden die Führungen zur Verfügung gestellt?
+    - Welche Sprachoptionen werden für die Führungen angeboten?
+    - Welche Sprachen stehen für die Führungen zur Auswahl?
+    - Für welche Sprachen sind Führungen verfügbar?
+    - In welchen Sprachen werden die Führungen präsentiert?
+
+- intent: sonderausstellung_information
   examples: |
     - Gibt es eine Möglichkeit, Informationen überlaufende Sonderausstellungen zu erhalten?
     - Wo könnte ich nach Informationen zu den aktuellen Sonderausstellungen suchen?
@@ -458,5 +503,39 @@ nlu:
     - Wo finde ich Informationen zur aktuellen Sonderausstellung im Museum?
     - Wo erhalte ich Auskunft über die Sonderausstellung im Museum?
     - Kannst du mir sagen, wo ich Informationen zur Sonderausstellung im Museum erhalten kann?
+
+- intent: sonderausstellung_archiv
+  examples: |
     - Gibt es ein Archiv der vergangenen Sonderausstellungen?
     - Gibt es ein Archiv der vergangenen Sonderschauen?
+    - Existiert ein Archiv vergangener Sonderausstellungen?
+    - Gibt es eine Sammlung vergangener Sonderausstellungen?
+    - Ist ein Archiv der früheren Sonderausstellungen vorhanden?
+    - Gibt es eine Aufzeichnung der vergangenen Sonderausstellungen?
+    - Besteht ein Archiv vergangener Sonderausstellungen?
+    - Sind die vergangenen Sonderausstellungen archiviert?
+    - Wird eine Dokumentation der vergangenen Sonderausstellungen geführt?
+    - Gibt es eine historische Sammlung der vergangenen Sonderausstellungen?
+    - Ist ein Archiv mit den vergangenen Sonderausstellungen verfügbar?
+    - Werden die vergangenen Sonderausstellungen archiviert?
+
+- intent: museumsshop
+  examples: |
+    - Gibt es einen Shop im Museum?
+    - Gibt es einen Museumsshop?
+    - Bietet das Museum einen eigenen Shop an?
+    - Ist im Museum ein Geschäft vorhanden?
+    - Kann man im Museum etwas kaufen?
+    - Gibt es eine Einkaufsmöglichkeit innerhalb des Museums?
+    - Ist ein Shop in den Räumlichkeiten des Museums zu finden?
+    - Hat das Museum einen eigenen Laden?
+    - Gibt es einen Souvenirshop im Museum?
+    - Kann man im Museum Merchandise erwerben?
+    - Gibt es einen Laden, wo man Geschenke kaufen kann?
+    - Ist ein Shop für Museumssouvenirs vorhanden?
+    - Bietet das Museum eine Verkaufsstelle für Erinnerungsstücke an?
+    - Gibt es einen Geschenkeladen im Museum?
+    - Ist ein Museumsshop für Besucher zugänglich?
+    - Hat das Museum einen eigenen Verkaufsraum?
+    - Kann man im Museum Produkte erwerben?
+    - Gibt es einen Laden, wo man Kunstwerke und Bücher kaufen kann?
