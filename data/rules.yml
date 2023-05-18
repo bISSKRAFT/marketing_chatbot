@@ -15,7 +15,7 @@ rules:
 - rule: zeiten
   steps:
   - intent: zeiten
-  - action: utter_zeiten
+  - action: action_get_opening_times
 
 - rule: preise
   steps:
