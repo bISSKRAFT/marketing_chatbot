@@ -135,8 +135,13 @@ nlu:
     - Wann ist das museum geöffnet?
     - [Weihnachten]{"entity": "holiday", "value": "weihnachten"} auch offen?
     - [Heiligabend]{"entity": "holiday", "value": "Heiligabend"} offen?
+    - Guten Tag, [Heiligabend]{"entity": "holiday", "value": "Heiligabend"} offen?
+    - Hallo, [Heiligabend]{"entity": "holiday", "value": "Heiligabend"} offen?
     - Haben Sie an [Weihnachten]{"entity": "holiday", "role": "day"} offen?
+    - Guten Tag, Haben Sie an [Weihnachten]{"entity": "holiday", "role": "day"} offen?
+    - Hallo, Haben Sie an [Weihnachten]{"entity": "holiday", "role": "day"} offen?
     - Haben Sie an [Heiligabend]{"entity": "holiday", "role": "day"} offen?
+    - Guten Tag, Haben Sie an [Heiligabend]{"entity": "holiday", "role": "day"} offen?
     - Haben Sie an [Weihnachten]{"entity": "holiday", "role": "day"} geöffnet?
     - Haben Sie an [Heiligabend]{"entity": "holiday", "role": "day"} geöffnet?
     - Haben Sie in den [Weihnachtsferien]{"entity": "holiday", "role": "span"} offen?
