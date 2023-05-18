@@ -133,7 +133,7 @@ nlu:
     - Öffnungszeiten?
     - Wann habt ihr offen?
     - Wann ist das museum geöffnet?
-    - [Weihnachten]{"entity": "holiday", "role": day} auch offen?
+    - [Weihnachten]{"entity": "holiday", "value": "weihnachten"} auch offen?
     - [Heiligabend]{"entity": "holiday", "value": "Heiligabend"} offen?
     - Haben Sie an [Weihnachten]{"entity": "holiday", "role": "day"} offen?
     - Haben Sie an [Heiligabend]{"entity": "holiday", "role": "day"} offen?
