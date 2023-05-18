@@ -29,9 +29,9 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: wenn nach Zeiten gefragt wird BASIS
-  steps:
-  - intent: zeiten
-  - action: utter_zeiten
+# - story: wenn nach Zeiten gefragt wird BASIS
+#   steps:
+#   - intent: zeiten
+#   - action: utter_zeiten
 
 # TODO: preis story
