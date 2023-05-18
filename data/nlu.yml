@@ -3,25 +3,36 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - Hallo du
-    - Guten Morgen
-    - Guten Tag
-    - Guten Abend
-    - Grüß Gott
-    - Grüß dich
-    - Grüß Sie
-    - Grüß euch
-    - Grüß dich Gott
-    - Grüß Gott, Servus
-    - Grüß Gott, Grüß dich
-    - Grüß Gott, Grüß Sie
-    - Grüß Gott, Grüß euch
-    - grüße
-    - was geht?
-    - Hallo Meister
+  - Guten Tag
+  - Hallo
+  - Grüß Gott!
+  - Guten Morgen!
+  - Schönen guten Tag!
+  - Guten Tag allerseits
+  - Herzlich willkommen!
+  - Einen schönen Tag!
+  - Guten Tag, wie geht es Ihnen?
+  - Seien Sie herzlich gegrüßt
+  - Guten Tag, wie kann ich Ihnen helfen?
+  - Schön, Sie zu sehen
+  - Freut mich, Ihnen guten Tag zu sagen!
+  - Ich wünsche Ihnen einen angenehmen Tag
+  - Guten Tag, wie steht es um Ihr Wohlbefinden?
+  - Ich hoffe, Sie haben einen großartigen Tag!
+  - Einen wundervollen Tag wünsche ich Ihnen!
+  - Möge Ihr Tag erfüllt sein von Freude und Erfolg
+  - Guten Tag, ich hoffe, Sie haben gut geschlafen
+  - Guten Tag, es ist schön, Sie hier zu haben
+  - Ich begrüße Sie herzlich und wünsche Ihnen einen guten Tag!
+  - Guten Tag, ich hoffe, Sie genießen den heutigen Tag
+  - Guten Tag, ich wünsche Ihnen einen gelungenen Start in den Tag
+  - Hallo und einen sonnigen Tag wünsche ich Ihnen!
+  - Guten Tag, mögen Ihre Vorhaben erfolgreich sein
+  - Schönen guten Tag, ich hoffe, Ihnen geht es gut
+  - Guten Tag, ich hoffe, Sie haben eine angenehme Zeit hier!
+  - Einen schönen guten Tag wünsche ich Ihnen von Herzen
+  - Guten Tag, ich hoffe, Sie haben einen schönen Tag vor sich
+  - Herzlich willkommen und einen wundervollen Tag wünsche ich Ihnen
 
 - intent: goodbye
   examples: |
@@ -122,8 +133,232 @@ nlu:
     - Öffnungszeiten?
     - Wann habt ihr offen?
     - Wann ist das museum geöffnet?
-    - Weihnachten auch offen?
-    - Silvester offen?
-    - Gönn Öffnungszeiten!
+    - [Weihnachten]{"entity": "holiday", "role": day} auch offen?
+    - [Heiligabend]{"entity": "holiday", "value": "Heiligabend"} offen?
+    - Haben Sie an [Weihnachten]{"entity": "holiday", "role": "day"} offen?
+    - Haben Sie an [Heiligabend]{"entity": "holiday", "role": "day"} offen?
+    - Haben Sie an [Weihnachten]{"entity": "holiday", "role": "day"} geöffnet?
+    - Haben Sie an [Heiligabend]{"entity": "holiday", "role": "day"} geöffnet?
+    - Haben Sie in den [Weihnachtsferien]{"entity": "holiday", "role": "span"} offen?
+    - Ist während der [Weihnachtsurlaubszeit]{"entity": "holiday", "role": "span"} offen?
+    - [Silvester]{"entity": "holiday", "role": "day"} offen?
+    - [Neujahr]{"entity": "holiday", "role": "day"} offen?
+    - Haben Sie an [Silvester]{"entity": "holiday", "role": "day"} offen?
+    - Haben Sie in der [Silvesterzeit]{"entity": "holiday", "role": "span"} offen?
+    - Haben Sie an [Neujahr]{"entity": "holiday", "role": "day"} offen?
+    - Haben Sie an [Silvester]{"entity": "holiday", "role": "day"} geöffnet?
+    - Haben Sie an [Neujahr]{"entity": "holiday", "role": "day"} geöffnet?
     - Offen?
     - Zu?
+    - Guten Tag, haben Sie [heute]{"entity": "time", "role": "today"} offen?
+    - Guten Tag, haben Sie [heute]{"entity": "time", "role": "today"} geöffnet?
+    - Hallo, kann ich [heute]{"entity": "time", "role": "today"} vorbei kommen? 
+    - Grüße, [heute]{"entity": "time", "role": "today"} offen?
+    - Meister, [heute]{"entity": "time", "role": "today"} offen?
+    - Hallo, [morgen]{"entity": "time", "role": "tomorrow"} auch offen?
+    - Hallo, [morgen]{"entity": "time", "role": "tomorrow"} auch geöffnet?
+    - [Ab wann]{"entity": "time", "value": "Ab", "role": "from"} ist geöffnet?
+    - [Bis wann]{"entity": "time", "value": "Bis", "role": "until"} ist geöffnet?
+    - [Bis wann]{"entity": "time", "value": "Bis", "role": "until"} ist offen?
+
+
+- intent: preise
+  examples: |
+    - Wie hoch ist der Eintrittspreis für das Museum?
+    - Welcher Betrag wird für den Museumseintritt verlangt?
+    - Wie viel muss ich zahlen, um ins Museum zu gelangen?
+    - Was ist der Preis für den Eintritt in das Museum?
+    - Welche Kosten fallen für den Zutritt zum Museum an?
+    - Kannst du mir sagen, wie teuer der Eintritt ins Museum ist?
+    - Gibt es eine Gebühr für den Besuch des Museums?
+    - Was ist der Tarif für den Eintritt ins Museum?
+    - Wie viel Geld muss ich ausgeben, um ins Museum zu kommen?
+    - Welcher Eintrittspreis wird für das Museum erhoben?
+    - Mit welchen Kosten muss ich rechnen, wenn ich das Museum besuchen möchte?
+    - Was ist der Eintrittspreis, um ins Museum zu gelangen?
+    - Wie viel kostet der Einlass in das Museum?
+    - Welche Gebühr muss ich entrichten, um das Museum zu betreten?
+    - Kannst du mir sagen, wie viel der Eintritt ins Museum kostet?
+    - Welchen Betrag muss ich bezahlen, um das Museum zu besichtigen?
+    - Was verlangt das Museum als Eintrittsgebühr?
+    - Wie hoch sind die Eintrittskosten für das Museum?
+    - Welche finanzielle Belastung entsteht mir, wenn ich das Museum besuchen möchte?
+    - Wie teuer ist der Zutritt zum Museum?
+    - Mit welchen Kosten muss ich rechnen, um das Museum betreten zu können?
+    - Was sind die Kosten für den Zutritt zum Museum?
+    - Welche Eintrittsgebühr wird für das Museum verlangt?
+    - Wie viel muss ich bezahlen, um Zutritt zum Museum zu erhalten?
+    - Welcher Preis wird für den Eintritt ins Museum berechnet?
+    - Mit welchem Eintrittspreis muss ich rechnen, um das Museum zu besuchen?
+    - Was kostet der Zugang zum Museum?
+    - Wie hoch ist der Eintrittspreis für den Museumsbesuch?
+    - Welche Kosten entstehen mir, wenn ich das Museum betreten möchte?
+    - Kannst du mir sagen, wie viel ich zahlen muss, um das Museum zu besichtigen?
+  
+- intent: anreise
+  examples: |
+    - Wie gelange ich zum Museum?
+    - Wie finde ich den Weg zum Museum?
+    - Welche Route führt zum Museum?
+    - Wie erreiche ich das Museum?
+    - Wie komme ich am besten zum Museum?
+    - Welche Verkehrsmittel sollte ich nutzen, um zum Museum zu gelangen?
+    - Wie kann ich das Museum am einfachsten erreichen?
+    - Gibt es eine empfohlene Route zum Museum?
+    - Welche Transportmöglichkeiten stehen mir zur Verfügung, um zum Museum zu kommen?
+    - Was ist die beste Art und Weise, um zum Museum zu gelangen?
+    - Kannst du mir den Weg zum Museum erklären?
+    - Wie finde ich den richtigen Weg zum Museum?
+    - Welche Verkehrsanbindung gibt es zum Museum?
+    - Wie sieht die Anfahrtsroute zum Museum aus?
+    - Welche Optionen habe ich, um das Museum zu erreichen?
+    - Wie komme ich von meinem aktuellen Standort zum Museum?
+    - Gibt es öffentliche Verkehrsmittel, die mich zum Museum bringen?
+    - Wie weit ist es von hier zum Museum und wie kann ich dorthin gelangen?
+    - Welche Wege führen zum Museum?
+    - Kannst du mir eine Wegbeschreibung zum Museum geben?
+    - Wie kann ich das Museum am schnellsten erreichen?
+    - Welche Transportmittel sind die bequemsten, um zum Museum zu gelangen?
+    - Was ist die schnellste Route zum Museum?
+    - Gibt es eine direkte Verbindung zum Museum?
+    - Wie finde ich den nächstgelegenen Eingang zum Museum?
+    - Welche Straßen oder Wege muss ich nehmen, um zum Museum zu gelangen?
+    - Kannst du mir sagen, welche Buslinie ich nehmen soll, um zum Museum zu gelangen?
+    - Gibt es Parkmöglichkeiten in der Nähe des Museums?
+    - Wie weit ist es zu Fuß vom Bahnhof zum Museum?
+    - Welche Orientierungspunkte sollte ich beachten, um zum Museum zu gelangen?
+
+- intent: abteilungen
+  examples: |
+    - Welche Abteilungen gibt es im Museum?
+    - Welche Themen werden im Museum abgedeckt?
+    - Welche Schwerpunkte behandelt das Museum?
+    - In welchen Bereichen setzt sich das Museum thematisch auseinander?
+    - Über welche Themen informiert das Museum?
+    - Welche thematischen Schwerpunkte gibt es im Museum?
+    - Was sind die Hauptthemen, die im Museum behandelt werden?
+    - Welche Themenbereiche werden im Museum abgedeckt?
+    - Über welche Aspekte wird im Museum berichtet?
+    - Welche Themen werden im Rahmen der Museumsausstellung behandelt?
+    - Welche Inhalte werden im Museum thematisiert?
+    - Kannst du mir sagen, welche Themen im Museum präsentiert werden?
+    - In welchen Bereichen des Museums werden spezifische Themen behandelt?
+    - Welche Themenfelder umfasst die Ausstellung im Museum?
+    - Was sind die zentralen Themen, die im Museum behandelt werden?
+    - Welche Schwerpunktthemen werden im Museum beleuchtet?
+    - Kannst du mir eine Übersicht über die behandelten Themen im Museum geben?
+    - Über welche Sachverhalte erfahre ich etwas im Museum?
+    - Welche Themen stehen im Fokus der museumspädagogischen Arbeit?
+    - Was sind die zentralen Inhalte der Museumssammlung?
+    - Welche Themen werden in den einzelnen Ausstellungsbereichen des Museums behandelt?
+    - Gibt es spezifische Themenausstellungen im Museum?
+    - Welche Aspekte der Geschichte werden im Museum thematisiert?
+    - Was sind die Kernthemen, die im Museum präsentiert werden?
+    - Welche spezifischen Themenbereiche werden im Museum angesprochen?
+    - In welchen Kontexten werden im Museum Informationen vermittelt?
+    - Welche historischen Ereignisse und Entwicklungen werden im Museum dargestellt?
+    - Welche relevanten Themen werden im Museum aufgegriffen?
+    - Was sind die hauptsächlichen Inhalte der Ausstellung im Museum?
+    - Welche gesellschaftlichen Aspekte werden im Museum behandelt?
+    - Gibt es bestimmte Themenschwerpunkte, auf die sich das Museum konzentriert?
+
+- intent: kindgerecht
+  examples: |
+    - Erfüllt das Museum die Bedürfnisse von Kindern?
+    - Wird das Museum den Anforderungen von Kindern gerecht?
+    - Ist das Museum für Kinder geeignet?
+    - Bietet das Museum kindgerechte Angebote?
+    - Ist das Museum auf die Bedürfnisse von Kindern abgestimmt?
+    - Gibt es im Museum Aktivitäten, die speziell für Kinder geeignet sind?
+    - Bietet das Museum kinderfreundliche Ausstellungen?
+    - Wurden bei der Gestaltung des Museums die Bedürfnisse von Kindern berücksichtigt?
+    - Ist das Museum für junge Besucher geeignet?
+    - Wird im Museum eine kinderfreundliche Umgebung geschaffen?
+    - Gibt es im Museum Veranstaltungen, die speziell für Kinder konzipiert sind?
+    - Erfahren Kinder im Museum eine angemessene Betreuung?
+    - Bietet das Museum interaktive Möglichkeiten für Kinder?
+    - Gibt es im Museum etwas, das Kinder anspricht?
+    - Ist das Museum auf die Lernbedürfnisse von Kindern ausgerichtet?
+    - Gibt es im Museum Bildungsangebote für Kinder?
+    - Werden Kinder im Museum aktiv einbezogen?
+    - Bietet das Museum altersgerechte Inhalte für Kinder?
+    - Erfahren Kinder im Museum eine ansprechende Präsentation der Ausstellungsstücke?
+    - Wird im Museum auf kindgerechte Sprache und Erklärungen geachtet?
+    - Bietet das Museum eine angemessene Sicherheit für Kinder?
+    - Ist das Museum für Kinder gut zugänglich?
+    - Wurde das Museum mit Blick auf die Bedürfnisse von Kindern gestaltet?
+    - Bietet das Museum Möglichkeiten zur kreativen Entfaltung für Kinder?
+    - Wird im Museum auf eine kinderfreundliche Gestaltung geachtet?
+    - Gibt es im Museum Räumlichkeiten, die speziell für Kinder konzipiert sind?
+    - Erfahren Kinder im Museum eine altersgerechte Auseinandersetzung mit den Ausstellungsinhalten?
+    - Bietet das Museum Spiel- und Lernmöglichkeiten für Kinder?
+    - Wird im Museum auf eine kinderfreundliche Atmosphäre geachtet?
+    - Gibt es im Museum Möglichkeiten zur aktiven Teilnahme von Kindern?
+
+- intent: barrierefrei
+  examples: |
+    - Erfüllt das Museum die Anforderungen der Barrierefreiheit?
+    - Ist das Museum für Menschen mit Behinderungen zugänglich?
+    - Bietet das Museum barrierefreie Einrichtungen?
+    - Erfüllt das Museum die Standards für Barrierefreiheit?
+    - Ist das Museum für Rollstuhlfahrer geeignet?
+    - Gibt es im Museum barrierefreie Wege und Zugänge?
+    - Wurde das Museum mit Blick auf die Bedürfnisse von Menschen mit Behinderungen gestaltet?
+    - Erfüllt das Museum die gesetzlichen Vorgaben zur Barrierefreiheit?
+    - Bietet das Museum Hilfsmittel für Menschen mit Behinderungen?
+    - Ist das Museum für Menschen mit eingeschränkter Mobilität geeignet?
+    - Gibt es im Museum Aufzüge oder Rampen für einen barrierefreien Zugang?
+    - Erfahren Besucher mit Behinderungen eine angemessene Unterstützung im Museum?
+    - Bietet das Museum barrierefreie Toiletten?
+    - Ist das Museum für sehbehinderte oder blinde Menschen zugänglich?
+    - Gibt es im Museum taktil erfassbare Informationen für blinde oder sehbehinderte Besucher?
+    - Erfüllt das Museum die Bedürfnisse von Menschen mit Hörbehinderungen?
+    - Bietet das Museum barrierefreie Informationen in Gebärdensprache?
+    - Ist das Museum mit einem barrierefreien Parkplatz ausgestattet?
+    - Gibt es im Museum barrierefreie Sitzgelegenheiten?
+    - Erfüllt das Museum die Anforderungen für eine barrierefreie Beschilderung?
+    - Bietet das Museum Hilfsmittel für Menschen mit kognitiven Beeinträchtigungen?
+    - Ist das Museum für Besucher mit Gehhilfen geeignet?
+    - Gibt es im Museum barrierefreie Informationen in Leichter Sprache?
+    - Erfüllen die Ausstellungsbereiche des Museums die Standards für Barrierefreiheit?
+    - Bietet das Museum barrierefreie Informationen in verschiedenen Sprachen an?
+    - Ist das Museum für Menschen mit Autismus geeignet?
+    - Gibt es im Museum ausreichend Platz für Rollstuhlfahrer und Gehhilfen?
+    - Erfahren Besucher mit körperlichen Einschränkungen eine angemessene Unterstützung im Museum?
+    - Bietet das Museum barrierefreie Audioführungen?
+    - Ist das Museum für Besucher mit unterschiedlichen Behinderungsarten zugänglich?
+
+
+- intent: barrierefrei
+  examples: |
+    - Welche Angebote gibt es in der Cafeteria des Museums?
+    - Was kann man in der Cafeteria des Museums genießen?
+    - Welche Speisen und Getränke werden in der Cafeteria des Museums angeboten?
+    - Was erwartet Besucher in der Cafeteria des Museums?
+    - Welche Auswahl gibt es in der Cafeteria des Museums?
+    - Was sind die kulinarischen Highlights der Cafeteria im Museum?
+    - Welche gastronomischen Möglichkeiten bietet die Cafeteria im Museum?
+    - Was für kulinarische Genüsse kann man in der Cafeteria des Museums erwarten?
+    - Welche Gerichte stehen in der Cafeteria des Museums zur Auswahl?
+    - Was für gastronomische Optionen stehen den Besuchern in der Cafeteria des Museums zur Verfügung?
+    - Zu welchen Zeiten ist die Cafeteria des Museums geöffnet?
+    - Wie sind die Öffnungszeiten der Cafeteria im Museum?
+    - Wann kann man die Cafeteria im Museum besuchen?
+    - Welche Uhrzeiten gelten für die Öffnung der Cafeteria im Museum?
+    - Zu welchen Tageszeiten hat die Cafeteria des Museums geöffnet?
+    - Wann ist die Cafeteria im Museum für Besucher zugänglich?
+    - Welche Öffnungszeiten gelten für die Cafeteria des Museums?
+    - In welchem Zeitraum kann man die Cafeteria im Museum aufsuchen?
+    - Zu welchen Stunden ist die Cafeteria des Museums geöffnet?
+    - Wann darf man die Cafeteria im Museum betreten?
+    - Hat das Museum eine Cafeteria?
+    - Gibt es im Museum eine Cafeteria?
+    - Was bietet die Cafeteria des Museums?
+    - Was gibt es alles in der Cafeteria des Museums?
+    - Was für Speisen und Getränke gibt es in der Cafeteria des Museums?
+    - Was für kulinarische Angebote gibt es in der Cafeteria des Museums?
+    - Was für gastronomische Angebote gibt es in der Cafeteria des Museums?
+    - Wann hat die Cafeteria offen?
+    - Zu welchen Zeiten ist die Cafeteria geöffnet?
+    - Welche Öffnungszeiten hat die Cafeteria?
+    - Wann ist die Cafeteria geöffnet?
