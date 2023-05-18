@@ -47,4 +47,8 @@ rules:
   - intent: cafeteria
   - action: utter_cafeteria
 
+- rule: kontakt
+  steps:
+  - intent: kontakt
+  - action: utter_kontakt
 

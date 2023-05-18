@@ -81,6 +81,10 @@ responses:
   utter_fuehrungen_information:
   - text: fuehrungen_information
 
+  utter_fuehrung_buchen:
+  - text: "Hier kannst du deine Führungen durch das Museum buchen:"
+    link: "https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/"
+
   utter_fuehrungen_ansprechpartner:
   - text: fuehrungen_ansprechpartner
 
@@ -95,6 +99,9 @@ responses:
 
   utter_museumsshop:
   - text: museumsshop
+  
+  utter_kontakt:
+  - text: kontakt
 
 
 session_config:
