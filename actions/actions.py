@@ -126,7 +126,7 @@ class ActionGetPrices(Action):
         dispather.utter_message(text=msg)
 
 
-    def scrape_prices():
+    def scrape_prices(self):
         url = "https://www.kriminalmuseum.eu/besucherplaner/preise/"
         html = requests.get(url).text
 
@@ -143,7 +143,7 @@ class ActionGetPrices(Action):
 
         return data
     
-    def prices_to_string(prices):
+    def prices_to_string(self, prices):
         price_string = ""
         for price in prices:
             price_string += price[0] + ": " + price[1] + "\n"
