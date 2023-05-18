@@ -539,3 +539,40 @@ nlu:
     - Hat das Museum einen eigenen Verkaufsraum?
     - Kann man im Museum Produkte erwerben?
     - Gibt es einen Laden, wo man Kunstwerke und Bücher kaufen kann?
+
+
+- intent: kontakt
+  examples: |
+      - Wie ist eure Telefonnummer?
+      - Wie ist die Telefonnummer vom Museum?
+      - An welche E-Mail-Adresse kann ich schreiben?
+      - Wie ist die Mailadresse vom Museum?
+      - Wie kann ich das Museum kontaktieren?
+      - Kann ich mit einem Mitarbeiter sprechen?
+      - Kann ich mit einem Mitarbeiter chatten?
+      - Ich möchte mit einem Mitarbeiter sprechen.
+      - Wie kann ich mit einem echten Menschen sprechen?
+      - Wie kann ich euch kontaktieren?
+      - Gibt es eine Telefonnummer unter der ich sie erreichen kann?
+      - Wie kann ich einen Besuch im Museum vereinbaren?
+      - Wie kann ich einen Mitarbeiter des Museums kontaktieren?
+      - Über wen kann ich einen Vortrag im Museum buchen?
+      - Wie kann ich einen Schulbesuch im Museum vereinbaren?
+      - Wie kann ich den Kontakt zum Museum herstellen?
+      - Wie kann ich mit dem Museum in Kontakt treten?
+      - Wie kann ich den Kontakt zum Museum aufnehmen?
+      - Wie kann ich den Kontakt zum Museum herstellen, um mehr über die Ausstellung zu erfahren?
+      - Wie kann ich den Kontakt zum Museum aufnehmen, um mehr über die Öffnungszeiten zu erfahren?
+      - Wie kann ich den Kontakt zum Museum aufnehmen, um mehr über die Veranstaltungen zu erfahren?
+      - Wie kann ich den Kontakt zum Museum aufnehmen, um mehr über die Adresse und den Standort zu erfahren?
+      - Wie kann ich den Kontakt zum Museum aufnehmen, um mehr über die Parkmöglichkeiten zu erfahren?
+      - Wie kann ich den Kontakt zum Museum aufnehmen, um mehr über Veranstaltungen für Kinder zu erfahren?
+      - Welche Telefonnummer kann ich anrufen, um einen Mitarbeiter zu erreichen?
+      - Wie kann ich einen Mitarbeiter anrufen?
+      - Unter welcher Nummer kann ich einen Mitarbeiter erreichen?
+      - Wie kann ich einen Mitarbeiter kontaktieren?
+      - Welche Telefonnummer kann ich verwenden, um einen Mitarbeiter zu erreichen?
+      - Wie kann ich einen Mitarbeiter kontaktieren?
+      - Wie ist die E-Mail des Museums?
+      - Habe ich die Möglichkeit mit einem Mitarbeiter zu sprechen?
+      - Gibt es die Möglichkeit mit einem Mitarbeiter zu sprechen?
