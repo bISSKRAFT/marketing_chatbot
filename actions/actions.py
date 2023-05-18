@@ -25,7 +25,7 @@
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
-from typing import Text
+from typing import Text, Dict, Any, List
 from datetime import datetime
 from bs4 import BeautifulSoup
 import re
@@ -63,7 +63,7 @@ class ActionGetOpeningTimes(Action):
             return match.group(2), match.group(3)
             
     
-    def run(self, dispather: CollectingDispatcher, tracker: Tracker):
+    def run(self, dispather: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         #TODO: tracker gives chat history
         url = "https://www.kriminalmuseum.eu/besucherplaner/oeffnungszeiten/"
         html = requests.get(url).text
@@ -114,11 +114,10 @@ class ActionGetOpeningTimes(Action):
 
 
 class ActionGetPrices(Action):
-
     def name(self) -> Text:
         return "action_get_price"
 
-    def run(self, dispather: CollectingDispatcher, tracker: Tracker):
+    def run(self, dispather: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         prices = self.scrape_prices()
         msg = self.prices_to_string(prices)
         dispather.utter_message(text=msg)
