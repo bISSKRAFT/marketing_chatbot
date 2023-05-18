@@ -1,19 +1,38 @@
 version: "3.1"
 
 intents:
+  - greet
   - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
   - bot_challenge
   - zeiten
   - preise
   - anreise
+  - parken
   - abteilungen
   - kindgerecht
   - barrierefrei
-  - cafeteria
+  - cafeteria_angebot
+  - cafeteria_information
+  - cafeteria_ort
+  - cafeteria_oeffnungszeiten
+  - fuehrungen_information
+  - fuehrungen_ansprechpartner
+  - fuehrungen_sprachen
+  - sonderausstellung_information
+  - sonderausstellung_archiv
+  - museumsshop
+
 
 responses:
   utter_greet:
   - text: "Hey! How are you?"
+  
+  utter_goodbye:
+  - text: "Bye"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -24,9 +43,6 @@ responses:
 
   utter_happy:
   - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
 
   utter_iamabot:
   - text: "Ja, ich bin ein Bot und wurde mit Rasa entwickelt." 
@@ -40,6 +56,9 @@ responses:
   utter_anreise:
   - text: anreise
 
+  utter_parken:
+  - text: parken
+
   utter_abteilungen:
   - text: abteilungen
 
@@ -49,8 +68,36 @@ responses:
   utter_barrierefrei:
   - text: barrierefrei
 
-  utter_cafeteria:
-  - text: cafeteria
+  utter_cafeteria_angebot:
+  - text: cafeteria_angebot
+
+  utter_cafeteria_information:
+  - text: cafeteria_information
+
+  utter_cafeteria_ort:
+  - text: cafeteria_ort
+
+  utter_cafeteria_oeffnungszeiten:
+  - text: cafeteria_oeffnungszeiten
+
+  utter_fuehrungen_information:
+  - text: fuehrungen_information
+
+  utter_fuehrungen_ansprechpartner:
+  - text: fuehrungen_ansprechpartner
+
+  utter_fuehrungen_sprachen:
+  - text: fuehrungen_sprachen
+
+  utter_sonderausstellung_information:
+  - text: sonderausstellung_information
+
+  utter_sonderausstellung_archiv:
+  - text: sonderausstellung_archiv
+
+  utter_museumsshop:
+  - text: museumsshop
+
 
 session_config:
   session_expiration_time: 60
