@@ -29,12 +29,9 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: ask if bot or not
+- story: wenn nach Zeiten gefragt wird BASIS
   steps:
-  - intent: is_bot
-  - action: utter_iamabot
+  - intent: zeiten
+  - action: utter_zeiten
 
-# - story: ask zeiten
-#   steps:
-#   - intent: zeiten
-#   - action: utter_zeiten
+# TODO: preis story
