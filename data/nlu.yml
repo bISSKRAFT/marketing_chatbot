@@ -329,7 +329,7 @@ nlu:
     - Ist das Museum für Besucher mit unterschiedlichen Behinderungsarten zugänglich?
 
 
-- intent: barrierefrei
+- intent: cafeteria
   examples: |
     - Welche Angebote gibt es in der Cafeteria des Museums?
     - Was kann man in der Cafeteria des Museums genießen?
