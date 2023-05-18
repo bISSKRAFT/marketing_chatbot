@@ -261,3 +261,69 @@ nlu:
     - Was sind die hauptsächlichen Inhalte der Ausstellung im Museum?
     - Welche gesellschaftlichen Aspekte werden im Museum behandelt?
     - Gibt es bestimmte Themenschwerpunkte, auf die sich das Museum konzentriert?
+
+- intent: kindgerecht
+  examples: |
+    - Erfüllt das Museum die Bedürfnisse von Kindern?
+    - Wird das Museum den Anforderungen von Kindern gerecht?
+    - Ist das Museum für Kinder geeignet?
+    - Bietet das Museum kindgerechte Angebote?
+    - Ist das Museum auf die Bedürfnisse von Kindern abgestimmt?
+    - Gibt es im Museum Aktivitäten, die speziell für Kinder geeignet sind?
+    - Bietet das Museum kinderfreundliche Ausstellungen?
+    - Wurden bei der Gestaltung des Museums die Bedürfnisse von Kindern berücksichtigt?
+    - Ist das Museum für junge Besucher geeignet?
+    - Wird im Museum eine kinderfreundliche Umgebung geschaffen?
+    - Gibt es im Museum Veranstaltungen, die speziell für Kinder konzipiert sind?
+    - Erfahren Kinder im Museum eine angemessene Betreuung?
+    - Bietet das Museum interaktive Möglichkeiten für Kinder?
+    - Gibt es im Museum etwas, das Kinder anspricht?
+    - Ist das Museum auf die Lernbedürfnisse von Kindern ausgerichtet?
+    - Gibt es im Museum Bildungsangebote für Kinder?
+    - Werden Kinder im Museum aktiv einbezogen?
+    - Bietet das Museum altersgerechte Inhalte für Kinder?
+    - Erfahren Kinder im Museum eine ansprechende Präsentation der Ausstellungsstücke?
+    - Wird im Museum auf kindgerechte Sprache und Erklärungen geachtet?
+    - Bietet das Museum eine angemessene Sicherheit für Kinder?
+    - Ist das Museum für Kinder gut zugänglich?
+    - Wurde das Museum mit Blick auf die Bedürfnisse von Kindern gestaltet?
+    - Bietet das Museum Möglichkeiten zur kreativen Entfaltung für Kinder?
+    - Wird im Museum auf eine kinderfreundliche Gestaltung geachtet?
+    - Gibt es im Museum Räumlichkeiten, die speziell für Kinder konzipiert sind?
+    - Erfahren Kinder im Museum eine altersgerechte Auseinandersetzung mit den Ausstellungsinhalten?
+    - Bietet das Museum Spiel- und Lernmöglichkeiten für Kinder?
+    - Wird im Museum auf eine kinderfreundliche Atmosphäre geachtet?
+    - Gibt es im Museum Möglichkeiten zur aktiven Teilnahme von Kindern?
+
+- intent: barrierefrei
+  examples: |
+    - Erfüllt das Museum die Anforderungen der Barrierefreiheit?
+    - Ist das Museum für Menschen mit Behinderungen zugänglich?
+    - Bietet das Museum barrierefreie Einrichtungen?
+    - Erfüllt das Museum die Standards für Barrierefreiheit?
+    - Ist das Museum für Rollstuhlfahrer geeignet?
+    - Gibt es im Museum barrierefreie Wege und Zugänge?
+    - Wurde das Museum mit Blick auf die Bedürfnisse von Menschen mit Behinderungen gestaltet?
+    - Erfüllt das Museum die gesetzlichen Vorgaben zur Barrierefreiheit?
+    - Bietet das Museum Hilfsmittel für Menschen mit Behinderungen?
+    - Ist das Museum für Menschen mit eingeschränkter Mobilität geeignet?
+    - Gibt es im Museum Aufzüge oder Rampen für einen barrierefreien Zugang?
+    - Erfahren Besucher mit Behinderungen eine angemessene Unterstützung im Museum?
+    - Bietet das Museum barrierefreie Toiletten?
+    - Ist das Museum für sehbehinderte oder blinde Menschen zugänglich?
+    - Gibt es im Museum taktil erfassbare Informationen für blinde oder sehbehinderte Besucher?
+    - Erfüllt das Museum die Bedürfnisse von Menschen mit Hörbehinderungen?
+    - Bietet das Museum barrierefreie Informationen in Gebärdensprache?
+    - Ist das Museum mit einem barrierefreien Parkplatz ausgestattet?
+    - Gibt es im Museum barrierefreie Sitzgelegenheiten?
+    - Erfüllt das Museum die Anforderungen für eine barrierefreie Beschilderung?
+    - Bietet das Museum Hilfsmittel für Menschen mit kognitiven Beeinträchtigungen?
+    - Ist das Museum für Besucher mit Gehhilfen geeignet?
+    - Gibt es im Museum barrierefreie Informationen in Leichter Sprache?
+    - Erfüllen die Ausstellungsbereiche des Museums die Standards für Barrierefreiheit?
+    - Bietet das Museum barrierefreie Informationen in verschiedenen Sprachen an?
+    - Ist das Museum für Menschen mit Autismus geeignet?
+    - Gibt es im Museum ausreichend Platz für Rollstuhlfahrer und Gehhilfen?
+    - Erfahren Besucher mit körperlichen Einschränkungen eine angemessene Unterstützung im Museum?
+    - Bietet das Museum barrierefreie Audioführungen?
+    - Ist das Museum für Besucher mit unterschiedlichen Behinderungsarten zugänglich?
