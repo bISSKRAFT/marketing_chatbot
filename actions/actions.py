@@ -78,8 +78,6 @@ class ActionGetOpeningTimes(Action):
         if current_entity:
             #TODO: extract opening times for holiday
             pass
-
-<<<<<<< HEAD
         if crt_month in range(4,11):
             pattern = r"(April..).*?(\d{2}:\d{2}) – (\d{2}:\d{2})"
             start, end = self._get_matches(pattern, soup, crt_month, crt_day)
@@ -113,12 +111,6 @@ class ActionGetOpeningTimes(Action):
             msg = f"Im Januar haben wir ab dem 9. von {start} bis {end} geöffnet."
         dispather.utter_message(text=msg)
         return []
-=======
-        if not current_entity:
-            # TODO: was wenn kein "holiday" erkannt wurde?
-            msg = "Es tut mir leid, das habe ich nicht richtig verstanden. Wenn du etwas über die Öffnungszeiten wissen möchtest, dann frage einfach nach Öffnungszeiten"
-            dispather.utter_message(text=msg)
-        pass
 
 
 class ActionGetPrices(Action):
@@ -153,5 +145,3 @@ class ActionGetPrices(Action):
         price_string = ""
         for price in prices:
             price_string += price[0] + ": " + price[1] + "\n"
-
->>>>>>> 28f4cc0ce214e5f7a5f714ba6da16a18f8ddae59
