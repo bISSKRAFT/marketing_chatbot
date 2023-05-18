@@ -25,11 +25,8 @@
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
-<<<<<<< HEAD
-from typing import Text, Dict, Any
-=======
+
 from typing import Text, Dict, Any, List
->>>>>>> 9911abfd6947244f49472f99c6871da9b2d77b4d
 from datetime import datetime
 from bs4 import BeautifulSoup
 import re
@@ -65,16 +62,12 @@ class ActionGetOpeningTimes(Action):
                 if matchNum == 2:
                     return match.group(2), match.group(3)
             return match.group(2), match.group(3)
-            
-    
-<<<<<<< HEAD
+
     def run(self, 
             dispather: CollectingDispatcher, 
             tracker: Tracker,
             domain: Dict[Text, Any]):
-=======
-    def run(self, dispather: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
->>>>>>> 9911abfd6947244f49472f99c6871da9b2d77b4d
+
         #TODO: tracker gives chat history
         url = "https://www.kriminalmuseum.eu/besucherplaner/oeffnungszeiten/"
         html = requests.get(url).text
