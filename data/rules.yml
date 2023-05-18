@@ -42,11 +42,6 @@ rules:
   - intent: barrierefrei
   - action: utter_barrierefrei
 
-- rule: cafeteria
-  steps:
-  - intent: cafeteria
-  - action: utter_cafeteria
-
 - rule: kontakt
   steps:
   - intent: kontakt

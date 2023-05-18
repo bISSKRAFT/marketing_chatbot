@@ -582,7 +582,7 @@ nlu:
       - Habe ich die Möglichkeit mit einem Mitarbeiter zu sprechen?
       - Gibt es die Möglichkeit mit einem Mitarbeiter zu sprechen?
 
-- intent: Kontaktmöglichkeiten
+- intent: kontaktmoeglichkeiten
   examples: |
     - Wie ist eure Telefonnummer?
     - Wie ist die Telefonnummer vom Museum?
