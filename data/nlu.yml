@@ -119,15 +119,6 @@ nlu:
     - ich habe keine lust
     - nerv nicht
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-    - bist du ein bot?
-    - bist du eine maschine?
-
 - intent: zeiten
   examples: |
     - Öffnungszeiten?
