@@ -25,7 +25,7 @@
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
-from typing import Text
+from typing import Text, Dict, Any
 from datetime import datetime
 from bs4 import BeautifulSoup
 import re
@@ -63,7 +63,10 @@ class ActionGetOpeningTimes(Action):
             return match.group(2), match.group(3)
             
     
-    def run(self, dispather: CollectingDispatcher, tracker: Tracker):
+    def run(self, 
+            dispather: CollectingDispatcher, 
+            tracker: Tracker,
+            domain: Dict[Text, Any]):
         #TODO: tracker gives chat history
         url = "https://www.kriminalmuseum.eu/besucherplaner/oeffnungszeiten/"
         html = requests.get(url).text
@@ -103,7 +106,6 @@ class ActionGetOpeningTimes(Action):
                     msg = self._set_default(crt_day, crt_month, url)
             msg = f"Im Januar haben wir bis zum 8. von {start} bis {end} geöffnet."
         elif crt_month in range(1,4):
-            #TODO: january - march
             pattern = r"(Januar..).*?(\d{2}:\d{2}) – (\d{2}:\d{2})"
             start, end = self._get_matches(pattern, soup, crt_month, crt_day)
             if start == None or end == None:
