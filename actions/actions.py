@@ -40,4 +40,16 @@ class ActionGetOpeningTimes(Action):
     
     def run(self, dispather: CollectingDispatcher, tracker: Tracker):
         #TODO: tracker gives chat history
+        url = "https://www.kriminalmuseum.eu/besucherplaner/oeffnungszeiten/"
+        html = requests.get(url).text
+        soup = BeautifulSoup(html, "html.parser")
+        soup.find_all("div", class_="wpb_wrapper")[1].text.strip()
+        
+        #TODO: extract right opening times from soup with tracker information
+        current_entity = next(tracker.get_latest_entity_values("holiday"), None)
+
+        if not current_entity:
+            # TODO: was wenn kein "holiday" erkannt wurde?
+            msg = "Wenn du etwas über die Öffnungszeiten wissen möchtest, dann frage mich einfach nach Öffnungszeiten"
+            dispather.utter_message(text=msg)
         pass
