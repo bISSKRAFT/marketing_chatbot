@@ -7,13 +7,33 @@ intents:
   - deny
   - mood_great
   - mood_unhappy
-  - bot_challenge
+  - fuehrung_buchen
+  - sonderausstellung
   - zeiten
-  - is_bot 
+  - preise
+  - anreise
+  - parken
+  - abteilungen
+  - kindgerecht
+  - barrierefrei
+  - cafeteria_angebot
+  - cafeteria_information
+  - cafeteria_ort
+  - cafeteria_oeffnungszeiten
+  - fuehrungen_information
+  - fuehrungen_ansprechpartner
+  - fuehrungen_sprachen
+  - sonderausstellung_information
+  - sonderausstellung_archiv
+  - museumsshop
+
 
 responses:
   utter_greet:
   - text: "Hey! How are you?"
+  
+  utter_goodbye:
+  - text: "Bye"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -25,16 +45,69 @@ responses:
   utter_happy:
   - text: "Great, carry on!"
 
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "Ja, ich bin ein Bot und wurde mit Rasa entwickelt." 
-
   utter_zeiten:
-  - text: "Die HAUPTAUSSTELLUNG\nApril – Oktober 2023:\nMo. – So.: 10:00 – 18:00 Uhr\nNovember 2023:\nMo. – So. 13:00 – 16:00 Uhr\nDezember 2023 – 8. Januar 2024:\xa0\nMo. – So. 11:00 – 17:00 Uhr\n9. Januar\xa0 –\xa0 März 2024:\nMo. – So.: 13:00 – 16:00 Uhr\n\xa0\nSonderöffnungszeiten:\n24.12.2023 (Heilig Abend): 10:00 – 13:00 Uhr\n31.12.2023 (Silvester):\xa0 \xa0 \xa0 \xa010:00 – 13:00 Uhr\n\xa0\nDer letzte Einlass ist immer 45 Minuten vor Schließung.\n\xa0\nDie Cafeteria mit neuer Sonderausstellung in der Johanniterscheune\n…wird zu den selben Zeiten ab dem 30. April wieder geöffnet sein.\n\n\xa0\n\xa0\nDer letzte Einlass ist immer 45 Minuten vor Schließung.\nWir freuen uns auf Ihren Besuch!\n\n\n\n
-"
+  - text: "Die HAUPTAUSSTELLUNG\nApril – Oktober 2023:\nMo. – So.: 10:00 – 18:00 Uhr\nNovember 2023:\nMo. – So. 13:00 – 16:00 Uhr\nDezember 2023 – 8. Januar 2024:\xa0\nMo. – So. 11:00 – 17:00 Uhr\n9. Januar\xa0 –\xa0 März 2024:\nMo. – So.: 13:00 – 16:00 Uhr\n\xa0\nSonderöffnungszeiten:\n24.12.2023 (Heilig Abend): 10:00 – 13:00 Uhr\n31.12.2023 (Silvester):\xa0 \xa0 \xa0 \xa010:00 – 13:00 Uhr\n\xa0\nDer letzte Einlass ist immer 45 Minuten vor Schließung.\n\xa0\nDie Cafeteria mit neuer Sonderausstellung in der Johanniterscheune\n…wird zu den selben Zeiten ab dem 30. April wieder geöffnet sein.\n\n\xa0\n\xa0\nDer letzte Einlass ist immer 45 Minuten vor Schließung.\nWir freuen uns auf Ihren Besuch!\n\n\n\n"
+
+  utter_preise:
+  - text: preise
+
+  utter_anreise:
+  - text: anreise
+
+  utter_parken:
+  - text: parken
+
+  utter_abteilungen:
+  - text: abteilungen
+
+  utter_kindgerecht:
+  - text: kindgerecht
+
+  utter_barrierefrei:
+  - text: barrierefrei
+
+  utter_cafeteria_angebot:
+  - text: cafeteria_angebot
+
+  utter_cafeteria_information:
+  - text: cafeteria_information
+
+  utter_cafeteria_ort:
+  - text: cafeteria_ort
+
+  utter_cafeteria_oeffnungszeiten:
+  - text: cafeteria_oeffnungszeiten
+
+  utter_fuehrungen_information:
+  - text: fuehrungen_information
+
+  utter_fuehrung_buchen:
+  - text: "Hier kannst du deine Führungen durch das Museum buchen:"
+    link: "https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/"
+
+  utter_fuehrungen_ansprechpartner:
+  - text: fuehrungen_ansprechpartner
+
+  utter_fuehrungen_sprachen:
+  - text: fuehrungen_sprachen
+
+  utter_sonderausstellung_information:
+  - text: sonderausstellung_information
+
+  utter_sonderausstellung_archiv:
+  - text: sonderausstellung_archiv
+
+  utter_museumsshop:
+  - text: museumsshop
+  
+  utter_kontakt:
+  - text: kontakt
+
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+actions:
+- action_get_price
+- action_get_opening_times
