@@ -127,7 +127,6 @@ class ActionGetOpeningTimes(Action):
         dispather.utter_message(text=msg)
         return []
 
-
 class ActionGetPrices(Action):
     def name(self) -> Text:
         return "action_get_price"
@@ -158,4 +157,5 @@ class ActionGetPrices(Action):
     def prices_to_string(self, prices):
         price_string = ""
         for price in prices:
-            price_string += price[0] + ": " + price[1] + "\n"
+            price_string += price[0] + price[1] + "\n" + "-----------------------" + "\n"
+        return price_string
