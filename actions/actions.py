@@ -45,11 +45,20 @@ class ActionGetOpeningTimes(Action):
     def name(self) -> Text:
         return "action_get_opening_times"
     
+    def _crawl_opening_times(self, url: str) -> str:
+        html = requests.get(url).text
+        soup = BeautifulSoup(html, "html.parser")
+        extract_str = soup.find_all("div", class_="wpb_wrapper")[1].text.strip()
+        return extract_str
+    
     def _set_default(day: int, month: int, url: str) -> str:
         return f"Zu Heute, dem {day}.{month} wurden keine Öffnungszeiten gefunden. Sie könenne diese unter {url} finden."
     
     def _get_matches(self, pattern: str, text: str, month: int , day: int):
-        matches = re.finditer(pattern, text, re.MULTILINE)
+        print("pattern: ",pattern)
+        print("text: ",text)
+
+        matches = re.finditer(pattern=pattern, string=text, flags=re.MULTILINE)
 
         for matchNum, match in enumerate(matches, start=1):
             
@@ -72,7 +81,7 @@ class ActionGetOpeningTimes(Action):
         url = "https://www.kriminalmuseum.eu/besucherplaner/oeffnungszeiten/"
         html = requests.get(url).text
         soup = BeautifulSoup(html, "html.parser")
-        soup.find_all("div", class_="wpb_wrapper")[1].text.strip()
+        extract_str = soup.find_all("div", class_="wpb_wrapper")[1].text.strip()
 
         #TODO: extract right opening times from soup with tracker information
         current_entity = next(tracker.get_latest_entity_values("holiday"), None)
@@ -83,32 +92,35 @@ class ActionGetOpeningTimes(Action):
             #TODO: extract opening times for holiday
             pass
         if crt_month in range(4,11):
-            pattern = r"(April..).*?(\d{2}:\d{2}) – (\d{2}:\d{2})"
-            start, end = self._get_matches(pattern, soup, crt_month, crt_day)
+            regex = r"(April..).*?(\d{2}:\d{2}) – (\d{2}:\d{2})"
+            start, end = self._get_matches(pattern=regex,
+                                           text=extract_str,
+                                           month=crt_month,
+                                           day=crt_day)
             if start == None or end == None:
                  msg = self._set_default(crt_day, crt_month, url)
             msg = f"Von April bis Oktober haben wir von {start} bis {end} geöffnet."
         elif crt_month == 11:
             pattern = r"(November..).*?(\d{2}:\d{2}) – (\d{2}:\d{2})"
-            start, end = self._get_matches(pattern, soup, crt_month, crt_day)
+            start, end = self._get_matches(pattern, extract_str, crt_month, crt_day)
             if start == None or end == None:
                     msg = self._set_default(crt_day, crt_month, url)
             msg = f"Im November haben wir von {start} bis {end} geöffnet."
         elif crt_month == 12:
             pattern = r"(Dezember..).*?(\d{2}:\d{2}) – (\d{2}:\d{2})"
-            start, end = self._get_matches(pattern, soup, crt_month, crt_day)
+            start, end = self._get_matches(pattern, extract_str, crt_month, crt_day)
             if start == None or end == None:
                     msg = self._set_default(crt_day, crt_month, url)
             msg = f"Im Dezember haben wir von {start} bis {end} geöffnet."
         elif crt_month == 1 and crt_day <= 8:
             pattern = r"(Januar..).*?(\d{2}:\d{2}) – (\d{2}:\d{2})"
-            start, end = self._get_matches(pattern, soup, crt_month, crt_day)
+            start, end = self._get_matches(pattern, extract_str, crt_month, crt_day)
             if start == None or end == None:
                     msg = self._set_default(crt_day, crt_month, url)
             msg = f"Im Januar haben wir bis zum 8. von {start} bis {end} geöffnet."
         elif crt_month in range(1,4):
             pattern = r"(Januar..).*?(\d{2}:\d{2}) – (\d{2}:\d{2})"
-            start, end = self._get_matches(pattern, soup, crt_month, crt_day)
+            start, end = self._get_matches(pattern, extract_str, crt_month, crt_day)
             if start == None or end == None:
                     msg = self._set_default(crt_day, crt_month, url)
             msg = f"Im Januar haben wir ab dem 9. von {start} bis {end} geöffnet."
