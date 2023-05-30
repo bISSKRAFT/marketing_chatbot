@@ -7,10 +7,15 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
+- rule: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
 - rule: zeiten
   steps:
   - intent: zeiten
-  - action: utter_zeiten
+  - action: action_get_opening_times
 
 - rule: preise
   steps:
@@ -37,9 +42,8 @@ rules:
   - intent: barrierefrei
   - action: utter_barrierefrei
 
-- rule: cafeteria
+- rule: kontakt
   steps:
-  - intent: cafeteria
-  - action: utter_cafeteria
-
+  - intent: kontakt
+  - action: utter_kontakt
 

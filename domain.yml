@@ -3,6 +3,10 @@ version: "3.1"
 intents:
   - greet
   - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
   - zeiten
   - preise
   - anreise
@@ -21,6 +25,7 @@ intents:
   - sonderausstellung_information
   - sonderausstellung_archiv
   - museumsshop
+  - kontakt
 
 responses:
   utter_greet:
@@ -38,9 +43,6 @@ responses:
 
   utter_happy:
   - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
 
   utter_zeiten:
   - text: "Die HAUPTAUSSTELLUNG\nApril – Oktober 2023:\nMo. – So.: 10:00 – 18:00 Uhr\nNovember 2023:\nMo. – So. 13:00 – 16:00 Uhr\nDezember 2023 – 8. Januar 2024:\xa0\nMo. – So. 11:00 – 17:00 Uhr\n9. Januar\xa0 –\xa0 März 2024:\nMo. – So.: 13:00 – 16:00 Uhr\n\xa0\nSonderöffnungszeiten:\n24.12.2023 (Heilig Abend): 10:00 – 13:00 Uhr\n31.12.2023 (Silvester):\xa0 \xa0 \xa0 \xa010:00 – 13:00 Uhr\n\xa0\nDer letzte Einlass ist immer 45 Minuten vor Schließung.\n\xa0\nDie Cafeteria mit neuer Sonderausstellung in der Johanniterscheune\n…wird zu den selben Zeiten ab dem 30. April wieder geöffnet sein.\n\n\xa0\n\xa0\nDer letzte Einlass ist immer 45 Minuten vor Schließung.\nWir freuen uns auf Ihren Besuch!\n\n\n\n"
@@ -81,6 +83,9 @@ responses:
   utter_fuehrungen_information:
   - text: Alle Informationen zu den Führungen im Museum findest du unter https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/.
 
+  utter_fuehrung_buchen:
+  - text: "Hier kannst du deine Führungen durch das Museum buchen: https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/"
+
   utter_fuehrungen_ansprechpartner:
   - text: Alle Ansprechpartner und weitere Informationen zu Führungen findest du unter https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/.
 
@@ -96,6 +101,9 @@ responses:
   utter_museumsshop:
   - text: Der Museumsshop befindet sich in der Johanniterscheune im Nebengebäude des Museums. Alternativ kannst du auch online unter https://kriminalmuseum.ticketfritz.de/ vorbeischauen.
 
+  utter_kontakt:
+  - text: kontakt
+
 
 session_config:
   session_expiration_time: 60
@@ -103,3 +111,4 @@ session_config:
 
 actions:
 - action_get_price
+- action_get_opening_times
