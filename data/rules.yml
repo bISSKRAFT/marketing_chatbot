@@ -37,10 +37,15 @@ rules:
   - intent: kindgerecht
   - action: utter_kindgerecht
 
-- rule: barrierefrei
+- rule: barrierefrei_gehen
   steps:
-  - intent: barrierefrei
-  - action: utter_barrierefrei
+  - intent: barrierefrei_gehen
+  - action: utter_barrierefrei_gehen
+
+- rule: barrierefrei_sehen_hoeren
+  steps:
+  - intent: barrierefrei_sehen_hoeren
+  - action: barrierefrei_sehen_hoeren
 
 - rule: kontakt
   steps:
