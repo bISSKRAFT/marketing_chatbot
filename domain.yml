@@ -3,8 +3,6 @@ version: "3.1"
 intents:
   - greet
   - goodbye
-  - affirm
-  - deny
   - zeiten
   - preise
   - anreise
@@ -12,7 +10,8 @@ intents:
   - parken_fahrrad
   - abteilungen
   - kindgerecht
-  - barrierefrei
+  - barrierefrei_gehen
+  - barrierefrei_sehen_hoeren
   - cafeteria_angebot
   - cafeteria_information
   - cafeteria_ort
