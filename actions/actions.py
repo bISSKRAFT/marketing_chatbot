@@ -51,26 +51,21 @@ class ActionGetOpeningTimes(Action):
         extract_str = soup.find_all("div", class_="wpb_wrapper")[1].text.strip()
         return extract_str
     
-    def _set_default(day: int, month: int, url: str) -> str:
-        return f"Zu Heute, dem {day}.{month} wurden keine Öffnungszeiten gefunden. Sie könenne diese unter {url} finden."
+    def _msg_builder(self, start: str, end: str, day: int, month: int):
+        if start == "" or end == "":
+             return self._set_default(day, month)
+        return f"Am {day}.{month} haben wir von {start} bis {end} geöffnet."
     
-    def _get_matches(self, pattern: str, text: str, month: int , day: int):
-        print("pattern: ",pattern)
-        print("text: ",text)
+    def _set_default(self, 
+                     day: int, 
+                     month: int, 
+                     url: str = "https://www.kriminalmuseum.eu/besucherplaner/oeffnungszeiten/") -> str:
+        return f"Zu Heute, dem {day}.{month} wurden keine Öffnungszeiten gefunden. Sie könenne diese unter {url} einsehen."
+    
+    def _get_matches(self, regex: str, text: str, month: int , day: int):
+        #print("text: ",text)
 
-        matches = re.finditer(pattern=pattern, string=text, flags=re.MULTILINE)
-
-        for matchNum, match in enumerate(matches, start=1):
-            
-            if matchNum > 2:
-                return None, None
-            if month == 1 and day < 9:
-                if matchNum == 1:
-                    return match.group(2), match.group(3)
-            if month == 1 and day >= 9:
-                if matchNum == 2:
-                    return match.group(2), match.group(3)
-            return match.group(2), match.group(3)
+        pass
 
     def run(self, 
             dispather: CollectingDispatcher, 
@@ -79,9 +74,7 @@ class ActionGetOpeningTimes(Action):
 
         #TODO: tracker gives chat history
         url = "https://www.kriminalmuseum.eu/besucherplaner/oeffnungszeiten/"
-        html = requests.get(url).text
-        soup = BeautifulSoup(html, "html.parser")
-        extract_str = soup.find_all("div", class_="wpb_wrapper")[1].text.strip()
+        extract_str = self._crawl_opening_times(url)
 
         #TODO: extract right opening times from soup with tracker information
         current_entity = next(tracker.get_latest_entity_values("holiday"), None)
@@ -93,13 +86,12 @@ class ActionGetOpeningTimes(Action):
             pass
         if crt_month in range(4,11):
             regex = r"(April..).*?(\d{2}:\d{2}) – (\d{2}:\d{2})"
-            start, end = self._get_matches(pattern=regex,
+            start, end = self._get_matches(regex=regex,
                                            text=extract_str,
                                            month=crt_month,
                                            day=crt_day)
-            if start == None or end == None:
-                 msg = self._set_default(crt_day, crt_month, url)
-            msg = f"Von April bis Oktober haben wir von {start} bis {end} geöffnet."
+            msg = self._msg_builder(start, end, crt_day, crt_month)
+        #TODO: refactor
         elif crt_month == 11:
             pattern = r"(November..).*?(\d{2}:\d{2}) – (\d{2}:\d{2})"
             start, end = self._get_matches(pattern, extract_str, crt_month, crt_day)
