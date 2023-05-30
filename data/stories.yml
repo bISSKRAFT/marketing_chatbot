@@ -15,3 +15,33 @@ stories:
 #   - action: utter_zeiten
 
 # TODO: preis story
+
+- story: wenn nach Kontaktmöglichkeiten gefragt wird
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: kontakt
+  - action: utter_kontakt
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: wenn eine LehrerIn eine Führung für ihre Schulklasse buchen möchte
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: kindgerecht
+  - action: utter_kindgerecht
+  - intent: barrrierefrei_gehen
+  - action: utter_barrierefrei_gehen
+  - intent: cafeteria_angebot
+  - action: utter_cafeteria_angebot
+  - intent: fuehrungen_information
+  - action: utter_fuehrungen_information
+  - intent: preise
+  - action: utter_preise
+  - intent: fuehrungen_ansprechpartner
+  - action: utter_fuehrungen_ansprechpartner
+  - intent: mood_great
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
