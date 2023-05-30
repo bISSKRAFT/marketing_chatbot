@@ -49,8 +49,11 @@ responses:
   utter_kindgerecht:
   - text: Das Museum eigent sich für alle Altersgruppen und ist kindgerecht.
 
-  utter_barrierefrei:
+  utter_barrierefrei_gehen:
   - text: Bei dem Museum handelt es sich um ein denkmalgeschützes Gebäude, daher konnte es leider nicht barrierefrei gestaltet werden.
+
+  barrierefrei_sehen_hoeren:
+  - text: Das Museum bietet aktuelle keinen Audioguide. Führungen werden in deutscher und englischer Sprache angeboten. Weitere Informationen zu den Führungen findest du unter https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/
 
   utter_cafeteria_angebot:
   - text: Die Cafeteria bietet Heiß- und Kaltgetränke sowie unsere hausgemachten „Kriminalmuseums“-Schneeballen in verschiedenen Größen und ein täglich wechselndes Kuchenangebot an (alles auch zum Mitnehmen). Zudem halten wir saisonale Erfrischungsgetränke wie etwa Holunderblütenschorle, Hugo und Aperol Spritz für dich bereit.
