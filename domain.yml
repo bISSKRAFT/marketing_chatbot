@@ -32,7 +32,6 @@ responses:
   - text: "Guten Tag, wie geht es Ihnen?"
   
   utter_goodbye:
-<<<<<<< HEAD
   - text: "Viel Spaß und Auf Wiedersehen!"
 
   utter_did_that_help:
@@ -43,9 +42,6 @@ responses:
 
   utter_preise:
   - text: preise
-=======
-  - text: "Bye"
->>>>>>> fb4d6e0821c2f7e1ed4bd8dd408e34e1777427c1
 
   utter_anreise:
   - text: anreise
