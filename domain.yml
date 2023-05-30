@@ -34,19 +34,6 @@ responses:
   utter_goodbye:
   - text: "Bye"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_preise:
-  - text: preise
-
   utter_anreise:
   - text: anreise
 
@@ -57,13 +44,13 @@ responses:
   - text: parken_fahrrad
 
   utter_abteilungen:
-  - text: abteilungen
+  - text: Unser Museum ist in folgeden Abteilungen untergliedert:\n\t-Recht in alter Zeit\n\t-Eine Frage der Ehre\n\t-Verfahren und Folter\n\t-Urteil und Strafe\n\t-Hexen, Henker und Halunken\n\t-Kriche,Reich und Recht\n\t-Tiere in der Rechtsgeschichte\n\t-Mythos oder Wahrheit? Rechtsfantasien\n\nWeitere Informationen zu den Abteilungen findest du unter https://www.kriminalmuseum.eu
 
   utter_kindgerecht:
-  - text: kindgerecht
+  - text: Das Museum eigent sich für alle Altersgruppen und ist kindgerecht.
 
   utter_barrierefrei:
-  - text: barrierefrei
+  - text: Bei dem Museum handelt es sich um ein denkmalgeschützes Gebäude, daher konnte es leider nicht barrierefrei gestaltet werden.
 
   utter_cafeteria_angebot:
   - text: Die Cafeteria bietet Heiß- und Kaltgetränke sowie unsere hausgemachten „Kriminalmuseums“-Schneeballen in verschiedenen Größen und ein täglich wechselndes Kuchenangebot an (alles auch zum Mitnehmen). Zudem halten wir saisonale Erfrischungsgetränke wie etwa Holunderblütenschorle, Hugo und Aperol Spritz für dich bereit.
