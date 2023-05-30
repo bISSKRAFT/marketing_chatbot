@@ -95,7 +95,7 @@ responses:
   - text: Der Museumsshop befindet sich in der Johanniterscheune im Nebengebäude des Museums. Alternativ kannst du auch online unter https://kriminalmuseum.ticketfritz.de/ vorbeischauen.
 
   utter_kontakt:
-  - text: kontakt
+  - text: Du kannst uns unter der Telefonnummer +49 (0) 9861 5359 erreichen oder eine E-Mail an info@kriminalmuseum.eu schreiben. Weitere Informationen findest du unter https://www.kriminalmuseum.eu/kontakt/.
 
 
 session_config:
