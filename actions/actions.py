@@ -39,6 +39,20 @@ from rasa_sdk import Action, Tracker
 """
 'Die HAUPTAUSSTELLUNG\nApril – Oktober 2023:\nMo. – So.: 10:00 – 18:00 Uhr\nNovember 2023:\nMo. – So. 13:00 – 16:00 Uhr\nDezember 2023 – 8. Januar 2024:\xa0\nMo. – So. 11:00 – 17:00 Uhr\n9. Januar\xa0 –\xa0 März 2024:\nMo. – So.: 13:00 – 16:00 Uhr\n\xa0\nSonderöffnungszeiten:\n24.12.2023 (Heilig Abend): 10:00 – 13:00 Uhr\n31.12.2023 (Silvester):\xa0 \xa0 \xa0 \xa010:00 – 13:00 Uhr\n\xa0\nDer letzte Einlass ist immer 45 Minuten vor Schließung.\n\xa0\nDie Cafeteria mit neuer Sonderausstellung in der Johanniterscheune\n…wird zu den selben Zeiten ab dem 30. April wieder geöffnet sein.\n\n\xa0\n\xa0\nDer letzte Einlass ist immer 45 Minuten vor Schließung.\nWir freuen uns auf Ihren Besuch!\n\n\n\nFührung Buchen'
 """
+mapping = {
+    1: "januar",
+    2: "märz",
+    3: "märz",
+    4: "april",
+    5: "april",
+    6: "april",
+    7: "april",
+    8: "april",
+    9: "april",
+    10: "oktober",
+    11: "november",
+    12: "dezember"
+}
 
 class ActionGetOpeningTimes(Action):
 
@@ -51,10 +65,8 @@ class ActionGetOpeningTimes(Action):
         extract_str = soup.find_all("div", class_="wpb_wrapper")[1].text.strip()
         return extract_str
     
-    def _msg_builder(self, start: str, end: str, day: int, month: int):
-        if start == "" or end == "":
-             return self._set_default(day, month)
-        return f"Am {day}.{month} haben wir von {start} bis {end} geöffnet."
+    def _msg_builder(self, months: str, times: str):
+        return f"Von {months} haben wir von {times} geöffnet."
     
     def _set_default(self, 
                      day: int, 
@@ -62,10 +74,31 @@ class ActionGetOpeningTimes(Action):
                      url: str = "https://www.kriminalmuseum.eu/besucherplaner/oeffnungszeiten/") -> str:
         return f"Zu Heute, dem {day}.{month} wurden keine Öffnungszeiten gefunden. Sie könenne diese unter {url} einsehen."
     
-    def _get_matches(self, regex: str, text: str, month: int , day: int):
-        #print("text: ",text)
-
-        pass
+    def _get_matches2(self, text: str, month: int, day: int):
+        splits = text.split("\n")
+        month_str = mapping[month]
+        #print(splits)
+        for idx, split in enumerate(splits):
+            print("in for")
+            time_split = split.split("–")
+            if month == 11:
+                if len(time_split) == 1:
+                    if month_str in time_split[0].lower():
+                            return split, splits[idx+1]
+            if len(time_split) != 2:
+                print("in continue")
+                continue
+            if month == 1 and day >= 9:
+                print("in jan if")
+                if month_str in time_split[0].lower():
+                    return split, splits[idx+1]
+                continue
+            if month_str in time_split[0].lower():
+                print("in month if 0")
+                return split, splits[idx+1]
+            if month_str in time_split[1].lower():
+                print("in month if 1")
+                return split, splits[idx+1]
 
     def run(self, 
             dispather: CollectingDispatcher, 
@@ -84,38 +117,19 @@ class ActionGetOpeningTimes(Action):
         if current_entity:
             #TODO: extract opening times for holiday
             pass
-        if crt_month in range(4,11):
-            regex = r"(April..).*?(\d{2}:\d{2}) – (\d{2}:\d{2})"
-            start, end = self._get_matches(regex=regex,
-                                           text=extract_str,
-                                           month=crt_month,
-                                           day=crt_day)
-            msg = self._msg_builder(start, end, crt_day, crt_month)
-        #TODO: refactor
-        elif crt_month == 11:
-            pattern = r"(November..).*?(\d{2}:\d{2}) – (\d{2}:\d{2})"
-            start, end = self._get_matches(pattern, extract_str, crt_month, crt_day)
-            if start == None or end == None:
-                    msg = self._set_default(crt_day, crt_month, url)
-            msg = f"Im November haben wir von {start} bis {end} geöffnet."
-        elif crt_month == 12:
-            pattern = r"(Dezember..).*?(\d{2}:\d{2}) – (\d{2}:\d{2})"
-            start, end = self._get_matches(pattern, extract_str, crt_month, crt_day)
-            if start == None or end == None:
-                    msg = self._set_default(crt_day, crt_month, url)
-            msg = f"Im Dezember haben wir von {start} bis {end} geöffnet."
-        elif crt_month == 1 and crt_day <= 8:
-            pattern = r"(Januar..).*?(\d{2}:\d{2}) – (\d{2}:\d{2})"
-            start, end = self._get_matches(pattern, extract_str, crt_month, crt_day)
-            if start == None or end == None:
-                    msg = self._set_default(crt_day, crt_month, url)
-            msg = f"Im Januar haben wir bis zum 8. von {start} bis {end} geöffnet."
-        elif crt_month in range(1,4):
-            pattern = r"(Januar..).*?(\d{2}:\d{2}) – (\d{2}:\d{2})"
-            start, end = self._get_matches(pattern, extract_str, crt_month, crt_day)
-            if start == None or end == None:
-                    msg = self._set_default(crt_day, crt_month, url)
-            msg = f"Im Januar haben wir ab dem 9. von {start} bis {end} geöffnet."
+        try: 
+            months_times, time_times = self._get_matches2(
+                                                        text=extract_str, 
+                                                        month=crt_month, 
+                                                        day=crt_day)
+        except Exception as e:
+            msg = self._set_default(crt_day, crt_month)
+            print(f"\n\nERROR: {e}\n\n")
+            dispather.utter_message(text=msg)
+            return []
+        
+        msg = self._msg_builder(months=months_times, times=time_times)
+        
         dispather.utter_message(text=msg)
         return []
 
