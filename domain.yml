@@ -29,20 +29,16 @@ intents:
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Guten Tag, wie geht es Ihnen?"
   
   utter_goodbye:
-  - text: "Bye"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: "Viel Spaß und Auf Wiedersehen!"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+  - text: "Hat das Ihnen weitergeholfen?"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "Freut mich, dass ich helfen konnte!"
 
   utter_preise:
   - text: preise
@@ -51,7 +47,7 @@ responses:
   - text: anreise
 
   utter_parken_auto:
-  - text: parken_auto
+  - text: Zum Parken können Sie folgenden Parkplatz nutzen https://goo.gl/maps/QAUyMY8E6LRvjZwb8?coh=178572&entry=tt
 
   utter_parken_fahrrad:
   - text: parken_fahrrad
