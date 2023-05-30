@@ -21,7 +21,6 @@ intents:
   - sonderausstellung_archiv
   - museumsshop
 
-
 responses:
   utter_greet:
   - text: "Hey! How are you?"
