@@ -38,21 +38,36 @@ nlu:
 # tbd
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-    - bis dann
-    - tüschselldorf
-    - bis später
-    - tschüss
-    - schleich dich
+    - Man sieht sich!
+    - Auf Wiedersehen
+    - Bis später
+    - Gute Nacht
+    - GN8
+    - Bye
+    - Tschüss
+    - Hab einen schönen Tag
+    - Bis dann
+    - Bis denne
+    - Bis denne Antenne
+    - Machs gut
+    - Ciao Kakao
+    - Hasta la pasta
+    - Tschö mit ö
+    - Tschüsseldorf
+    - Adios amigo
+    - Ciao
+    - Ciao for now
+    - Schleich dich
+    - Tschüssikowski
+    - Tschüssle
+    - See you later alligator
+    - San frantschüssko
+    - Tschüsli Müsli
+    - Bis Baldrian
+    - Ich mach mich vom Acker
+    - Halt die Ohren steif
+    - Ich bin dann mal weg
+    - Ich bin dann mal offline
 
 - intent: zeiten
   examples: |
