@@ -219,11 +219,17 @@ nlu:
     - Wie weit ist es zu Fuß vom Bahnhof zum Museum?
     - Welche Orientierungspunkte sollte ich beachten, um zum Museum zu gelangen?
 
-- intent: parken
+- intent: parken_auto
   examples: |
     - Wo kann ich mein Auto parken?
     - Gibt es Parkplätze in der Nähe des Museums?
     - Wo kann ich mein Auto abstellen?
+
+- intent: parken_fahrrad
+  examples: |
+    - Wo kann ich mein Fahrrad parken?
+    - Gibt es einen Fahrradständer in der Nähe des Museums?
+    - Wo kann ich mein Fahrrad abstellen?
 
 - intent: abteilungen
   examples: |
@@ -292,7 +298,7 @@ nlu:
     - Wird im Museum auf eine kinderfreundliche Atmosphäre geachtet?
     - Gibt es im Museum Möglichkeiten zur aktiven Teilnahme von Kindern?
 
-- intent: barrierefrei
+- intent: barrierefrei_gehen
   examples: |
     - Erfüllt das Museum die Anforderungen der Barrierefreiheit?
     - Ist das Museum für Menschen mit Behinderungen zugänglich?
@@ -307,10 +313,6 @@ nlu:
     - Gibt es im Museum Aufzüge oder Rampen für einen barrierefreien Zugang?
     - Erfahren Besucher mit Behinderungen eine angemessene Unterstützung im Museum?
     - Bietet das Museum barrierefreie Toiletten?
-    - Ist das Museum für sehbehinderte oder blinde Menschen zugänglich?
-    - Gibt es im Museum taktil erfassbare Informationen für blinde oder sehbehinderte Besucher?
-    - Erfüllt das Museum die Bedürfnisse von Menschen mit Hörbehinderungen?
-    - Bietet das Museum barrierefreie Informationen in Gebärdensprache?
     - Ist das Museum mit einem barrierefreien Parkplatz ausgestattet?
     - Gibt es im Museum barrierefreie Sitzgelegenheiten?
     - Erfüllt das Museum die Anforderungen für eine barrierefreie Beschilderung?
@@ -324,6 +326,35 @@ nlu:
     - Erfahren Besucher mit körperlichen Einschränkungen eine angemessene Unterstützung im Museum?
     - Bietet das Museum barrierefreie Audioführungen?
     - Ist das Museum für Besucher mit unterschiedlichen Behinderungsarten zugänglich?
+
+- intent: barrierefrei_sehen_hoeren
+  examples: |
+    - Ist das Museum für sehbehinderte oder blinde Menschen zugänglich?
+    - Gibt es im Museum taktil erfassbare Informationen für blinde oder sehbehinderte Besucher?
+    - Gibt es im Museum Informationen in Brailleschrift?
+    - Werden im Museum Informationen in Brailleschrift bereitgestellt?
+    - Gibt es im Museum Beschriftungen in Brailleschrift?
+    - Werden im Museum Texte in Brailleschrift angeboten?
+    - Bietet das Museum Erklärungen in Brailleschrift an?
+    - Sind im Museum Informationen in Brailleschrift verfügbar?
+    - Gibt es im Museum Texte, die in Brailleschrift verfasst sind?
+    - Wird im Museum Brailleschrift verwendet, um Informationen zu vermitteln?
+    - Sind im Museum Hinweise in Brailleschrift vorhanden?
+    - Werden im Museum Texte in Brailleschrift präsentiert?
+    - Welche Unterstützung bietet das Museum für Menschen mit Sehbehinderung?
+    - Gibt es im Museum spezielle Dienstleistungen für Menschen mit Sehbehinderung?
+    - Welche Hilfsmittel stehen im Museum für Menschen mit Sehbehinderung zur Verfügung?
+    - Welche Maßnahmen ergreift das Museum, um Menschen mit Sehbehinderung zu unterstützen?
+    - Bietet das Museum barrierefreie Angebote für Menschen mit Sehbehinderung an?
+    - Gibt es im Museum spezielle Programme oder Vorkehrungen für Menschen mit Sehbehinderung?
+    - Welche Vorkehrungen hat das Museum getroffen, um Menschen mit Sehbehinderung zu helfen?
+    - Welche Ressourcen stellt das Museum Menschen mit Sehbehinderung zur Verfügung?
+    - Welche Hilfsmittel oder Anpassungen bietet das Museum Menschen mit Sehbehinderung an?
+    - Wie wird das Museum Menschen mit Sehbehinderung gerecht?
+
+    
+    - Erfüllt das Museum die Bedürfnisse von Menschen mit Hörbehinderungen?
+    - Bietet das Museum barrierefreie Informationen in Gebärdensprache?
 
 - intent: cafeteria_angebot
   examples: |

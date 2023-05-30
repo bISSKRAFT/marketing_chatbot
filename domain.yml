@@ -6,7 +6,8 @@ intents:
   - zeiten
   - preise
   - anreise
-  - parken
+  - parken_auto
+  - parken_fahrrad
   - abteilungen
   - kindgerecht
   - barrierefrei
@@ -50,8 +51,11 @@ responses:
   utter_anreise:
   - text: anreise
 
-  utter_parken:
-  - text: parken
+  utter_parken_auto:
+  - text: parken_auto
+
+  utter_parken_fahrrad:
+  - text: parken_fahrrad
 
   utter_abteilungen:
   - text: abteilungen
@@ -63,34 +67,34 @@ responses:
   - text: barrierefrei
 
   utter_cafeteria_angebot:
-  - text: cafeteria_angebot
+  - text: Die Cafeteria bietet Heiß- und Kaltgetränke sowie unsere hausgemachten „Kriminalmuseums“-Schneeballen in verschiedenen Größen und ein täglich wechselndes Kuchenangebot an (alles auch zum Mitnehmen). Zudem halten wir saisonale Erfrischungsgetränke wie etwa Holunderblütenschorle, Hugo und Aperol Spritz für dich bereit.
 
   utter_cafeteria_information:
-  - text: cafeteria_information
+  - text: Alle Informationen rund um die Cafeteria findest du unter https://www.kriminalmuseum.eu/besucherplaner/cafeteria/.
 
   utter_cafeteria_ort:
-  - text: cafeteria_ort
+  - text: Die Cafeteria mit Museumsshop befindet sich in der Johanniterscheune im Nebengebäude des Museums.
 
   utter_cafeteria_oeffnungszeiten:
-  - text: cafeteria_oeffnungszeiten
+  - text: Die Cafeteria ist Dienstag, Mittwoch, Donnerstag, Samstag und Sonntag von 13-18 Uhr geöffnet.
 
   utter_fuehrungen_information:
-  - text: fuehrungen_information
+  - text: Alle Informationen zu den Führungen im Museum findest du unter https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/.
 
   utter_fuehrungen_ansprechpartner:
-  - text: fuehrungen_ansprechpartner
+  - text: Alle Ansprechpartner und weitere Informationen zu Führungen findest du unter https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/.
 
   utter_fuehrungen_sprachen:
-  - text: fuehrungen_sprachen
+  - text: Die Führungen werden in deutscher und englischer Sprache angeboten.
 
   utter_sonderausstellung_information:
-  - text: sonderausstellung_information
+  - text: Alle Informationen zu den aktuellen Sonderausstellungen findest du unter https://www.kriminalmuseum.eu/sonderschauen/.
 
   utter_sonderausstellung_archiv:
-  - text: sonderausstellung_archiv
+  - text: Ein Archiv der verganenen Sonderaustellungen des Museums findest du unter https://www.kriminalmuseum.eu/sonderschauen/.
 
   utter_museumsshop:
-  - text: museumsshop
+  - text: Der Museumsshop befindet sich in der Johanniterscheune im Nebengebäude des Museums. Alternativ kannst du auch online unter https://kriminalmuseum.ticketfritz.de/ vorbeischauen.
 
 
 session_config:
