@@ -38,10 +38,10 @@ stories:
   - intent: fuehrungen_information
   - action: utter_fuehrungen_information
   - intent: preise
-  - action: utter_preise
+  - action: action_get_price
   - intent: fuehrungen_ansprechpartner
   - action: utter_fuehrungen_ansprechpartner
-  - intent: mood_great
-  - action: utter_happy
-  - intent: goodbye
-  - action: utter_goodbye
+  # - intent: mood_great
+  # - action: utter_happy
+  # - intent: goodbye
+  # - action: utter_goodbye

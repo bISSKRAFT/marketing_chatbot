@@ -36,8 +36,8 @@ from rasa_sdk import Action, Tracker
 
 # source: https://learning.rasa.com/conversational-ai-with-rasa/custom-actions/
 
-"""
-'Die HAUPTAUSSTELLUNG\nApril – Oktober 2023:\nMo. – So.: 10:00 – 18:00 Uhr\nNovember 2023:\nMo. – So. 13:00 – 16:00 Uhr\nDezember 2023 – 8. Januar 2024:\xa0\nMo. – So. 11:00 – 17:00 Uhr\n9. Januar\xa0 –\xa0 März 2024:\nMo. – So.: 13:00 – 16:00 Uhr\n\xa0\nSonderöffnungszeiten:\n24.12.2023 (Heilig Abend): 10:00 – 13:00 Uhr\n31.12.2023 (Silvester):\xa0 \xa0 \xa0 \xa010:00 – 13:00 Uhr\n\xa0\nDer letzte Einlass ist immer 45 Minuten vor Schließung.\n\xa0\nDie Cafeteria mit neuer Sonderausstellung in der Johanniterscheune\n…wird zu den selben Zeiten ab dem 30. April wieder geöffnet sein.\n\n\xa0\n\xa0\nDer letzte Einlass ist immer 45 Minuten vor Schließung.\nWir freuen uns auf Ihren Besuch!\n\n\n\nFührung Buchen'
+OPENING_TIMES ="""
+Die HAUPTAUSSTELLUNG\nApril – Oktober 2023:\nMo. – So.: 10:00 – 18:00 Uhr\nNovember 2023:\nMo. – So. 13:00 – 16:00 Uhr\nDezember 2023 – 8. Januar 2024:\xa0\nMo. – So. 11:00 – 17:00 Uhr\n9. Januar\xa0 –\xa0 März 2024:\nMo. – So.: 13:00 – 16:00 Uhr\n\xa0\nSonderöffnungszeiten:\n24.12.2023 (Heilig Abend): 10:00 – 13:00 Uhr\n31.12.2023 (Silvester):\xa0 \xa0 \xa0 \xa010:00 – 13:00 Uhr\n\xa0\nDer letzte Einlass ist immer 45 Minuten vor Schließung.\n\xa0\nDie Cafeteria mit neuer Sonderausstellung in der Johanniterscheune\n…wird zu den selben Zeiten ab dem 30. April wieder geöffnet sein.\n\n\xa0\n\xa0\nDer letzte Einlass ist immer 45 Minuten vor Schließung.\nWir freuen uns auf Ihren Besuch!
 """
 mapping = {
     1: "januar",
@@ -66,7 +66,7 @@ class ActionGetOpeningTimes(Action):
         return extract_str
     
     def _msg_builder(self, months: str, times: str):
-        return f"Von {months} haben wir von {times} geöffnet."
+        return f"Von {months} haben wir von {times} geöffnet.\n\n\nAndere Öffnungszeiten: {OPENING_TIMES}"
     
     def _set_default(self, 
                      day: int, 
@@ -100,6 +100,15 @@ class ActionGetOpeningTimes(Action):
                 print("in month if 1")
                 return split, splits[idx+1]
 
+    def _get_entity_values(self, tracker: Tracker, entity_name: str) -> str:
+        if entity_name == "holiday":
+            return tracker.latest_message["entities"][0]["value"]
+        if entity_name == "time":
+            return {
+                    tracker.latest_message["entities"][0]["value"],
+                    tracker.latest_message["entities"][0]["role"]
+                    }
+
     def run(self, 
             dispather: CollectingDispatcher, 
             tracker: Tracker,
@@ -110,14 +119,11 @@ class ActionGetOpeningTimes(Action):
         extract_str = self._crawl_opening_times(url)
 
         #TODO: extract right opening times from soup with tracker information
-        current_entity = next(tracker.get_latest_entity_values("holiday"), None)
-        print(current_entity)
+        #current_entity = tracker.latest_message["entities"][0]["entity"]
+        print(tracker.latest_message["entities"])
         crt_month = datetime.now().month
         crt_day = datetime.now().day
 
-        if current_entity:
-            #TODO: extract opening times for holiday
-            pass
         try: 
             months_times, time_times = self._get_matches2(
                                                         text=extract_str, 
