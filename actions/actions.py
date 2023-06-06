@@ -72,7 +72,7 @@ class ActionGetOpeningTimes(Action):
                      day: int, 
                      month: int, 
                      url: str = "https://www.kriminalmuseum.eu/besucherplaner/oeffnungszeiten/") -> str:
-        return f"Zu Heute, dem {day}.{month} wurden keine Öffnungszeiten gefunden. Sie könenne diese unter {url} einsehen."
+        return f"Zu Heute, dem {day}.{month} wurden keine Öffnungszeiten gefunden. Sie können diese unter {url} einsehen. \n\n\nAlternativ hier ein Ausschnitt: {OPENING_TIMES}"
     
     def _get_matches2(self, text: str, month: int, day: int):
         splits = text.split("\n")
