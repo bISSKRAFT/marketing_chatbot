@@ -100,14 +100,24 @@ class ActionGetOpeningTimes(Action):
                 print("in month if 1")
                 return split, splits[idx+1]
 
-    def _get_entity_values(self, tracker: Tracker, entity_name: str) -> str:
-        if entity_name == "holiday":
+    def _get_entity_values(self, tracker: Tracker) -> str:
+        try:
             return tracker.latest_message["entities"][0]["value"]
-        if entity_name == "time":
-            return {
-                    tracker.latest_message["entities"][0]["value"],
-                    tracker.latest_message["entities"][0]["role"]
-                    }
+        except Exception as e:
+            print(f"\n\nERROR: {e}\n\n")
+            return None
+        
+    def _generate_holiday_msg(self, holiday: str) -> str:
+        if holiday.lower() == "silvester":
+            return f"Am 31.12.2023 haben wir von 10:00 – 13:00 Uhr geöffnet\n\n\nAndere Öffnungszeiten: {OPENING_TIMES}"
+        elif holiday.lower() == "weihnachten" or holiday.lower() == "heilig abend":
+            return "Am 24.12.2023 haben wir von 10:00 – 13:00 Uhr geöffnet\n\n\nAndere Öffnungszeiten: {OPENING_TIMES}"
+        
+    def is_holiday(self, holiday: str) -> bool:
+        if holiday.lower() == "silvester" or holiday.lower() == "weihnachten" or holiday.lower() == "heilig abend":
+            return True
+        return False
+
 
     def run(self, 
             dispather: CollectingDispatcher, 
@@ -120,7 +130,11 @@ class ActionGetOpeningTimes(Action):
 
         #TODO: extract right opening times from soup with tracker information
         #current_entity = tracker.latest_message["entities"][0]["entity"]
-        print(tracker.latest_message["entities"])
+        current_ent = self._get_entity_values(tracker)
+        if self.is_holiday(current_ent):
+            msg = self._generate_holiday_msg(current_ent)
+            dispather.utter_message(text=msg)
+            return []
         crt_month = datetime.now().month
         crt_day = datetime.now().day
 

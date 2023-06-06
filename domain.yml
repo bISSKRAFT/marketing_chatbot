@@ -26,6 +26,7 @@ intents:
 
 entities:
   - holiday
+  - time
 
 responses:
   utter_greet:
