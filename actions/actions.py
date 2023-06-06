@@ -26,8 +26,8 @@
 #
 #         return []
 
-from typing import Text, Dict, Any, List
-from datetime import datetime
+from typing import Text, Dict, Any, List, Tuple
+from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
 import re
 import requests
@@ -37,7 +37,7 @@ from rasa_sdk import Action, Tracker
 # source: https://learning.rasa.com/conversational-ai-with-rasa/custom-actions/
 
 OPENING_TIMES ="""
-Die HAUPTAUSSTELLUNG\nApril – Oktober 2023:\nMo. – So.: 10:00 – 18:00 Uhr\nNovember 2023:\nMo. – So. 13:00 – 16:00 Uhr\nDezember 2023 – 8. Januar 2024:\xa0\nMo. – So. 11:00 – 17:00 Uhr\n9. Januar\xa0 –\xa0 März 2024:\nMo. – So.: 13:00 – 16:00 Uhr\n\xa0\nSonderöffnungszeiten:\n24.12.2023 (Heilig Abend): 10:00 – 13:00 Uhr\n31.12.2023 (Silvester):\xa0 \xa0 \xa0 \xa010:00 – 13:00 Uhr\n\xa0\nDer letzte Einlass ist immer 45 Minuten vor Schließung.\n\xa0\nDie Cafeteria mit neuer Sonderausstellung in der Johanniterscheune\n…wird zu den selben Zeiten ab dem 30. April wieder geöffnet sein.\n\n\xa0\n\xa0\nDer letzte Einlass ist immer 45 Minuten vor Schließung.\nWir freuen uns auf Ihren Besuch!
+\n\nDie Hauptausstellung:\nApril – Oktober 2023:\nMo. – So.: 10:00 – 18:00 Uhr\n\n\nNovember 2023:\nMo. – So. 13:00 – 16:00 Uhr\n\n\nDezember 2023 – 8. Januar 2024:\xa0\nMo. – So. 11:00 – 17:00 Uhr\n\n\n9. Januar\xa0 –\xa0 März 2024:\nMo. – So.: 13:00 – 16:00 Uhr\n\xa0\nSonderöffnungszeiten:\n24.12.2023 (Heilig Abend):\xa0 \xa010:00 – 13:00 Uhr\n\n\n31.12.2023 (Silvester):\xa0 \xa010:00 – 13:00 Uhr\n\n\n\n\nDer letzte Einlass ist immer 45 Minuten vor Schließung.\n\n\nWir freuen uns auf Ihren Besuch!
 """
 mapping = {
     1: "januar",
@@ -54,6 +54,11 @@ mapping = {
     12: "dezember"
 }
 
+time_mapping = [
+    "morgen",
+    "heute",
+]
+
 class ActionGetOpeningTimes(Action):
 
     def name(self) -> Text:
@@ -66,7 +71,7 @@ class ActionGetOpeningTimes(Action):
         return extract_str
     
     def _msg_builder(self, months: str, times: str):
-        return f"Von {months} haben wir von {times} geöffnet.\n\n\nAndere Öffnungszeiten: {OPENING_TIMES}"
+        return f"Von {months.strip(':')} haben wir von {times} geöffnet.\n\n\nWeitere Öffnungszeiten: {OPENING_TIMES}"
     
     def _set_default(self, 
                      day: int, 
@@ -104,20 +109,28 @@ class ActionGetOpeningTimes(Action):
         try:
             return tracker.latest_message["entities"][0]["value"]
         except Exception as e:
-            print(f"\n\nERROR: {e}\n\n")
+            print(f"\n\nERROR IN FETCHING ENTITY: {e}\n\n")
             return None
         
     def _generate_holiday_msg(self, holiday: str) -> str:
         if holiday.lower() == "silvester":
             return f"Am 31.12.2023 haben wir von 10:00 – 13:00 Uhr geöffnet\n\n\nAndere Öffnungszeiten: {OPENING_TIMES}"
         elif holiday.lower() == "weihnachten" or holiday.lower() == "heilig abend":
-            return "Am 24.12.2023 haben wir von 10:00 – 13:00 Uhr geöffnet\n\n\nAndere Öffnungszeiten: {OPENING_TIMES}"
+            return f"Am 24.12.2023 haben wir von 10:00 – 13:00 Uhr geöffnet\n\n\nAndere Öffnungszeiten: {OPENING_TIMES}"
         
-    def is_holiday(self, holiday: str) -> bool:
-        if holiday.lower() == "silvester" or holiday.lower() == "weihnachten" or holiday.lower() == "heilig abend":
+    def is_holiday(self, text: str) -> bool:
+        if text.lower() == "silvester" or text.lower() == "weihnachten" or text.lower() == "heilig abend":
             return True
         return False
-
+    
+    def is_time(self, text: str) -> bool:
+        if text.lower() in time_mapping:
+            return True
+        return False
+    
+    def _calculate_time(self, days: int = 0) -> Tuple[int,int]:
+        new_time = datetime.now() + timedelta(days=days)
+        return new_time.month, new_time.day
 
     def run(self, 
             dispather: CollectingDispatcher, 
@@ -128,18 +141,27 @@ class ActionGetOpeningTimes(Action):
         extract_str = self._crawl_opening_times(url)
 
         current_ent = self._get_entity_values(tracker)
-        if self.is_holiday(current_ent):
-            msg = self._generate_holiday_msg(current_ent)
-            dispather.utter_message(text=msg)
-            return []
+
         crt_month = datetime.now().month
         crt_day = datetime.now().day
+
+        if current_ent is not None:
+            if self.is_holiday(current_ent):
+                msg = self._generate_holiday_msg(current_ent)
+                dispather.utter_message(text=msg)
+                return []
+            
+            if self.is_time(current_ent):
+                if current_ent.lower() == time_mapping[0]:
+                    crt_month, crt_day = self._calculate_time(1)
+                    print(f'calculated month: {crt_month}\ncalculated day: {crt_day}')
 
         try: 
             months_times, time_times = self._get_matches2(
                                                         text=extract_str, 
                                                         month=crt_month, 
-                                                        day=crt_day)
+                                                        day=crt_day
+                                                        )
         except Exception as e:
             msg = self._set_default(crt_day, crt_month)
             print(f"\n\nERROR: {e}\n\n")
