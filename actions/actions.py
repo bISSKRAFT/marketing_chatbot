@@ -124,12 +124,9 @@ class ActionGetOpeningTimes(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]):
 
-        #TODO: tracker gives chat history
         url = "https://www.kriminalmuseum.eu/besucherplaner/oeffnungszeiten/"
         extract_str = self._crawl_opening_times(url)
 
-        #TODO: extract right opening times from soup with tracker information
-        #current_entity = tracker.latest_message["entities"][0]["entity"]
         current_ent = self._get_entity_values(tracker)
         if self.is_holiday(current_ent):
             msg = self._generate_holiday_msg(current_ent)
