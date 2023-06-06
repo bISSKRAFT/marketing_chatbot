@@ -111,6 +111,7 @@ class ActionGetOpeningTimes(Action):
 
         #TODO: extract right opening times from soup with tracker information
         current_entity = next(tracker.get_latest_entity_values("holiday"), None)
+        print(current_entity)
         crt_month = datetime.now().month
         crt_day = datetime.now().day
 

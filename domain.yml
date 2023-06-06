@@ -24,6 +24,9 @@ intents:
   - museumsshop
   - kontakt
 
+entities:
+  - holiday
+
 responses:
   utter_greet:
   - text: "Guten Tag, wie geht es Ihnen?"
