@@ -528,6 +528,8 @@ nlu:
     - Welche Sprachen stehen für die Führungen zur Auswahl?
     - Für welche Sprachen sind Führungen verfügbar?
     - In welchen Sprachen werden die Führungen präsentiert?
+    - In welchen Sprachen gibt es die Führungen?
+    - Gibt es die Führung in anderen Sprachen außer Deutsch?
 
 - intent: sonderausstellung_information
   examples: |
