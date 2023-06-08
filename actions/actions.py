@@ -59,16 +59,29 @@ time_mapping = [
     "heute",
 ]
 
+def crawl_opening_times(url: str = "https://www.kriminalmuseum.eu/besucherplaner/oeffnungszeiten/") -> str:
+    html = requests.get(url).text
+    soup = BeautifulSoup(html, "html.parser")
+    extract_str = soup.find_all("div", class_="wpb_wrapper")[1].text.strip()
+    return extract_str
+
+def get_holiday_times(text: str) -> str:
+    split = text.split("\\n")
+    for entry in split:
+        if "24.12." in entry:
+            return entry
+        if "31.12." in entry:
+            return entry
+    return
+
+def split_date_and_time(text: str) -> Tuple[str, str]:
+    split = text.split(":")
+    return split[0], split[1] 
+
 class ActionGetOpeningTimes(Action):
 
     def name(self) -> Text:
         return "action_get_opening_times"
-    
-    def _crawl_opening_times(self, url: str) -> str:
-        html = requests.get(url).text
-        soup = BeautifulSoup(html, "html.parser")
-        extract_str = soup.find_all("div", class_="wpb_wrapper")[1].text.strip()
-        return extract_str
     
     def _msg_builder(self, months: str, times: str):
         return f"Von {months.strip(':')} haben wir von {times} geöffnet.\n\n\nWeitere Öffnungszeiten: {OPENING_TIMES}"
@@ -137,8 +150,7 @@ class ActionGetOpeningTimes(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]):
 
-        url = "https://www.kriminalmuseum.eu/besucherplaner/oeffnungszeiten/"
-        extract_str = self._crawl_opening_times(url)
+        extract_str = crawl_opening_times()
 
         current_ent = self._get_entity_values(tracker)
 
@@ -172,8 +184,14 @@ class ActionGetChristmasOpeningTimes(Action):
     def name(self) -> Text:
         return "action_get_christmas_opening_times"
     
+    def _msg_builder(self, text: str) -> str:
+        date , time = split_date_and_time(text)
+        return f"Am {date} haben wir von {time} geöffnet\n\n\nAndere Öffnungszeiten: {OPENING_TIMES}"
+    
     def run(self, dispather: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        msg = f"Am 24.12.2023 haben wir von 10:00 – 13:00 Uhr geöffnet\n\n\nAndere Öffnungszeiten: {OPENING_TIMES}"
+        crawled_opening_times = crawl_opening_times()
+        extr_times = get_holiday_times(crawled_opening_times)
+        msg = self._msg_builder(extr_times)
         dispather.utter_message(text=msg)
         return []
     
@@ -181,8 +199,14 @@ class ActionGetNewYearsOpeningTimes(Action):
     def name(self) -> Text:
         return "action_get_new_years_opening_times"
     
+    def _msg_builder(self, text: str) -> str:
+        date , time = split_date_and_time(text)
+        return f"Am {date} haben wir von {time} geöffnet\n\n\nAndere Öffnungszeiten: {OPENING_TIMES}"
+    
     def run(self, dispather: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        msg = f"Am 31.12.2023 haben wir von 10:00 – 13:00 Uhr geöffnet\n\n\nAndere Öffnungszeiten: {OPENING_TIMES}"
+        crawled_opening_times = crawl_opening_times()
+        extr_times = get_holiday_times(crawled_opening_times)
+        msg = self._msg_builder(extr_times)
         dispather.utter_message(text=msg)
         return []
 
