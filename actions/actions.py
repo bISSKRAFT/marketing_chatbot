@@ -112,16 +112,16 @@ class ActionGetOpeningTimes(Action):
             print(f"\n\nERROR IN FETCHING ENTITY: {e}\n\n")
             return None
         
-    def _generate_holiday_msg(self, holiday: str) -> str:
-        if holiday.lower() == "silvester":
-            return f"Am 31.12.2023 haben wir von 10:00 – 13:00 Uhr geöffnet\n\n\nAndere Öffnungszeiten: {OPENING_TIMES}"
-        elif holiday.lower() == "weihnachten" or holiday.lower() == "heilig abend":
-            return f"Am 24.12.2023 haben wir von 10:00 – 13:00 Uhr geöffnet\n\n\nAndere Öffnungszeiten: {OPENING_TIMES}"
+    # def _generate_holiday_msg(self, holiday: str) -> str:
+    #     if holiday.lower() == "silvester":
+    #         return f"Am 31.12.2023 haben wir von 10:00 – 13:00 Uhr geöffnet\n\n\nAndere Öffnungszeiten: {OPENING_TIMES}"
+    #     elif holiday.lower() == "weihnachten" or holiday.lower() == "heilig abend":
+    #         return f"Am 24.12.2023 haben wir von 10:00 – 13:00 Uhr geöffnet\n\n\nAndere Öffnungszeiten: {OPENING_TIMES}"
         
-    def is_holiday(self, text: str) -> bool:
-        if text.lower() == "silvester" or text.lower() == "weihnachten" or text.lower() == "heilig abend":
-            return True
-        return False
+    # def is_holiday(self, text: str) -> bool:
+    #     if text.lower() == "silvester" or text.lower() == "weihnachten" or text.lower() == "heilig abend":
+    #         return True
+    #     return False
     
     def is_time(self, text: str) -> bool:
         if text.lower() in time_mapping:
@@ -146,11 +146,6 @@ class ActionGetOpeningTimes(Action):
         crt_day = datetime.now().day
 
         if current_ent is not None:
-            if self.is_holiday(current_ent):
-                msg = self._generate_holiday_msg(current_ent)
-                dispather.utter_message(text=msg)
-                return []
-            
             if self.is_time(current_ent):
                 if current_ent.lower() == time_mapping[0]:
                     crt_month, crt_day = self._calculate_time(1)
@@ -170,6 +165,24 @@ class ActionGetOpeningTimes(Action):
         
         msg = self._msg_builder(months=months_times, times=time_times)
         
+        dispather.utter_message(text=msg)
+        return []
+
+class ActionGetChristmasOpeningTimes(Action):
+    def name(self) -> Text:
+        return "action_get_christmas_opening_times"
+    
+    def run(self, dispather: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        msg = f"Am 24.12.2023 haben wir von 10:00 – 13:00 Uhr geöffnet\n\n\nAndere Öffnungszeiten: {OPENING_TIMES}"
+        dispather.utter_message(text=msg)
+        return []
+    
+class ActionGetNewYearsOpeningTimes(Action):
+    def name(self) -> Text:
+        return "action_get_new_years_opening_times"
+    
+    def run(self, dispather: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        msg = f"Am 31.12.2023 haben wir von 10:00 – 13:00 Uhr geöffnet\n\n\nAndere Öffnungszeiten: {OPENING_TIMES}"
         dispather.utter_message(text=msg)
         return []
 

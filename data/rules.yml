@@ -17,6 +17,16 @@ rules:
   - intent: zeiten
   - action: action_get_opening_times
 
+- rule: zeiten_weihnachten
+  steps:
+  - intent: zeiten_weihnachten
+  - action: action_get_christmas_opening_times
+
+- rule: zeiten_silvester
+  steps:
+  - intent: zeiten_silvester
+  - action: action_get_new_years_opening_times
+
 - rule: preise
   steps:
   - intent: preise

@@ -4,6 +4,8 @@ intents:
   - greet
   - goodbye
   - zeiten
+  - zeiten_weihnachten
+  - zeiten_silvester
   - preise
   - anreise
   - parken_auto
@@ -25,7 +27,6 @@ intents:
   - kontakt
 
 entities:
-  - holiday
   - time
 
 responses:
@@ -101,7 +102,6 @@ responses:
   utter_kontakt:
   - text: Du kannst uns unter der Telefonnummer +49 (0) 9861 5359 erreichen oder eine E-Mail an info@kriminalmuseum.eu schreiben. Weitere Informationen findest Du unter https://www.kriminalmuseum.eu/kontakt/.
 
-
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
@@ -109,3 +109,5 @@ session_config:
 actions:
 - action_get_price
 - action_get_opening_times
+- action_get_christmas_opening_times
+- action_get_new_years_opening_times

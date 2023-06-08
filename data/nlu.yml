@@ -69,82 +69,107 @@ nlu:
     - Ich bin dann mal weg
     - Ich bin dann mal offline
 
+#TODO: make tomorrow or day after tomorrow entity for programatic handeling
 - intent: zeiten
   examples: |
-    - Öffnungszeiten?
-    - Wann habt ihr offen?
-    - Wann ist das museum geöffnet?
-    - [Weihnachten]{"entity": "holiday", "role": "day"} auch offen?
-    - [Heiligabend]{"entity": "holiday", "value": "Heiligabend"} offen?
-    - Guten Tag, [Heiligabend]{"entity": "holiday", "value": "Heiligabend"} offen?
-    - Hallo, [Heiligabend]{"entity": "holiday", "value": "Heiligabend"} offen?
-    - Haben Sie an [Weihnachten]{"entity": "holiday", "role": "day"} offen?
-    - Guten Tag, Haben Sie an [Weihnachten]{"entity": "holiday", "role": "day"} offen?
-    - Hallo, Haben Sie an [Weihnachten]{"entity": "holiday", "role": "day"} offen?
-    - Haben Sie an [Heiligabend]{"entity": "holiday", "role": "day"} offen?
-    - Guten Tag, Haben Sie an [Heiligabend]{"entity": "holiday", "role": "day"} offen?
-    - Haben Sie an [Weihnachten]{"entity": "holiday", "role": "day"} geöffnet?
-    - Haben Sie an [Heiligabend]{"entity": "holiday", "role": "day"} geöffnet?
-    - Haben Sie in den [Weihnachtsferien]{"entity": "holiday", "role": "span"} offen?
-    - Ist während der [Weihnachtsurlaubszeit]{"entity": "holiday", "role": "span"} offen?
-    - [Silvester]{"entity": "holiday", "role": "day"} offen?
-    - [Neujahr]{"entity": "holiday", "role": "day"} offen?
-    - Haben Sie an [Silvester]{"entity": "holiday", "role": "day"} offen?
-    - Haben Sie in der [Silvesterzeit]{"entity": "holiday", "role": "span"} offen?
-    - Haben Sie an [Neujahr]{"entity": "holiday", "role": "day"} offen?
-    - Haben Sie an [Silvester]{"entity": "holiday", "role": "day"} geöffnet?
-    - Haben Sie an [Neujahr]{"entity": "holiday", "role": "day"} geöffnet?
-    - Guten Tag, haben Sie heute offen?
-    - Guten Tag, haben Sie heute geöffnet?
-    - Hallo, kann ich [heute]{"entity": "time", "role": "today"} vorbei kommen? 
-    - Grüße, heute offen?
-    - Meister, heute offen?
-    - Hallo, [morgen]{"entity": "time", "role": "tomorrow"} auch offen?
-    - Hallo, [morgen]{"entity": "time", "role": "tomorrow"} auch geöffnet?
-    - Ab wann ist geöffnet?
-    - Bis wann ist geöffnet?
-    - Bis wann ist offen?
+    - Wie sind ihre Öffnungszeiten?
+    - Wie sind die Öffnungszeiten des Museums?
+    - Wann hat das Museum geöffnet?
+    - Wann hat das Museum offen?
+    - Wann hat das Museum auf?
+    - Ist das Musem heute geschlossen?
+    - Ist das Museum heute offen?
+    - Ist das Museum heute geöffnet?
+    - Ist das Museum heute auf?
+    - Hat das Musem heute geöffnet?
+    - Hat das Museum heute offen?
+    - Hat das Museum heute auf?
+    - Ab wann hat das Museum heute geöffnet?
+    - Ab wann hat das Museum heute offen?
+    - Ab wann hat das Museum heute auf?
+    - Ist heute das Museum geöffnet?
+    - Wann ist das Museum geschlossen?
+    - Wann ist das Museum offen?
+    - Wann hat das Museum geschlossen?
+    - Ist heute geöffnet?
+    - Ist heute offen?
+
+# - intent: zeiten
+#   examples: |
+#     - Öffnungszeiten?
+#     - Wann habt ihr offen?
+#     - Wann ist das museum geöffnet?
+#     - [Weihnachten]{"entity": "holiday", "role": "day"} auch offen?
+#     - [Heiligabend]{"entity": "holiday", "value": "Heiligabend"} offen?
+#     - Guten Tag, [Heiligabend]{"entity": "holiday", "value": "Heiligabend"} offen?
+#     - Hallo, [Heiligabend]{"entity": "holiday", "value": "Heiligabend"} offen?
+#     - Haben Sie an [Weihnachten]{"entity": "holiday", "role": "day"} offen?
+#     - Guten Tag, Haben Sie an [Weihnachten]{"entity": "holiday", "role": "day"} offen?
+#     - Hallo, Haben Sie an [Weihnachten]{"entity": "holiday", "role": "day"} offen?
+#     - Haben Sie an [Heiligabend]{"entity": "holiday", "role": "day"} offen?
+#     - Guten Tag, Haben Sie an [Heiligabend]{"entity": "holiday", "role": "day"} offen?
+#     - Haben Sie an [Weihnachten]{"entity": "holiday", "role": "day"} geöffnet?
+#     - Haben Sie an [Heiligabend]{"entity": "holiday", "role": "day"} geöffnet?
+#     - Haben Sie in den [Weihnachtsferien]{"entity": "holiday", "role": "span"} offen?
+#     - Ist während der [Weihnachtsurlaubszeit]{"entity": "holiday", "role": "span"} offen?
+#     - [Silvester]{"entity": "holiday", "role": "day"} offen?
+#     - [Neujahr]{"entity": "holiday", "role": "day"} offen?
+#     - Haben Sie an [Silvester]{"entity": "holiday", "role": "day"} offen?
+#     - Haben Sie in der [Silvesterzeit]{"entity": "holiday", "role": "span"} offen?
+#     - Haben Sie an [Neujahr]{"entity": "holiday", "role": "day"} offen?
+#     - Haben Sie an [Silvester]{"entity": "holiday", "role": "day"} geöffnet?
+#     - Haben Sie an [Neujahr]{"entity": "holiday", "role": "day"} geöffnet?
+#     - Guten Tag, haben Sie heute offen?
+#     - Guten Tag, haben Sie heute geöffnet?
+#     - Hallo, kann ich [heute]{"entity": "time", "role": "today"} vorbei kommen? 
+#     - Grüße, heute offen?
+#     - Meister, heute offen?
+#     - Hallo, [morgen]{"entity": "time", "role": "tomorrow"} auch offen?
+#     - Hallo, [morgen]{"entity": "time", "role": "tomorrow"} auch geöffnet?
+#     - Ab wann ist geöffnet?
+#     - Bis wann ist geöffnet?
+#     - Bis wann ist offen?
 
 - intent: zeiten_weihnachten
-  examples:
-  - Ist an Weihnachten geöffnet?
-  - Ist das Musem an Weihnachten geöffnet?
-  - Ist das Musem an Weihnachten offen?
-  - Ist das Musem an Weihnachten zu?
-  - Hat das Musem an Weihnachten geschlossen?
-  - Ist das Musem an Weihnachten geschlossen?
-  - Haben Sie an Weihnachten geöffnet?
-  - Haben Sie an Weihnachten offen?
-  - Haben Sie an Weihnachten zu?
-  - Haben Sie an Weihnachten geschlossen?
-  - Ist das Musem an Heiligabend geöffnet?
-  - Ist das Musem an Heiligabend offen?
-  - Ist das Musem an Heiligabend zu?
-  - Hat das Musem an Heiligabend geschlossen?
-  - Ist das Musem an Heiligabend geschlossen?
-  - Haben Sie an Heiligabend geöffnet?
-  - Haben Sie an Heiligabend offen?
-  - Haben Sie an Heiligabend zu?
-  - Haben Sie an Heiligabend geschlossen?
-  - Ist in den Weihnachtsferien geöffnet?
+  examples: |
+    - Ist an Weihnachten geöffnet?
+    - Ist das Musem an Weihnachten geöffnet?
+    - Ist das Musem an Weihnachten offen?
+    - Ist das Musem an Weihnachten zu?
+    - Hat das Musem an Weihnachten geschlossen?
+    - Ist das Musem an Weihnachten geschlossen?
+    - Haben Sie an Weihnachten geöffnet?
+    - Haben Sie an Weihnachten offen?
+    - Haben Sie an Weihnachten zu?
+    - Haben Sie an Weihnachten geschlossen?
+    - Ist das Musem an Heiligabend geöffnet?
+    - Ist das Musem an Heiligabend offen?
+    - Ist das Musem an Heiligabend zu?
+    - Hat das Musem an Heiligabend geschlossen?
+    - Ist das Musem an Heiligabend geschlossen?
+    - Haben Sie an Heiligabend geöffnet?
+    - Haben Sie an Heiligabend offen?
+    - Haben Sie an Heiligabend zu?
+    - Haben Sie an Heiligabend geschlossen?
+    - Ist in den Weihnachtsferien geöffnet?
 
 - intent: zeiten_silvester
-  examples:
-  - Ist an Silvester geöffnet?
-  - Ist das Musem an Silvester geöffnet?
-  - Ist das Musem an Silvester offen?
-  - Ist das Musem an Silvester zu?
-  - Hat das Musem an Silvester geschlossen?
-  - Ist das Musem an Silvester geschlossen?
-  - Haben Sie an Silvester geöffnet?
-  - Haben Sie an Silvester offen?
-  - Haben Sie an Silvester zu?
-  - Haben Sie an Silvester geschlossen?
-  - Hat das Musem an 31.12 geöffnet?
-  - Hat das Musem an 31.12 offen?
-  - Hat das Musem an 31.12 zu?
-  - Hat das Musem an 31.12 geschlossen?
-  - Ist das Musem an 31.12 geschlossen?
+  examples: |
+    - Ist an Silvester geöffnet?
+    - Ist das Musem an Silvester geöffnet?
+    - Ist das Musem an Silvester offen?
+    - Ist das Musem an Silvester zu?
+    - Hat das Musem an Silvester geschlossen?
+    - Ist das Musem an Silvester geschlossen?
+    - Haben Sie an Silvester geöffnet?
+    - Haben Sie an Silvester offen?
+    - Haben Sie an Silvester zu?
+    - Haben Sie an Silvester geschlossen?
+    - Hat das Musem an 31.12 geöffnet?
+    - Hat das Musem an 31.12 offen?
+    - Hat das Musem an 31.12 zu?
+    - Hat das Musem an 31.12 geschlossen?
+    - Ist das Musem an 31.12 geschlossen?
 
 
 
