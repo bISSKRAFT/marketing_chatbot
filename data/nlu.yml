@@ -176,15 +176,43 @@ nlu:
 
 - intent: parken_auto
   examples: |
-    - Wo kann ich mein Auto parken?
+    - Wo kann ich mein Auto parken? 
+    - Gibt es einen Parkplatz in der Nähe des Museums?
     - Gibt es Parkplätze in der Nähe des Museums?
+    - Wo ist der nächste Parkplatz?
     - Wo kann ich mein Auto abstellen?
+    - Welche Parkmöglichkeiten stehen mir zur Verfügung, wenn ich mit dem Auto zum Museum komme?
+    - Gibt es Parkmöglichkeiten am Museum?
+    - Hat das Museum einen Parkplatz?
+    - Wo finde ich einen Parkplatz für mein Auto, wenn ich das Museum besuche?
+    - Wo kann ich mein Auto abstellen, wenn ich das Museum besuche?
+    - Wo kann ich mein Auto parken, wenn ich das Museum besuche?
+    - Wo kann ich mein Auto abstellen, wenn ich das Museum besichtige?
+    - Welche Parkmöglichkeiten gibt es?
+    - Wie ist die Parksitutation am Museum?
+    - Hat das Museum einen kostenlosen Parkplatz?
+    - Gibt es am Museum einen kostenfreien Parkplatz?
+
 
 - intent: parken_fahrrad
   examples: |
-    - Wo kann ich mein Fahrrad parken?
-    - Gibt es einen Fahrradständer in der Nähe des Museums?
     - Wo kann ich mein Fahrrad abstellen?
+    - Gibt es einen Fahrradständer in der Nähe des Museums?
+    - Hat das Museum einen Fahrradständer?
+    - Bietet das Museum die Möglichkeit Fahrräder zu parken?
+    - Kann ich am Museum mein Fahrrad abstellen?
+    - Gibt es am Museum einen Fahrradständer?
+    - Wo kann ich mein Fahrrad abstellen, wenn ich das Museum besuche?
+    - Wo kann ich mein Fahrrad abstellen, wenn ich das Museum besichtige?
+    - Kann man am Museum gut Fährrader abstellen? 
+    - Hat das Museum einen Fahrradparkplatz?
+    - Gibt es am Museum einen Fahrradparkplatz?
+    - Gibt es die Möglichkeit Fährrader am Museum gut und sicher abzustellen?
+    - Gibt es am Museum Parkmöglichkeiten für Fahrräder? 
+    - Wo kann ich am Museum mein Fahrrad parken?
+    - Wo kann ich am Museum ein E-Bike parken?
+    - Bietet das Museum die Möglichkeit E-Bikes zu laden? 
+
 
 - intent: abteilungen
   examples: |
@@ -203,27 +231,22 @@ nlu:
     - In welchen Bereichen des Museums werden spezifische Themen behandelt?
     - Welche Themenfelder umfasst die Ausstellung im Museum?
     - Was sind die zentralen Themen, die im Museum behandelt werden?
-    - Welche Schwerpunktthemen werden im Museum beleuchtet?
     - Kannst du mir eine Übersicht über die behandelten Themen im Museum geben?
-    - Über welche Sachverhalte erfahre ich etwas im Museum?
-    - Welche Themen stehen im Fokus der museumspädagogischen Arbeit?
-    - Was sind die zentralen Inhalte der Museumssammlung?
-    - Welche Themen werden in den einzelnen Ausstellungsbereichen des Museums behandelt?
-    - Gibt es spezifische Themenausstellungen im Museum?
-    - Welche Aspekte der Geschichte werden im Museum thematisiert?
-    - Was sind die Kernthemen, die im Museum präsentiert werden?
-    - Welche spezifischen Themenbereiche werden im Museum angesprochen?
-    - In welchen Kontexten werden im Museum Informationen vermittelt?
-    - Welche historischen Ereignisse und Entwicklungen werden im Museum dargestellt?
-    - Welche relevanten Themen werden im Museum aufgegriffen?
-    - Was sind die hauptsächlichen Inhalte der Ausstellung im Museum?
-    - Welche gesellschaftlichen Aspekte werden im Museum behandelt?
-    - Gibt es bestimmte Themenschwerpunkte, auf die sich das Museum konzentriert?
+# - Über welche Sachverhalte erfahre ich etwas im Museum?
+# - Welche Themen stehen im Fokus der museumspädagogischen Arbeit?
+# - Was sind die zentralen Inhalte der Museumssammlung?
+# - Welche Themen werden in den einzelnen Ausstellungsbereichen des Museums behandelt?
+# - Gibt es spezifische Themenausstellungen im Museum?
+# - Welche Aspekte der Geschichte werden im Museum thematisiert?
+# - Was sind die Kernthemen, die im Museum präsentiert werden?
+# - Welche spezifischen Themenbereiche werden im Museum angesprochen?
+# - Welche historischen Ereignisse und Entwicklungen werden im Museum dargestellt?
+# - Was sind die hauptsächlichen Inhalte der Ausstellung im Museum?
+# - Gibt es bestimmte Themenschwerpunkte, auf die sich das Museum konzentriert?
 
 - intent: kindgerecht
   examples: |
     - Erfüllt das Museum die Bedürfnisse von Kindern?
-    - Wird das Museum den Anforderungen von Kindern gerecht?
     - Ist das Museum für Kinder geeignet?
     - Bietet das Museum kindgerechte Angebote?
     - Ist das Museum auf die Bedürfnisse von Kindern abgestimmt?
@@ -236,51 +259,39 @@ nlu:
     - Erfahren Kinder im Museum eine angemessene Betreuung?
     - Bietet das Museum interaktive Möglichkeiten für Kinder?
     - Gibt es im Museum etwas, das Kinder anspricht?
-    - Ist das Museum auf die Lernbedürfnisse von Kindern ausgerichtet?
     - Gibt es im Museum Bildungsangebote für Kinder?
-    - Werden Kinder im Museum aktiv einbezogen?
     - Bietet das Museum altersgerechte Inhalte für Kinder?
     - Erfahren Kinder im Museum eine ansprechende Präsentation der Ausstellungsstücke?
     - Wird im Museum auf kindgerechte Sprache und Erklärungen geachtet?
-    - Bietet das Museum eine angemessene Sicherheit für Kinder?
-    - Ist das Museum für Kinder gut zugänglich?
-    - Wurde das Museum mit Blick auf die Bedürfnisse von Kindern gestaltet?
-    - Bietet das Museum Möglichkeiten zur kreativen Entfaltung für Kinder?
-    - Wird im Museum auf eine kinderfreundliche Gestaltung geachtet?
-    - Gibt es im Museum Räumlichkeiten, die speziell für Kinder konzipiert sind?
-    - Erfahren Kinder im Museum eine altersgerechte Auseinandersetzung mit den Ausstellungsinhalten?
-    - Bietet das Museum Spiel- und Lernmöglichkeiten für Kinder?
-    - Wird im Museum auf eine kinderfreundliche Atmosphäre geachtet?
-    - Gibt es im Museum Möglichkeiten zur aktiven Teilnahme von Kindern?
+# - Bietet das Museum eine angemessene Sicherheit für Kinder?
+# - Ist das Museum für Kinder gut zugänglich?
+# - Wurde das Museum mit Blick auf die Bedürfnisse von Kindern gestaltet?
+# - Bietet das Museum Möglichkeiten zur kreativen Entfaltung für Kinder?
+# - Wird im Museum auf eine kinderfreundliche Gestaltung geachtet?
+# - Gibt es im Museum Räumlichkeiten, die speziell für Kinder konzipiert sind?
+# - Erfahren Kinder im Museum eine altersgerechte Auseinandersetzung mit den Ausstellungsinhalten?
+# - Bietet das Museum Spiel- und Lernmöglichkeiten für Kinder?
+# - Wird im Museum auf eine kinderfreundliche Atmosphäre geachtet?
+# - Gibt es im Museum Möglichkeiten zur aktiven Teilnahme von Kindern?
 
 - intent: barrierefrei_gehen
   examples: |
-    - Erfüllt das Museum die Anforderungen der Barrierefreiheit?
-    - Ist das Museum für Menschen mit Behinderungen zugänglich?
-    - Bietet das Museum barrierefreie Einrichtungen?
-    - Erfüllt das Museum die Standards für Barrierefreiheit?
+    - Ist das Museum für Menschen mit Gehbehinderung geeignet?
     - Ist das Museum für Rollstuhlfahrer geeignet?
     - Gibt es im Museum barrierefreie Wege und Zugänge?
-    - Wurde das Museum mit Blick auf die Bedürfnisse von Menschen mit Behinderungen gestaltet?
-    - Erfüllt das Museum die gesetzlichen Vorgaben zur Barrierefreiheit?
     - Bietet das Museum Hilfsmittel für Menschen mit Behinderungen?
     - Ist das Museum für Menschen mit eingeschränkter Mobilität geeignet?
     - Gibt es im Museum Aufzüge oder Rampen für einen barrierefreien Zugang?
-    - Erfahren Besucher mit Behinderungen eine angemessene Unterstützung im Museum?
     - Bietet das Museum barrierefreie Toiletten?
     - Ist das Museum mit einem barrierefreien Parkplatz ausgestattet?
     - Gibt es im Museum barrierefreie Sitzgelegenheiten?
-    - Erfüllt das Museum die Anforderungen für eine barrierefreie Beschilderung?
-    - Bietet das Museum Hilfsmittel für Menschen mit kognitiven Beeinträchtigungen?
     - Ist das Museum für Besucher mit Gehhilfen geeignet?
-    - Gibt es im Museum barrierefreie Informationen in Leichter Sprache?
-    - Erfüllen die Ausstellungsbereiche des Museums die Standards für Barrierefreiheit?
-    - Bietet das Museum barrierefreie Informationen in verschiedenen Sprachen an?
-    - Ist das Museum für Menschen mit Autismus geeignet?
     - Gibt es im Museum ausreichend Platz für Rollstuhlfahrer und Gehhilfen?
     - Erfahren Besucher mit körperlichen Einschränkungen eine angemessene Unterstützung im Museum?
-    - Bietet das Museum barrierefreie Audioführungen?
-    - Ist das Museum für Besucher mit unterschiedlichen Behinderungsarten zugänglich?
+    - Bietet das Museum barrierefreie Zugänge für Menschen mit Gehbehinderung?
+    - Ist das Museum mit Aufzügen oder Rampen ausgestattet, um eine Zugänglichkeit für Menschen mit Gehbehinderung zu gewährleisten?
+    - Erfüllt das Museum die Bedürfnisse von Menschen mit Gehbehinderung in Bezug auf Zugänglichkeit und Barrierefreiheit?
+    - Ist das Museum für Menschen mit einer Gehbehinderung zugänglich?
 
 - intent: barrierefrei_sehen
   examples: |
