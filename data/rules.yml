@@ -73,9 +73,9 @@ steps:
 - action: utter_cafeteria_ort
 
 - rule: cafeteria_oeffnungszeiten
-steps:
-- intent: cafeteria_oeffnungszeiten
-- action: utter_cafeteria_oeffnungszeiten
+  steps:
+  - intent: cafeteria_oeffnungszeiten
+  - action: utter_cafeteria_oeffnungszeiten
 
 - rule: fuehrungen_information
   steps:
