@@ -25,7 +25,7 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
-- story: wenn eine LehrerIn eine Führung für ihre Schulklasse buchen möchte
+- story: wenn ein/e LehrerIn eine Führung für seine/ihre Schulklasse buchen möchte
   steps:
   - intent: greet
   - action: utter_greet
