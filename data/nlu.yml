@@ -282,7 +282,7 @@ nlu:
     - Bietet das Museum barrierefreie Audioführungen?
     - Ist das Museum für Besucher mit unterschiedlichen Behinderungsarten zugänglich?
 
-- intent: barrierefrei_sehen_hoeren
+- intent: barrierefrei_sehen
   examples: |
     - Ist das Museum für sehbehinderte oder blinde Menschen zugänglich?
     - Gibt es im Museum taktil erfassbare Informationen für blinde oder sehbehinderte Besucher?
@@ -306,8 +306,6 @@ nlu:
     - Welche Ressourcen stellt das Museum Menschen mit Sehbehinderung zur Verfügung?
     - Welche Hilfsmittel oder Anpassungen bietet das Museum Menschen mit Sehbehinderung an?
     - Wie wird das Museum Menschen mit Sehbehinderung gerecht?
-    - Erfüllt das Museum die Bedürfnisse von Menschen mit Hörbehinderungen?
-    - Bietet das Museum barrierefreie Informationen in Gebärdensprache?
 
 - intent: cafeteria_angebot
   examples: |
@@ -523,7 +521,6 @@ nlu:
     - Hat das Museum einen eigenen Verkaufsraum?
     - Kann man im Museum Produkte erwerben?
     - Gibt es einen Laden, wo man Kunstwerke und Bücher kaufen kann?
-
 
 - intent: kontakt
   examples: |

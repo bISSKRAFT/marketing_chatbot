@@ -41,6 +41,7 @@ stories:
   - action: action_get_price
   - intent: fuehrungen_ansprechpartner
   - action: utter_fuehrungen_ansprechpartner
+
   # - intent: mood_great
   # - action: utter_happy
   # - intent: goodbye
