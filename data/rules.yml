@@ -17,6 +17,16 @@ rules:
   - intent: zeiten
   - action: action_get_opening_times
 
+- rule: zeiten_weihnachten
+  steps:
+  - intent: zeiten_weihnachten
+  - action: action_get_christmas_opening_times
+
+- rule: zeiten_silvester
+  steps:
+  - intent: zeiten_silvester
+  - action: action_get_new_years_opening_times
+
 - rule: preise
   steps:
   - intent: preise
@@ -26,6 +36,16 @@ rules:
   steps:
   - intent: anreise
   - action: utter_anreise
+
+- rule: parken_auto
+  steps:
+  - intent: parken_auto
+  - action: utter_parken_auto
+
+- rule: parken_fahrrad
+  steps:
+  - intent: parken_fahrrad
+  - action: utter_parken_fahrrad
 
 - rule: abteilungen
   steps:
@@ -42,10 +62,60 @@ rules:
   - intent: barrierefrei_gehen
   - action: utter_barrierefrei_gehen
 
-- rule: barrierefrei_sehen_hoeren
+- rule: barrierefrei_sehen
   steps:
-  - intent: barrierefrei_sehen_hoeren
-  - action: barrierefrei_sehen_hoeren
+  - intent: barrierefrei_sehen
+  - action: utter_barrierefrei_sehen
+
+- rule: cafeteria_angebot
+  steps:
+  - intent: cafeteria_angebot
+  - action: utter_cafeteria_angebot
+
+- rule: cafeteria_information
+  steps:
+  - intent: cafeteria_information
+  - action: utter_cafeteria_information
+
+- rule: cafeteria_ort
+steps:
+- intent: cafeteria_ort
+- action: utter_cafeteria_ort
+
+- rule: cafeteria_oeffnungszeiten
+  steps:
+  - intent: cafeteria_oeffnungszeiten
+  - action: utter_cafeteria_oeffnungszeiten
+
+- rule: fuehrungen_information
+  steps:
+  - intent: fuehrungen_information
+  - action: utter_fuehrungen_information
+
+- rule: fuehrungen_ansprechpartner
+  steps:
+  - intent: fuehrungen_ansprechpartner
+  - action: utter_fuehrungen_ansprechpartner
+
+- rule: fuehrungen_sprachen
+  steps:
+  - intent: fuehrungen_sprachen
+  - action: utter_fuehrungen_sprachen
+
+- rule: sonderausstellung_information
+  steps:
+  - intent: sonderausstellung_information
+  - action: utter_sonderausstellung_information
+
+- rule: sonderausstellung_archiv
+  steps:
+  - intent: sonderausstellung_archiv
+  - action: utter_sonderausstellung_archiv
+
+- rule: museumsshop
+  steps:
+  - intent: museumsshop
+  - action: utter_museumsshop
 
 - rule: kontakt
   steps:

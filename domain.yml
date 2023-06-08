@@ -4,6 +4,8 @@ intents:
   - greet
   - goodbye
   - zeiten
+  - zeiten_weihnachten
+  - zeiten_silvester
   - preise
   - anreise
   - parken_auto
@@ -11,7 +13,7 @@ intents:
   - abteilungen
   - kindgerecht
   - barrierefrei_gehen
-  - barrierefrei_sehen_hoeren
+  - barrierefrei_sehen
   - cafeteria_angebot
   - cafeteria_information
   - cafeteria_ort
@@ -24,6 +26,9 @@ intents:
   - museumsshop
   - kontakt
 
+entities:
+  - time
+
 responses:
   utter_greet:
   - text: "Guten Tag, wie geht es Ihnen?"
@@ -35,68 +40,67 @@ responses:
   - text: "Hat Ihnen das weitergeholfen?"
 
   utter_happy:
-  - text: "Freut mich, dass ich helfen konnte!"
+  - text: "Freut mich, dass ich Dir helfen konnte!"
 
   utter_preise:
-  - text: preise
+  - text: Eine Übersicht unserer Preise findest Du unter https://www.kriminalmuseum.eu/besucherplaner/preise/. 
 
   utter_anreise:
-  - text: anreise
+  - text: DU kannst sowohl mit dem Auto als auch mit der Bahn anreisen. Leider besitzt das Museum keine eigenen Parkplätze, jedoch befindet sich ein Parkplatz in der Nähe des Museums. Du kannst mich nach möglichen Parkplätzen befragen!\n\nMit der Bahn ist das Musem vom Bahnhof Rothenburg aus in 15 Minuten zu Fuß zu erreichen.
 
   utter_parken_auto:
-  - text: Zum Parken können Sie folgenden Parkplatz nutzen https://goo.gl/maps/QAUyMY8E6LRvjZwb8?coh=178572&entry=tt
+  - text: Für Bus, LKW & PKW kannst Du den Parkplatz am Friedrich-Hörner-Weg nutzen https://goo.gl/maps/QAUyMY8E6LRvjZwb8?coh=178572&entry=tt \n\nFür Bus, PKW & Wohnmobil kannst Du den Parkplatz in der Nördlinger Straße verwenden https://goo.gl/maps/vXoczjg9xMiQ4yuE9 \n\nFür Bus, LKW, PKW und Wohnmobil kannst Du dein Fahrzeug in der Schweinsdorfer Straße parken https://goo.gl/maps/MPyJPBjUNSsrY3Zd8 \n\nFür nur PKW gibt es den Parkplatz am Hornburgweg https://goo.gl/maps/3GuW6t4Euq2WMejH6 \nsowie am Bezoldweg https://goo.gl/maps/8tBsLftVqXkmjhno9.
 
   utter_parken_fahrrad:
-  - text: parken_fahrrad
+  - text: Das Museum bietet keine ausgewiesenen Stellplätze für Fahrräder an.
 
   utter_abteilungen:
-  - text: Unser Museum ist in folgende Abteilungen untergliedert:\n\t-Recht in alter Zeit\n\t-Eine Frage der Ehre\n\t-Verfahren und Folter\n\t-Urteil und Strafe\n\t-Hexen, Henker und Halunken\n\t-Kriche,Reich und Recht\n\t-Tiere in der Rechtsgeschichte\n\t-Mythos oder Wahrheit? Rechtsfantasien\n\nWeitere Informationen zu den Abteilungen findest du unter https://www.kriminalmuseum.eu
+  - text: Unser Museum ist in folgende Abteilungen untergliedert:\n\t-Recht in alter Zeit\n\t-Eine Frage der Ehre\n\t-Verfahren und Folter\n\t-Urteil und Strafe\n\t-Hexen, Henker und Halunken\n\t-Kriche,Reich und Recht\n\t-Tiere in der Rechtsgeschichte\n\t-Mythos oder Wahrheit? Rechtsfantasien\n\nWeitere Informationen zu den Abteilungen findest Du unter https://www.kriminalmuseum.eu.
 
   utter_kindgerecht:
   - text: Das Museum eignet sich für alle Altersgruppen und ist kindgerecht.
 
   utter_barrierefrei_gehen:
-  - text: Bei dem Museum handelt es sich um ein denkmalgeschützes Gebäude, daher konnte es leider nicht barrierefrei gestaltet werden.
+  - text: Bei dem Museum handelt es sich um ein denkmalgeschütztes Gebäude, daher konnte es leider nicht barrierefrei gestaltet werden.
 
-  barrierefrei_sehen_hoeren:
-  - text: Das Museum bietet aktuell keinen Audioguide. Führungen werden in deutscher und englischer Sprache angeboten. Weitere Informationen zu den Führungen findest du unter https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/
+  utter_barrierefrei_sehen:
+  - text: Das Museum bietet aktuell keinen Audioguide. Führungen werden in deutscher und englischer Sprache angeboten. Weitere Informationen zu den Führungen findest Du unter https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/.
 
   utter_cafeteria_angebot:
   - text: Die Cafeteria bietet Heiß- und Kaltgetränke sowie unsere hausgemachten „Kriminalmuseums“-Schneeballen in verschiedenen Größen und ein täglich wechselndes Kuchenangebot an (alles auch zum Mitnehmen). Zudem halten wir saisonale Erfrischungsgetränke wie etwa Holunderblütenschorle, Hugo und Aperol Spritz für dich bereit.
 
   utter_cafeteria_information:
-  - text: Alle Informationen rund um die Cafeteria findest du unter https://www.kriminalmuseum.eu/besucherplaner/cafeteria/.
+  - text: Alle Informationen rund um die Cafeteria findest Du unter https://www.kriminalmuseum.eu/besucherplaner/cafeteria/.
 
   utter_cafeteria_ort:
   - text: Die Cafeteria mit Museumsshop befindet sich in der Johanniterscheune im Nebengebäude des Museums.
 
   utter_cafeteria_oeffnungszeiten:
-  - text: Die Cafeteria ist Dienstag, Mittwoch, Donnerstag, Samstag und Sonntag von 13-18 Uhr geöffnet.
+  - text: Die Cafeteria ist am Dienstag, Mittwoch, Donnerstag, Samstag und Sonntag von 13-18 Uhr geöffnet.
 
   utter_fuehrungen_information:
-  - text: Alle Informationen zu den Führungen im Museum findest du unter https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/.
+  - text: Alle Informationen zu den Führungen im Museum findest Du unter https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/.
 
   utter_fuehrung_buchen:
-  - text: "Hier kannst du deine Führungen durch das Museum buchen: https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/"
+  - text: Hier kannst Du deine Führungen durch das Museum buchen https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/.
 
   utter_fuehrungen_ansprechpartner:
-  - text: Alle Ansprechpartner und weitere Informationen zu Führungen findest du unter https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/.
+  - text: Alle Ansprechpartner und weitere Informationen zu Führungen findest Du unter https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/.
 
   utter_fuehrungen_sprachen:
   - text: Die Führungen werden in deutscher und englischer Sprache angeboten.
 
   utter_sonderausstellung_information:
-  - text: Alle Informationen zu den aktuellen Sonderausstellungen findest du unter https://www.kriminalmuseum.eu/sonderschauen/.
+  - text: Alle Informationen zu den aktuellen Sonderausstellungen findest Du unter https://www.kriminalmuseum.eu/sonderschauen/.
 
   utter_sonderausstellung_archiv:
-  - text: Ein Archiv der vergangenen Sonderausstellungen des Museums findest du unter https://www.kriminalmuseum.eu/sonderschauen/.
+  - text: Ein Archiv der vergangenen Sonderausstellungen des Museums findest Du unter https://www.kriminalmuseum.eu/sonderschauen/.
 
   utter_museumsshop:
-  - text: Der Museumsshop befindet sich in der Johanniterscheune im Nebengebäude des Museums. Alternativ kannst du auch online unter https://kriminalmuseum.ticketfritz.de/ vorbeischauen.
+  - text: Der Museumsshop befindet sich in der Johanniterscheune im Nebengebäude des Museums. Alternativ kannst Du auch online unter https://kriminalmuseum.ticketfritz.de/ vorbeischauen.
 
   utter_kontakt:
-  - text: Du kannst uns unter der Telefonnummer +49 (0) 9861 5359 erreichen oder eine E-Mail an info@kriminalmuseum.eu schreiben. Weitere Informationen findest du unter https://www.kriminalmuseum.eu/kontakt/.
-
+  - text: Du kannst uns unter der Telefonnummer +49 (0) 9861 5359 erreichen oder eine E-Mail an info@kriminalmuseum.eu schreiben. Weitere Informationen findest Du unter https://www.kriminalmuseum.eu/kontakt/.
 
 session_config:
   session_expiration_time: 60
@@ -105,3 +109,5 @@ session_config:
 actions:
 - action_get_price
 - action_get_opening_times
+- action_get_christmas_opening_times
+- action_get_new_years_opening_times
