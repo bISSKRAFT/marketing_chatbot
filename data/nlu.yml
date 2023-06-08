@@ -585,17 +585,14 @@ nlu:
     - Ist im Museum ein Geschäft vorhanden?
     - Kann man im Museum etwas kaufen?
     - Gibt es eine Einkaufsmöglichkeit innerhalb des Museums?
-    - Ist ein Shop in den Räumlichkeiten des Museums zu finden?
     - Hat das Museum einen eigenen Laden?
     - Gibt es einen Souvenirshop im Museum?
     - Kann man im Museum Merchandise erwerben?
     - Gibt es einen Laden, wo man Geschenke kaufen kann?
     - Ist ein Shop für Museumssouvenirs vorhanden?
-    - Bietet das Museum eine Verkaufsstelle für Erinnerungsstücke an?
     - Gibt es einen Geschenkeladen im Museum?
     - Ist ein Museumsshop für Besucher zugänglich?
-    - Hat das Museum einen eigenen Verkaufsraum?
-    - Kann man im Museum Produkte erwerben?
+    - Kann man im Museum Souvenirs erwerben?
     - Gibt es einen Laden, wo man Kunstwerke und Bücher kaufen kann?
 
 - intent: kontakt
