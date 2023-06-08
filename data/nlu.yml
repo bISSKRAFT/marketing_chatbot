@@ -533,35 +533,20 @@ nlu:
 
 - intent: sonderausstellung_information
   examples: |
-    - Gibt es eine Möglichkeit, Informationen überlaufende Sonderausstellungen zu erhalten?
-    - Wo könnte ich nach Informationen zu den aktuellen Sonderausstellungen suchen?
-    - Ist es möglich, Informationen über gegenwärtige Sonderausstellungen zu finden?
-    - Wo bekomme ich Auskunft über die aktuellen Sonderausstellungen?
-    - Gibt es eine Quelle, die mir Informationen über aktuelle Sonderausstellungen geben kann?
     - Wo kann ich mich über die neuesten Sonderausstellungen informieren?
-    - Wo erhalte ich Informationen über die aktuellen Sonderausstellungen?
     - Wo kann ich mich über die Sonderausstellungen, die gerade stattfinden, informieren?
-    - Wo finde ich aktuelle Informationen zu den Sonderausstellungen?
-    - Wo kann ich nach aktuellen Sonderausstellungen recherchieren?
     - Wo kann ich nachschauen, um Details über die gegenwärtigen Sonderausstellungen zu erhalten?
-    - Wo kann ich nach den neuesten Informationen zu den Sonderausstellungen suchen?
-    - Gibt es eine spezielle Quelle für Informationen zu den aktuellen Sonderausstellungen?
-    - Wo könnte ich erfahren, was gerade an Sonderausstellungen angeboten wird?
     - Wo kann ich mich über die aktuellen Sonderausstellungen informieren und welche Werke gezeigt werden?
     - Wo kann ich erfahren, welche Sonderausstellungen gerade stattfinden und welche Themen sie behandeln?
     - Wo finde ich Informationen über die Sonderausstellungen, die derzeit geöffnet sind?
-    - Gibt es eine zentrale Anlaufstelle, um Informationen über die aktuellen Sonderausstellungen zu erhalten?
-    - Wo kann ich aktuelle Informationen zu den laufenden Sonderausstellungen finden
     - Gibt es eine Webseite, die mir Auskunft über die aktuellen Sonderausstellungen geben kann?
     - Wo kann ich nachsehen, welche Sonderausstellungen gerade stattfinden und wann sie enden?
-    - Gibt es eine Möglichkeit, mich über die aktuellen Sonderausstellungen zu informieren?
     - Wo finde ich eine Liste der aktuellen Sonderausstellungen und ihrer Austellungszeiten?
     - Wo kann ich erfahren, welche besonderen Ausstellungen zurzeit präsentiert werden?
     - Wo kann ich mich erkundigen, welche Sonderausstellungen gerade im Museum gezeigt werden?
     - Welche Sonderausstellung findet momentan statt?
     - Wo finde ich Informationen zu eurer Sonderausstellung?
     - Wo finde ich Informationen zur aktuellen Sonderausstellung im Museum?
-    - Wo erhalte ich Auskunft über die Sonderausstellung im Museum?
     - Kannst du mir sagen, wo ich Informationen zur Sonderausstellung im Museum erhalten kann?
 
 - intent: sonderausstellung_archiv
@@ -578,6 +563,9 @@ nlu:
     - Gibt es eine historische Sammlung der vergangenen Sonderausstellungen?
     - Ist ein Archiv mit den vergangenen Sonderausstellungen verfügbar?
     - Werden die vergangenen Sonderausstellungen archiviert?
+    - Gibt es Fotos oder Bilder vergangener Sonderausstellungen?
+    - Welche Sonderausstellungen gab es bisher?
+    - Wo finde ich das Archiv?
 
 - intent: museumsshop
   examples: |
