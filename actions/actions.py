@@ -37,7 +37,7 @@ from rasa_sdk import Action, Tracker
 # source: https://learning.rasa.com/conversational-ai-with-rasa/custom-actions/
 
 OPENING_TIMES ="""
-\n\nDie Hauptausstellung:\nApril – Oktober 2023:\nMo. – So.: 10:00 – 18:00 Uhr\n\n\nNovember 2023:\nMo. – So. 13:00 – 16:00 Uhr\n\n\nDezember 2023 – 8. Januar 2024:\xa0\nMo. – So. 11:00 – 17:00 Uhr\n\n\n9. Januar\xa0 –\xa0 März 2024:\nMo. – So.: 13:00 – 16:00 Uhr\n\xa0\nSonderöffnungszeiten:\n24.12.2023 (Heilig Abend):\xa0 \xa010:00 – 13:00 Uhr\n\n\n31.12.2023 (Silvester):\xa0 \xa010:00 – 13:00 Uhr\n\n\n\n\nDer letzte Einlass ist immer 45 Minuten vor Schließung.\n\n\nWir freuen uns auf Ihren Besuch!
+\n\nDie Hauptausstellung:\nApril – Oktober 2023:\nMo. – So.: 10:00 – 18:00 Uhr\nNovember 2023:\nMo. – So. 13:00 – 16:00 Uhr\nDezember 2023 – 8. Januar 2024:\xa0\nMo. – So. 11:00 – 17:00 Uhr\n9. Januar\xa0 –\xa0 März 2024:\nMo. – So.: 13:00 – 16:00 Uhr\n\xa0\nSonderöffnungszeiten:\n24.12.2023 (Heilig Abend):\xa0 \xa010:00 – 13:00 Uhr\n\n\n31.12.2023 (Silvester):\xa0 \xa010:00 – 13:00 Uhr\n\n\n\n\nDer letzte Einlass ist immer 45 Minuten vor Schließung.\nWir freuen uns auf Ihren Besuch!
 """
 mapping = {
     1: "januar",
@@ -87,13 +87,13 @@ class ActionGetOpeningTimes(Action):
         return "action_get_opening_times"
     
     def _msg_builder(self, months: str, times: str):
-        return f"Von {months.strip(':')} haben wir von {times} geöffnet.\n\n\nWeitere Öffnungszeiten: {OPENING_TIMES}"
+        return f"Von {months.strip(':')} haben wir von {times} geöffnet.\nWeitere Öffnungszeiten: {OPENING_TIMES}"
     
     def _set_default(self, 
                      day: int, 
                      month: int, 
                      url: str = "https://www.kriminalmuseum.eu/besucherplaner/oeffnungszeiten/") -> str:
-        return f"Zu Heute, dem {day}.{month} wurden keine Öffnungszeiten gefunden. Sie können diese unter {url} einsehen. \n\n\nAlternativ hier ein Ausschnitt: {OPENING_TIMES}"
+        return f"Zu Heute, dem {day}.{month} wurden keine Öffnungszeiten gefunden. Sie können diese unter {url} einsehen. \nAlternativ hier ein Ausschnitt: {OPENING_TIMES}"
     
     def _get_matches2(self, text: str, month: int, day: int):
         splits = text.split("\n")
