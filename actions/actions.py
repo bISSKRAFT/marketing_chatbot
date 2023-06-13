@@ -25,7 +25,7 @@
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
-
+# %%
 from typing import Text, Dict, Any, List, Tuple
 from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
@@ -37,7 +37,7 @@ from rasa_sdk import Action, Tracker
 # source: https://learning.rasa.com/conversational-ai-with-rasa/custom-actions/
 
 OPENING_TIMES ="""
-\n\nDie Hauptausstellung:\nApril – Oktober 2023:\nMo. – So.: 10:00 – 18:00 Uhr\n\n\nNovember 2023:\nMo. – So. 13:00 – 16:00 Uhr\n\n\nDezember 2023 – 8. Januar 2024:\xa0\nMo. – So. 11:00 – 17:00 Uhr\n\n\n9. Januar\xa0 –\xa0 März 2024:\nMo. – So.: 13:00 – 16:00 Uhr\n\xa0\nSonderöffnungszeiten:\n24.12.2023 (Heilig Abend):\xa0 \xa010:00 – 13:00 Uhr\n\n\n31.12.2023 (Silvester):\xa0 \xa010:00 – 13:00 Uhr\n\n\n\n\nDer letzte Einlass ist immer 45 Minuten vor Schließung.\n\n\nWir freuen uns auf Ihren Besuch!
+\n\nDie Hauptausstellung:\nApril – Oktober 2023:\nMo. – So.: 10:00 – 18:00 Uhr\nNovember 2023:\nMo. – So. 13:00 – 16:00 Uhr\nDezember 2023 – 8. Januar 2024:\xa0\nMo. – So. 11:00 – 17:00 Uhr\n9. Januar\xa0 –\xa0 März 2024:\nMo. – So.: 13:00 – 16:00 Uhr\n\xa0\nSonderöffnungszeiten:\n24.12.2023 (Heilig Abend):\xa0 \xa010:00 – 13:00 Uhr\n31.12.2023 (Silvester):\xa0 \xa010:00 – 13:00 Uhr\n\n\n\n\nDer letzte Einlass ist immer 45 Minuten vor Schließung.\nWir freuen uns auf Ihren Besuch!
 """
 mapping = {
     1: "januar",
@@ -65,18 +65,21 @@ def crawl_opening_times(url: str = "https://www.kriminalmuseum.eu/besucherplaner
     extract_str = soup.find_all("div", class_="wpb_wrapper")[1].text.strip()
     return extract_str
 
-def get_holiday_times(text: str) -> str:
-    split = text.split("\\n")
+def get_holiday_times(text: str, holiday: str) -> str:
+    text = text.replace("\xa0", "")
+    split = text.split("\n")
     for entry in split:
-        if "24.12." in entry:
-            return entry
-        if "31.12." in entry:
-            return entry
-    return
+        if holiday is "24.12":
+            if "24.12." in entry:
+                return entry
+        if holiday is "31.12":
+            if "31.12." in entry:
+                return entry
+    return ""
 
 def split_date_and_time(text: str) -> Tuple[str, str]:
-    split = text.split(":")
-    return split[0], split[1] 
+    split = text.split(": ")
+    return split[0].strip(), split[1].strip()
 
 class ActionGetOpeningTimes(Action):
 
@@ -84,13 +87,13 @@ class ActionGetOpeningTimes(Action):
         return "action_get_opening_times"
     
     def _msg_builder(self, months: str, times: str):
-        return f"Von {months.strip(':')} haben wir von {times} geöffnet.\n\n\nWeitere Öffnungszeiten: {OPENING_TIMES}"
+        return f"{OPENING_TIMES}\nGEFUNDENE ÖFFNUNGSZEITEN:\nVon {months.strip(':')} haben wir von {times} geöffnet.\nWeitere Öffnungszeiten können vorherigen Nachrichten entnommen werden."
     
     def _set_default(self, 
                      day: int, 
                      month: int, 
                      url: str = "https://www.kriminalmuseum.eu/besucherplaner/oeffnungszeiten/") -> str:
-        return f"Zu Heute, dem {day}.{month} wurden keine Öffnungszeiten gefunden. Sie können diese unter {url} einsehen. \n\n\nAlternativ hier ein Ausschnitt: {OPENING_TIMES}"
+        return f"Zu Heute, dem {day}.{month} wurden keine Öffnungszeiten gefunden. Sie können diese unter {url} einsehen. \nAlternativ hier ein Ausschnitt: {OPENING_TIMES}"
     
     def _get_matches2(self, text: str, month: int, day: int):
         splits = text.split("\n")
@@ -186,11 +189,11 @@ class ActionGetChristmasOpeningTimes(Action):
     
     def _msg_builder(self, text: str) -> str:
         date , time = split_date_and_time(text)
-        return f"Am {date} haben wir von {time} geöffnet\n\n\nAndere Öffnungszeiten: {OPENING_TIMES}"
+        return f"Am {date} haben wir von {time} geöffnet.\nAndere Öffnungszeiten: {OPENING_TIMES}"
     
     def run(self, dispather: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         crawled_opening_times = crawl_opening_times()
-        extr_times = get_holiday_times(crawled_opening_times)
+        extr_times = get_holiday_times(crawled_opening_times, "24.12")
         msg = self._msg_builder(extr_times)
         dispather.utter_message(text=msg)
         return []
@@ -201,11 +204,11 @@ class ActionGetNewYearsOpeningTimes(Action):
     
     def _msg_builder(self, text: str) -> str:
         date , time = split_date_and_time(text)
-        return f"Am {date} haben wir von {time} geöffnet\n\n\nAndere Öffnungszeiten: {OPENING_TIMES}"
+        return f"Am {date} haben wir von {time} geöffnet.\nAndere Öffnungszeiten: {OPENING_TIMES}"
     
     def run(self, dispather: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         crawled_opening_times = crawl_opening_times()
-        extr_times = get_holiday_times(crawled_opening_times)
+        extr_times = get_holiday_times(crawled_opening_times, "31.12")
         msg = self._msg_builder(extr_times)
         dispather.utter_message(text=msg)
         return []
@@ -240,5 +243,5 @@ class ActionGetPrices(Action):
     def prices_to_string(self, prices):
         price_string = ""
         for price in prices:
-            price_string += price[0] + price[1] + "\n" + "-----------------------" + "\n"
+            price_string += price[0].replace("\n", " ").replace(":", "") + "  |  " + price[1] + "\n"
         return price_string
