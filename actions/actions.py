@@ -87,7 +87,7 @@ class ActionGetOpeningTimes(Action):
         return "action_get_opening_times"
     
     def _msg_builder(self, months: str, times: str):
-        return f"\nWeitere Öffnungszeiten: {OPENING_TIMES}\nGEFUNDENE ÖFFNUNGSZEITEN:\nVon {months.strip(':')} haben wir von {times} geöffnet.\nWeitere Öffnungszeiten können vorherigen Nachrichten entnommen werden."
+        return f"{OPENING_TIMES}\nGEFUNDENE ÖFFNUNGSZEITEN:\nVon {months.strip(':')} haben wir von {times} geöffnet.\nWeitere Öffnungszeiten können vorherigen Nachrichten entnommen werden."
     
     def _set_default(self, 
                      day: int, 
