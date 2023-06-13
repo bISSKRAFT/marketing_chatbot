@@ -66,6 +66,7 @@ def crawl_opening_times(url: str = "https://www.kriminalmuseum.eu/besucherplaner
     return extract_str
 
 def get_holiday_times(text: str, holiday: str) -> str:
+    text = text.replace("\xa0", "")
     split = text.split("\n")
     for entry in split:
         if holiday is "24.12":
