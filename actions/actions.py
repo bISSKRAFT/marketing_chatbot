@@ -25,7 +25,7 @@
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
-
+# %%
 from typing import Text, Dict, Any, List, Tuple
 from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
@@ -240,5 +240,5 @@ class ActionGetPrices(Action):
     def prices_to_string(self, prices):
         price_string = ""
         for price in prices:
-            price_string += price[0] + price[1] + "\n" + "-----------------------" + "\n"
+            price_string += price[0].replace("\n", " ").replace(":", "") + "  |  " + price[1] + "\n"
         return price_string
