@@ -49,13 +49,13 @@ responses:
   - text: DU kannst sowohl mit dem Auto als auch mit der Bahn anreisen. Leider besitzt das Museum keine eigenen Parkplätze, jedoch befindet sich ein Parkplatz in der Nähe des Museums. Du kannst mich nach möglichen Parkplätzen befragen!\n\nMit der Bahn ist das Musem vom Bahnhof Rothenburg aus in 15 Minuten zu Fuß zu erreichen.
 
   utter_parken_auto:
-  - text: Für Bus, LKW & PKW kannst Du den Parkplatz am Friedrich-Hörner-Weg nutzen https://goo.gl/maps/QAUyMY8E6LRvjZwb8?coh=178572&entry=tt \n\nFür Bus, PKW & Wohnmobil kannst Du den Parkplatz in der Nördlinger Straße verwenden https://goo.gl/maps/vXoczjg9xMiQ4yuE9 \n\nFür Bus, LKW, PKW und Wohnmobil kannst Du dein Fahrzeug in der Schweinsdorfer Straße parken https://goo.gl/maps/MPyJPBjUNSsrY3Zd8 \n\nFür nur PKW gibt es den Parkplatz am Hornburgweg https://goo.gl/maps/3GuW6t4Euq2WMejH6 \nsowie am Bezoldweg https://goo.gl/maps/8tBsLftVqXkmjhno9.
+  - text: "Für Bus, LKW & PKW kannst Du den Parkplatz am Friedrich-Hörner-Weg nutzen https://goo.gl/maps/QAUyMY8E6LRvjZwb8?coh=178572&entry=tt \n\nFür Bus, PKW & Wohnmobil kannst Du den Parkplatz in der Nördlinger Straße verwenden https://goo.gl/maps/vXoczjg9xMiQ4yuE9 \n\nFür Bus, LKW, PKW und Wohnmobil kannst Du dein Fahrzeug in der Schweinsdorfer Straße parken https://goo.gl/maps/MPyJPBjUNSsrY3Zd8 \n\nFür nur PKW gibt es den Parkplatz am Hornburgweg https://goo.gl/maps/3GuW6t4Euq2WMejH6 \nsowie am Bezoldweg https://goo.gl/maps/8tBsLftVqXkmjhno9."
 
   utter_parken_fahrrad:
   - text: Das Museum bietet keine ausgewiesenen Stellplätze für Fahrräder an.
 
   utter_abteilungen:
-  - text: Unser Museum ist in folgende Abteilungen untergliedert:\n\t-Recht in alter Zeit\n\t-Eine Frage der Ehre\n\t-Verfahren und Folter\n\t-Urteil und Strafe\n\t-Hexen, Henker und Halunken\n\t-Kriche,Reich und Recht\n\t-Tiere in der Rechtsgeschichte\n\t-Mythos oder Wahrheit? Rechtsfantasien\n\nWeitere Informationen zu den Abteilungen findest Du unter https://www.kriminalmuseum.eu.
+  - text: "Unser Museum ist in folgende Abteilungen untergliedert:\n\t-Recht in alter Zeit\n\t-Eine Frage der Ehre\n\t-Verfahren und Folter\n\t-Urteil und Strafe\n\t-Hexen, Henker und Halunken\n\t-Kriche,Reich und Recht\n\t-Tiere in der Rechtsgeschichte\n\t-Mythos oder Wahrheit? Rechtsfantasien\n\nWeitere Informationen zu den Abteilungen findest Du unter https://www.kriminalmuseum.eu."
 
   utter_kindgerecht:
   - text: Das Museum eignet sich für alle Altersgruppen und ist kindgerecht.

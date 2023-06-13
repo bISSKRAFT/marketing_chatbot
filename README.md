@@ -1,3 +1,19 @@
+# RUN
+
+- to start the server with connection to the front end
+
+```
+rasa run -m models --enable-api --cors "*" --debug
+```
+
+- in the widet you have to use the correct url
+- you have to change the ip adress to the right one
+- if you don't want specify a port leave it default
+
+```
+http://localhost:5005
+```
+
 # TRAINING
 **to train on a specific GPU please use**
 
@@ -29,3 +45,5 @@ rasa interactive
 - asks if the output is the desired or not
 - and if the action was the right one
 - can be used for interactive learning
+
+

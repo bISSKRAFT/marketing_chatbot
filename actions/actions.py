@@ -65,18 +65,21 @@ def crawl_opening_times(url: str = "https://www.kriminalmuseum.eu/besucherplaner
     extract_str = soup.find_all("div", class_="wpb_wrapper")[1].text.strip()
     return extract_str
 
-def get_holiday_times(text: str) -> str:
-    split = text.split("\\n")
+def get_holiday_times(text: str, holiday: str) -> str:
+    text = text.replace("\xa0", "")
+    split = text.split("\n")
     for entry in split:
-        if "24.12." in entry:
-            return entry
-        if "31.12." in entry:
-            return entry
-    return
+        if holiday is "24.12":
+            if "24.12." in entry:
+                return entry
+        if holiday is "31.12":
+            if "31.12." in entry:
+                return entry
+    return ""
 
 def split_date_and_time(text: str) -> Tuple[str, str]:
-    split = text.split(":")
-    return split[0], split[1] 
+    split = text.split(": ")
+    return split[0].strip(), split[1].strip()
 
 class ActionGetOpeningTimes(Action):
 
@@ -190,7 +193,7 @@ class ActionGetChristmasOpeningTimes(Action):
     
     def run(self, dispather: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         crawled_opening_times = crawl_opening_times()
-        extr_times = get_holiday_times(crawled_opening_times)
+        extr_times = get_holiday_times(crawled_opening_times, "24.12")
         msg = self._msg_builder(extr_times)
         dispather.utter_message(text=msg)
         return []
@@ -205,7 +208,7 @@ class ActionGetNewYearsOpeningTimes(Action):
     
     def run(self, dispather: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         crawled_opening_times = crawl_opening_times()
-        extr_times = get_holiday_times(crawled_opening_times)
+        extr_times = get_holiday_times(crawled_opening_times, "31.12")
         msg = self._msg_builder(extr_times)
         dispather.utter_message(text=msg)
         return []
