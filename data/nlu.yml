@@ -147,10 +147,10 @@ nlu:
     - Ist das Musem an Heiligabend zu?
     - Hat das Musem an Heiligabend geschlossen?
     - Ist das Musem an Heiligabend geschlossen?
-    - Haben Sie an Heiligabend geöffnet?
-    - Haben Sie an Heiligabend offen?
-    - Haben Sie an Heiligabend zu?
-    - Haben Sie an Heiligabend geschlossen?
+    - Haben Sie am 24.12 geöffnet?
+    - Haben Sie an 24.12 offen?
+    - Haben Sie an 24.12 zu?
+    - Haben Sie an 24.12 geschlossen?
     - Ist in den Weihnachtsferien geöffnet?
 
 - intent: zeiten_silvester
@@ -170,8 +170,6 @@ nlu:
     - Hat das Musem an 31.12 zu?
     - Hat das Musem an 31.12 geschlossen?
     - Ist das Musem an 31.12 geschlossen?
-
-
 
 - intent: preise
   examples: |
