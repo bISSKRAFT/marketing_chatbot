@@ -175,33 +175,27 @@ nlu:
   examples: |
     - Wie hoch ist der Eintrittspreis für das Museum?
     - Welcher Betrag wird für den Museumseintritt verlangt?
-    - Wie viel muss ich zahlen, um ins Museum zu gelangen?
-    - Was ist der Preis für den Eintritt in das Museum?
-    - Welche Kosten fallen für den Zutritt zum Museum an?
-    - Kannst du mir sagen, wie teuer der Eintritt ins Museum ist?
-    - Gibt es eine Gebühr für den Besuch des Museums?
-    - Was ist der Tarif für den Eintritt ins Museum?
-    - Wie viel Geld muss ich ausgeben, um ins Museum zu kommen?
+    - Wie viel kostet ein Besuch im Museum?
+    - Was kostet eine Karte fürs Musem?
+    - Welche Kosten fallen für den Besuch im Museum an?
+    - Kannst du mir sagen, wie teuer eine Karte für Erwachsene ist?
+    - Kannst du mir sagen, wie teuer eine Karte für Kinder ist?
+    - Welche Ticketkategorien gibt es?
+    - Wie viel Geld kostet der Eintritt?
     - Welcher Eintrittspreis wird für das Museum erhoben?
     - Mit welchen Kosten muss ich rechnen, wenn ich das Museum besuchen möchte?
-    - Was ist der Eintrittspreis, um ins Museum zu gelangen?
-    - Wie viel kostet der Einlass in das Museum?
-    - Welche Gebühr muss ich entrichten, um das Museum zu betreten?
+    - Wie hoch ist der Eintrittspreis?
+    - wie viel kostet der Einlass?
     - Kannst du mir sagen, wie viel der Eintritt ins Museum kostet?
-    - Welchen Betrag muss ich bezahlen, um das Museum zu besichtigen?
-    - Was verlangt das Museum als Eintrittsgebühr?
-    - Wie hoch sind die Eintrittskosten für das Museum?
-    - Welche finanzielle Belastung entsteht mir, wenn ich das Museum besuchen möchte?
+    - Gibt es ermäßigte Preise für Studenten und Senioren?
+    - Wie hoch sind die Eintrittskosten?
     - Wie teuer ist der Zutritt zum Museum?
-    - Mit welchen Kosten muss ich rechnen, um das Museum betreten zu können?
-    - Was sind die Kosten für den Zutritt zum Museum?
-    - Welche Eintrittsgebühr wird für das Museum verlangt?
-    - Wie viel muss ich bezahlen, um Zutritt zum Museum zu erhalten?
+    - Können Kinder kostenlos ins Museum gehen?
+    - Was kostet mich ein Besuch?
+    - Wie viel kostet eine Familienkarte für das Museum?
     - Welcher Preis wird für den Eintritt ins Museum berechnet?
-    - Mit welchem Eintrittspreis muss ich rechnen, um das Museum zu besuchen?
-    - Was kostet der Zugang zum Museum?
-    - Wie hoch ist der Eintrittspreis für den Museumsbesuch?
-    - Welche Kosten entstehen mir, wenn ich das Museum betreten möchte?
+    - Mit welchem Eintrittspreis muss ich rechnen?
+    - Gibt es spezielle Eintrittspreise für Gruppen oder Touristen?
     - Kannst du mir sagen, wie viel ich zahlen muss, um das Museum zu besichtigen?
   
 - intent: anreise
