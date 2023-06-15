@@ -6,33 +6,24 @@ nlu:
   examples: |
     - Guten Tag
     - Hallo
+    - Hi
+    - Hey
     - Grüß Gott!
     - Guten Morgen!
+    - Guten Abend!
+    - Moin
+    - Moin Moin
+    - Servus
+    - Grüß dich
     - Schönen guten Tag!
-    - Guten Tag allerseits
-    - Herzlich willkommen!
-    - Einen schönen Tag!
-    - Guten Tag, wie geht es Ihnen?
-    - Seien Sie herzlich gegrüßt
-    - Guten Tag, wie kann ich Ihnen helfen?
-    - Schön, Sie zu sehen
-    - Freut mich, Ihnen guten Tag zu sagen!
-    - Ich wünsche Ihnen einen angenehmen Tag
-    - Guten Tag, wie steht es um Ihr Wohlbefinden?
-    - Ich hoffe, Sie haben einen großartigen Tag!
-    - Einen wundervollen Tag wünsche ich Ihnen!
-    - Möge Ihr Tag erfüllt sein von Freude und Erfolg
-    - Guten Tag, ich hoffe, Sie haben gut geschlafen
-    - Guten Tag, es ist schön, Sie hier zu haben
-    - Ich begrüße Sie herzlich und wünsche Ihnen einen guten Tag!
-    - Guten Tag, ich hoffe, Sie genießen den heutigen Tag
-    - Guten Tag, ich wünsche Ihnen einen gelungenen Start in den Tag
+    - Schönen guten Morgen!
+    - Hallo, kannst du mir helfen?
+    - Mahlzeit
+    - İyi günler
+    - iyi günler
+    - yawm jayid
+    - Hallo, Guten Tag
     - Hallo und einen sonnigen Tag wünsche ich Ihnen!
-    - Guten Tag, mögen Ihre Vorhaben erfolgreich sein
-    - Schönen guten Tag, ich hoffe, Ihnen geht es gut
-    - Guten Tag, ich hoffe, Sie haben eine angenehme Zeit hier!
-    - Einen schönen guten Tag wünsche ich Ihnen von Herzen
-    - Guten Tag, ich hoffe, Sie haben einen schönen Tag vor sich
     - Herzlich willkommen und einen wundervollen Tag wünsche ich Ihnen
 
 # tbd
@@ -41,33 +32,24 @@ nlu:
     - Man sieht sich!
     - Auf Wiedersehen
     - Bis später
+    - Bis bald
+    - Bis dann
     - Gute Nacht
     - GN8
     - Bye
     - Tschüss
+    - Tschau
     - Hab einen schönen Tag
     - Bis dann
     - Bis denne
-    - Bis denne Antenne
+    - Mach's gut!
     - Machs gut
     - Ciao Kakao
-    - Hasta la pasta
-    - Tschö mit ö
-    - Tschüsseldorf
-    - Adios amigo
-    - Ciao
-    - Ciao for now
-    - Schleich dich
-    - Tschüssikowski
-    - Tschüssle
-    - See you later alligator
-    - San frantschüssko
-    - Tschüsli Müsli
-    - Bis Baldrian
-    - Ich mach mich vom Acker
+    - Vielen Dank, Tschüss
     - Halt die Ohren steif
     - Ich bin dann mal weg
     - Ich bin dann mal offline
+    - Ich bin fertig, danke
 
 #TODO: make tomorrow or day after tomorrow entity for programatic handeling
 - intent: zeiten
@@ -202,34 +184,28 @@ nlu:
   examples: |
     - Wie gelange ich zum Museum?
     - Wie finde ich den Weg zum Museum?
-    - Welche Route führt zum Museum?
     - Wie erreiche ich das Museum?
     - Wie komme ich am besten zum Museum?
-    - Welche Verkehrsmittel sollte ich nutzen, um zum Museum zu gelangen?
+    - Welche Verkehrsmittel kann ich nutzen, um zum Museum zu gelangen?
     - Wie kann ich das Museum am einfachsten erreichen?
-    - Gibt es eine empfohlene Route zum Museum?
-    - Welche Transportmöglichkeiten stehen mir zur Verfügung, um zum Museum zu kommen?
+    - Welche Informationen gibt es zur Anreise?
+    - Welche Transportmöglichkeiten stehen mir zur Verfügung?
     - Was ist die beste Art und Weise, um zum Museum zu gelangen?
     - Kannst du mir den Weg zum Museum erklären?
-    - Wie finde ich den richtigen Weg zum Museum?
-    - Welche Verkehrsanbindung gibt es zum Museum?
+    - Welche Wege führen zum Museum?
+    - Wie komme ich am schnellsten zum Museum?
+    - Welche Verkehrsanbindung gibt es?
     - Wie sieht die Anfahrtsroute zum Museum aus?
     - Welche Optionen habe ich, um das Museum zu erreichen?
-    - Wie komme ich von meinem aktuellen Standort zum Museum?
-    - Gibt es öffentliche Verkehrsmittel, die mich zum Museum bringen?
-    - Wie weit ist es von hier zum Museum und wie kann ich dorthin gelangen?
-    - Welche Wege führen zum Museum?
+    - Ist das Museum mit öffentlichen Verkehrsmitteln erreichbar?
+    - Wie lautet die Adresse des Museums?
     - Kannst du mir eine Wegbeschreibung zum Museum geben?
-    - Wie kann ich das Museum am schnellsten erreichen?
-    - Welche Transportmittel sind die bequemsten, um zum Museum zu gelangen?
     - Was ist die schnellste Route zum Museum?
+    - Wie finde ich zum Museum?
     - Gibt es eine direkte Verbindung zum Museum?
-    - Wie finde ich den nächstgelegenen Eingang zum Museum?
-    - Welche Straßen oder Wege muss ich nehmen, um zum Museum zu gelangen?
-    - Kannst du mir sagen, welche Buslinie ich nehmen soll, um zum Museum zu gelangen?
-    - Gibt es Parkmöglichkeiten in der Nähe des Museums?
+    - Wie komme ich zum Museum?
     - Wie weit ist es zu Fuß vom Bahnhof zum Museum?
-    - Welche Orientierungspunkte sollte ich beachten, um zum Museum zu gelangen?
+    - Was sollte ich bei der Anreise beachten?
 
 - intent: parken_auto
   examples: |
