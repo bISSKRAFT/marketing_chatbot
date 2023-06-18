@@ -46,3 +46,31 @@ stories:
   # - action: utter_happy
   # - intent: goodbye
   # - action: utter_goodbye
+
+  - story: wenn nach Cafeteria gefragt wird
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: cafeteria_angebot
+  - action: utter_cafeteria_angebot
+  - intent: cafeteria_ort
+  - action: utter_cafeteria_ort
+  - intent: cafeteria_oefnungszeiten
+  - action: utter_cafeteria_oefnungszeiten
+  - intent: goodbye
+  - action: utter_goodbye
+
+  -story: wenn nach Anreise gefragt wird
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: anreise
+  - action: utter_anreise
+  - intent: parken_auto
+  - action: utter_parken_auto
+  - intent: parken_fahrrad
+  - action: utter_parken_fahrrad
+  - intent: goodbye
+  - action: utter_goodbye
+
+  
