@@ -100,7 +100,7 @@ socketio:
 
 ### :computer:Client Side
 
-to use the chatbot on your website include the follwing HTML-file
+to use the chatbot on your website include the follwing HTML snippet
 
 ```html
 <div id="rasa-chat-widget" data-websocket-url="http://localhost:5005"></div>
