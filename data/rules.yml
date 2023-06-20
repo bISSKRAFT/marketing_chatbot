@@ -1,7 +1,12 @@
 version: "3.1"
 
 # all user-groups
-rules:
+rules: 
+- rule: rephrase and instruction
+  steps:
+  - intent: nlu_fallback
+  - action: utter_rephrase_instruciton_bot
+  
 - rule: greet
   steps:
   - intent: greet
