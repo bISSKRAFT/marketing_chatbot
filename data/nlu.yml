@@ -1,7 +1,7 @@
 version: "3.1"
 
 nlu:
-# Alle User-Gruppen
+# all user-groups
 - intent: greet
   examples: |
     - Guten Tag
@@ -490,7 +490,7 @@ nlu:
     - Gibt es einen Laden, wo man Kunstwerke und Bücher kaufen kann?
 
 
-# Internet-Amateur
+# internet-amateur
 - intent: contact
   examples: |
       - Wie ist eure Telefonnummer?
@@ -509,7 +509,7 @@ nlu:
       - Wie kann ich einen Mitarbeiter kontaktieren?
       - Gibt es die Möglichkeit mit einem Mitarbeiter zu sprechen?
 
-# Internet-Anfänger
+# internet-beginner
 - intent: instruction_bot
   examples:  |
       - Wie benutze ich diesen Chatbot?

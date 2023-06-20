@@ -29,7 +29,7 @@ intents:
 entities:
   - time
 
-# Alle User-Gruppen
+# all user-groups
 responses:
   utter_greet:
   - text: "Guten Tag, wie geht es Ihnen?"
@@ -85,11 +85,11 @@ responses:
   utter_museum_shop:
   - text: "Der Museumsshop befindet sich in der Johanniterscheune im Nebengebäude des Museums. Alternativ kannst Du auch online unter https://kriminalmuseum.ticketfritz.de/ vorbeischauen."
 
-# Internet-Amateure
+# internet-amateur
   utter_contact:
   - text: "Du kannst uns unter der Telefonnummer +49 (0) 9861 5359 erreichen oder eine E-Mail an info@kriminalmuseum.eu schreiben. Weitere Informationen findest Du unter https://www.kriminalmuseum.eu/kontakt/."
 
-# Internet-Anfänger
+# internet-beginner
   utter_instruction_bot:
   - text: "Ich bin ein Chatbot und basiere auf Rasa. Ich kann dir Informationen zu folgenden Themen geben: \n\t- Öffnungszeiten\n\t- Preise\n\t- Anreise\n\t- Parken\n\t- Abteilungen\n\t- Kindgerecht\n\t- Barrierefreiheit\n\t- Cafeteria\n\t- Führungen\n\t- Sonderausstellungen\n\t- Museumsshop\n\t- Kontakt\n\t- Anleitung Webseite\n\nDu kannst mich nach diesen Themen fragen, indem Du die entsprechenden Stichwörter verwendest. Für weiter Informationen bitte ich dich diese Webseite zu durchsuchen."
 

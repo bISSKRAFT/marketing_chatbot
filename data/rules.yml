@@ -1,124 +1,125 @@
 version: "3.1"
 
+# all user-groups
 rules:
-
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
-
 - rule: greet
   steps:
   - intent: greet
   - action: utter_greet
 
-- rule: zeiten
+- rule: goodbye
   steps:
-  - intent: zeiten
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: opening_times
+  steps:
+  - intent: opening_times
   - action: action_get_opening_times
 
-- rule: zeiten_weihnachten
+- rule: opening_times_christmas
   steps:
-  - intent: zeiten_weihnachten
+  - intent: opening_times_christmas
   - action: action_get_christmas_opening_times
 
-- rule: zeiten_silvester
+- rule: opening_times_new_year
   steps:
-  - intent: zeiten_silvester
+  - intent: opening_times_new_year
   - action: action_get_new_years_opening_times
 
-- rule: preise
+- rule: prices
   steps:
-  - intent: preise
+  - intent: prices
   - action: action_get_price
 
-- rule: anreise
+- rule: arrival
   steps:
-  - intent: anreise
-  - action: utter_anreise
+  - intent: arrival
+  - action: utter_arrival
 
-- rule: parken_auto
+- rule: park_car
   steps:
-  - intent: parken_auto
-  - action: utter_parken_auto
+  - intent: park_car
+  - action: utter_park_car
 
-- rule: parken_fahrrad
+- rule: park_bike
   steps:
-  - intent: parken_fahrrad
-  - action: utter_parken_fahrrad
+  - intent: park_bike
+  - action: utter_park_bike
 
-- rule: abteilungen
+- rule: departments
   steps:
-  - intent: abteilungen
-  - action: utter_abteilungen
+  - intent: departments
+  - action: utter_departments
 
-- rule: kindgerecht
+- rule: child_friendly
   steps:
-  - intent: kindgerecht
-  - action: utter_kindgerecht
+  - intent: child_friendly
+  - action: utter_child_friendly
 
-- rule: barrierefrei_gehen
+- rule: barrier_free_walk
   steps:
-  - intent: barrierefrei_gehen
-  - action: utter_barrierefrei_gehen
+  - intent: barrier_free_walk
+  - action: utter_barrier_free_walk
 
-- rule: barrierefrei_sehen
+- rule: barrier_free_see
   steps:
-  - intent: barrierefrei_sehen
-  - action: utter_barrierefrei_sehen
-
-- rule: cafeteria_angebot
-  steps:
-  - intent: cafeteria_angebot
-  - action: utter_cafeteria_angebot
+  - intent: barrier_free_see
+  - action: utter_barrier_free_see
 
 - rule: cafeteria_information
   steps:
   - intent: cafeteria_information
   - action: utter_cafeteria_information
 
-- rule: cafeteria_ort
-steps:
-- intent: cafeteria_ort
-- action: utter_cafeteria_ort
-
-- rule: cafeteria_oeffnungszeiten
+- rule: cafeteria_offer
   steps:
-  - intent: cafeteria_oeffnungszeiten
-  - action: utter_cafeteria_oeffnungszeiten
+  - intent: cafeteria_offer
+  - action: utter_cafeteria_offer
 
-- rule: fuehrungen_information
+- rule: pupils
   steps:
-  - intent: fuehrungen_information
-  - action: utter_fuehrungen_information
+  - intent: pupils
+  - action: utter_pupils
 
-- rule: fuehrungen_ansprechpartner
+- rule: tours_information
   steps:
-  - intent: fuehrungen_ansprechpartner
-  - action: utter_fuehrungen_ansprechpartner
+  - intent: tours_information
+  - action: utter_tours_information
 
-- rule: fuehrungen_sprachen
+- rule: tours_languages
   steps:
-  - intent: fuehrungen_sprachen
-  - action: utter_fuehrungen_sprachen
+  - intent: tours_languages
+  - action: utter_tours_languages
 
-- rule: sonderausstellung_information
+- rule: special_exhibition_information
   steps:
-  - intent: sonderausstellung_information
-  - action: utter_sonderausstellung_information
+  - intent: special_exhibition_information
+  - action: utter_special_exhibition_information
 
-- rule: sonderausstellung_archiv
+- rule: special_exhibition_archive
   steps:
-  - intent: sonderausstellung_archiv
-  - action: utter_sonderausstellung_archiv
+  - intent: special_exhibition_archive
+  - action: utter_special_exhibition_archive
 
-- rule: museumsshop
+- rule: museum_shop
   steps:
-  - intent: museumsshop
-  - action: utter_museumsshop
+  - intent: museum_shop
+  - action: utter_museum_shop
 
-- rule: kontakt
+# internet-amateur
+- rule: contact
   steps:
-  - intent: kontakt
-  - action: utter_kontakt
+  - intent: contact
+  - action: utter_contact
 
+# internet-beginner
+- rule: instruction_bot
+  steps:
+  - intent: instruction_bot
+  - action: utter_instruction_bot
+
+- rule: instruction_website
+  steps:
+  - intent: instruction_website
+  - action: utter_instruction_website
