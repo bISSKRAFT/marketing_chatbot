@@ -354,6 +354,7 @@ nlu:
 
 - intent: barrier_free_see
   examples: |
+    - Ist das Museum für Seebehinderte geeignet?
     - Gibt es im Museum Angebote für Menschen, die nicht sehen können?
     - Lohnt es sich für meinen blinden Freund das Museum zu besuchen?
     - Stellt das Museum auch Inhalte für blinde oder sehbehinderte Menschen bereit?
@@ -364,7 +365,7 @@ nlu:
     - Ist das Museum barrierefrei für Menschen mit Sehbehinderung?
     - Gibt es im Museum Angebote für Menschen mit Sehbehinderung?
     - Kann man auch als blinder oder sehbehinderter Mensch das Museum gut erkunden?
-    - Werden INformationen auch in Blindenschrift angeboten? 
+    - Werden Informationen auch in Blindenschrift angeboten? 
     - Bietet das Museum Erklärungen in Brailleschrift für blinde Menschen an?
     - Sind im Museum Hinweise in Brailleschrift für blinde Menschen vorhanden?
     - Werden im Museum die Texte in Brailleschrift für blinde Menschen präsentiert?
@@ -540,6 +541,7 @@ nlu:
 - intent: instruction_bot
   examples:  |
       - Wie benutze ich diesen Chatbot?
+      - Gebe mir eine Anleitung
       - Wie funktioniert dieser Chatbot?
       - Wie bediene ich diesen Chatbot?
       - Wie kann ich diesen Bot nutzen?
