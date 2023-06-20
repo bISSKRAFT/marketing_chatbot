@@ -13,7 +13,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 
-# Installation
+# :warning:Installation
 [(Back to top)](#table-of-contents)
 
 > **Note**: the chatbot is based on rasa and has specific version requirements
@@ -66,12 +66,12 @@ conda activate <env_name>
 ```
 
 
-# Usage
+# :rocket:Usage
 [(Back to top)](#table-of-contents)
 
 There are two components that have to be in sync. First is the "Server Side" which handels the computation and the "Client Side" which handels the requests.
 
-### Server Side
+### :abacus:Server Side
 
 **For using the chatbot there are two steps necessary**
 
@@ -98,7 +98,7 @@ socketio:
  session_persistence: false
 ```
 
-### Client Side
+### :computer:Client Side
 
 to use the chatbot on your website include the follwing HTML-file
 
