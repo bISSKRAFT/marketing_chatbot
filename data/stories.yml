@@ -167,6 +167,8 @@ stories:
   - action: utter_departments
   - intent: cafeteria_information
   - action: utter_cafeteria_information
+  - intent: barrier_free_walk
+  - action: utter_barrier_free_walk
   - intent: goodbye
   - action: utter_goodbye
 
@@ -227,8 +229,8 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
-
-- story: wenn nach Kontaktmöglichkeiten gefragt wird
+# additional stories
+- story: ask for contact
   steps:
   - intent: greet
   - action: utter_greet
@@ -237,43 +239,8 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
-- story: wenn ein/e LehrerIn eine Führung für seine/ihre Schulklasse buchen möchte
+- story: ask for arrival
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: child_friendly
-  - action: utter_child_friendly
-  - intent: barrier_free_walk
-  - action: utter_barrier_free_walk
-  - intent: cafeteria_offer
-  - action: utter_cafeteria_offer
-  - intent: tours_information
-  - action: utter_tours_information
-  - intent: prices
-  - action: action_get_price
-  - intent: tours_information
-  - action: utter_tours_information
-
-  # - intent: mood_great
-  # - action: utter_happy
-  # - intent: goodbye
-  # - action: utter_goodbye
-
-  - story: wenn nach Cafeteria gefragt wird
-    steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: cafeteria_offer
-  - action: utter_cafeteria_offer
-  - intent: cafeteria_information
-  - action: utter_cafeteria_information
-  - intent: cafeteria_information
-  - action: utter_cafeteria_information
-  - intent: goodbye
-  - action: utter_goodbye
-
-  - story: wenn nach Anreise gefragt wird
-    steps:
   - intent: greet
   - action: utter_greet
   - intent: arrival
@@ -284,3 +251,22 @@ stories:
   - action: utter_park_bike
   - intent: goodbye
   - action: utter_goodbye
+
+- story: ask for barrier_free_walk
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: barrier_free_walk
+  - action: utter_barrier_free_walk
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: ask for barrier_free_see
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: barrier_free_see
+  - action: utter_barrier_free_see
+  - intent: goodbye
+  - action: utter_goodbye
+  
