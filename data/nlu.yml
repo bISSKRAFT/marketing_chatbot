@@ -50,6 +50,25 @@ nlu:
     - Ich bin dann mal offline
     - Ich bin fertig, danke
 
+- intent: greateful
+  examples:
+    - danke
+    - danke für die Hilfe
+    - danke für deine Hilfe
+    - danke für die Unterstützung
+    - danke für deine Unterstützung
+    - danke für die Information
+    - vielen Dank für die Informationen
+    - vielen Dank für die Hilfe
+    - vielen Dank für deine Hilfe
+    - vielen Dank für die Unterstützung
+    - du hast mir weitergeholfen
+    - du hast mir sehr weitergeholfen
+    - du hast mir sehr geholfen
+    - du hast mir weitergeholfen
+    - das war hilfreich
+    - das war sehr hilfreich
+
 #TODO: make tomorrow or day after tomorrow entity for programatic handeling
 - intent: opening_times
   examples: |
@@ -74,6 +93,13 @@ nlu:
     - Wann hat das Museum geschlossen?
     - Ist heute geöffnet?
     - Ist heute offen?
+    - Hat das Musem morgen offen?
+    - Ist das Musem morgen offen?
+    - Ist das Museum morgen geöffnet?
+    - Hat das Museum am Montag geöffnet?
+    - Hat das Museum am Dienstag geöffnet?
+    - Hat das Museum am Mittwoch geöffnet?
+    - Hat das Museum am Sonntag geöffnet?
 
 # - intent: zeiten
 #   examples: |
@@ -310,6 +336,7 @@ nlu:
   examples: |
     - Ist das Museum für Menschen mit Gehbehinderung geeignet?
     - Ist das Museum für Rollstuhlfahrer geeignet?
+    - Kann mit dem Rollstuhl ins Musem?
     - Gibt es im Museum barrierefreie Wege und Zugänge?
     - Bietet das Museum Hilfsmittel für Menschen mit Behinderungen?
     - Ist das Museum für Menschen mit eingeschränkter Mobilität geeignet?
@@ -396,6 +423,7 @@ nlu:
     - Bietet das Museum Schülern besondere Möglichkeiten zur Teilnahme oder Mitwirkung?
     - Hat das Museum extra Programme für Klassen?
     - Ist das Museum für Schüler geeignet?
+    - Ist das Museum für Schüler der 8. Klasse geeignet?
 
 - intent: tours_information
   examples: |
