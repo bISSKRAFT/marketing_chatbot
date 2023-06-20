@@ -328,143 +328,79 @@ nlu:
 
 - intent: barrierefrei_sehen
   examples: |
-    - Ist das Museum für sehbehinderte oder blinde Menschen zugänglich?
-    - Gibt es im Museum taktil erfassbare Informationen für blinde oder sehbehinderte Besucher?
-    - Gibt es im Museum Informationen in Brailleschrift?
-    - Werden im Museum Informationen in Brailleschrift bereitgestellt?
-    - Gibt es im Museum Beschriftungen in Brailleschrift?
-    - Werden im Museum Texte in Brailleschrift angeboten?
-    - Bietet das Museum Erklärungen in Brailleschrift an?
-    - Sind im Museum Informationen in Brailleschrift verfügbar?
-    - Gibt es im Museum Texte, die in Brailleschrift verfasst sind?
-    - Wird im Museum Brailleschrift verwendet, um Informationen zu vermitteln?
-    - Sind im Museum Hinweise in Brailleschrift vorhanden?
-    - Werden im Museum Texte in Brailleschrift präsentiert?
-    - Welche Unterstützung bietet das Museum für Menschen mit Sehbehinderung?
-    - Gibt es im Museum spezielle Dienstleistungen für Menschen mit Sehbehinderung?
-    - Welche Hilfsmittel stehen im Museum für Menschen mit Sehbehinderung zur Verfügung?
-    - Welche Maßnahmen ergreift das Museum, um Menschen mit Sehbehinderung zu unterstützen?
-    - Bietet das Museum barrierefreie Angebote für Menschen mit Sehbehinderung an?
-    - Gibt es im Museum spezielle Programme oder Vorkehrungen für Menschen mit Sehbehinderung?
-    - Welche Vorkehrungen hat das Museum getroffen, um Menschen mit Sehbehinderung zu helfen?
-    - Welche Ressourcen stellt das Museum Menschen mit Sehbehinderung zur Verfügung?
-    - Welche Hilfsmittel oder Anpassungen bietet das Museum Menschen mit Sehbehinderung an?
-    - Wie wird das Museum Menschen mit Sehbehinderung gerecht?
+
+    - Gibt es im Museum Angebote für Menschen, die nicht sehen können?
+    - Lohnt es sich für meinen blinden Freund das Museum zu besuchen?
+    - Stellt das Museum auch Inhalte für blinde oder sehbehinderte Menschen bereit?
+    - Kann man das Museum als blinder oder sehbehinderter Mensch besuchen?
+    - Ist das Museum für Menschen mit Sehbehinderung geeignet?
+    - Ist das Museum für sehbehinderte oder blinde Menschen geeignet?
+    - Eignet sich das Museum auch für Menschen mit Sehbehinderung?
+    - Ist das Museum barrierefrei für Menschen mit Sehbehinderung?
+    - Gibt es im Museum Angebote für Menschen mit Sehbehinderung?
+    - Kann man auch als blinder oder sehbehinderter Mensch das Museum gut erkunden?
+    - Werden INformationen auch in Blindenschrift angeboten? 
+    - Bietet das Museum Erklärungen in Brailleschrift für blinde Menschen an?
+    - Sind im Museum Hinweise in Brailleschrift für blinde Menschen vorhanden?
+    - Werden im Museum die Texte in Brailleschrift für blinde Menschen präsentiert?
+    - Gibt es im Museum Informationen in Brailleschrift für blinde Menschen?
+
 
 - intent: cafeteria_angebot
   examples: |
     - Welche Angebote gibt es in der Cafeteria des Museums?
-    - Was kann man in der Cafeteria des Museums genießen?
-    - Welche Speisen und Getränke werden in der Cafeteria des Museums angeboten?
-    - Was erwartet Besucher in der Cafeteria des Museums?
+    - Was kann man in der Cafeteria des Museums kaufen?
+    - Welche Speisen, Snacks und Getränke werden in der Cafeteria des Museums angeboten?
     - Welche Auswahl gibt es in der Cafeteria des Museums?
-    - Was sind die kulinarischen Highlights der Cafeteria im Museum?
-    - Welche gastronomischen Möglichkeiten bietet die Cafeteria im Museum?
-    - Was für kulinarische Genüsse kann man in der Cafeteria des Museums erwarten?
-    - Welche Gerichte stehen in der Cafeteria des Museums zur Auswahl?
-    - Was für gastronomische Optionen stehen den Besuchern in der Cafeteria des Museums zur Verfügung?
-    - Was bietet die Cafeteria des Museums?
+    - Was bietet die Cafeteria des Museums an?
+    - Was hat die Cafeteria für ein Angebot?
     - Was gibt es alles in der Cafeteria des Museums?
-    - Was für Speisen und Getränke gibt es in der Cafeteria des Museums?
-    - Was für kulinarische Angebote gibt es in der Cafeteria des Museums?
-    - Was für gastronomische Angebote gibt es in der Cafeteria des Museums?
-    
-- intent: cafeteria_information
-  examples: |
+    - Was kann man in der Cafeteria des Museums zu essen oder trinken kaufen?
+    - Was für Essen und Getränke gibt es in der Cafeteria des Museums?
+    - Kannst du mir das Angebot der Cafeteria des Museums sagen?
+    - Kannst du mir die Speisekarte der Cafeteria des Museums zeigen?
+    - Was wird in der Cafeteria des Museums verkauft?
+    - Was gibt es in der Cafeteria zu essen und zu trinken?
     - Gibt es eine Cafeteria im Museum?
     - Hat das Museum eine Cafeteria?
-    - Wo kann man im Museum etwas zu essen bekommen?
-    - Gibt es eine Möglichkeit, im Museum etwas zu essen zu kaufen?
-    - Ist im Museum eine Cafeteria vorhanden?
-    - Kannst du mir sagen, ob es im Museum eine Möglichkeit gibt, etwas zu essen?
-    - Ist es möglich, im Museum etwas zu essen zu bekommen?
-    - Gibt es im Museum eine Snackbar oder ein Café?
-    - Kann man im Museum Speisen und Getränke kaufen?
-    - Wo kann ich im Museum etwas zu essen finden?
-    - Kann man im Museum etwas zu trinken oder zu essen kaufen?
-    - Gibt es im Museum einen gastronomischen Bereich?
-    - Gibt es im Museum einen Ort, wo Besucher etwas essen können?
-    - Kannst du mir sagen, ob es im Museum eine Kantine gibt?
-    - Hat das Museum einen Restaurantbereich?
-    - Hat das Museum einen Platz, wo man etwas essen kann?
-    - Kannst du mir sagen, ob es im Museum eine Kantine gibt?
-    - Kannst du mir sagen, ob es im Museum eine Essgelegenheit gibt?
 
 - intent: cafeteria_ort
   examples: |
-    - Wo genau befindet sich die Cafeteria im Museum?
-    - Könntest du mir sagen, wo die Cafeteria im Museum liegt?
-    - In welchem Teil des Museums befindet sich die Cafeteria?
+
+    - Kannst du mir sagen, wo die Cafeteria im Museum liegt?
     - Kannst du mir den Standort der Cafeteria im Museum verraten?
+    - Was ist der Standort der Cafeteria des Museums?
     - Wo finde ich die Cafeteria im Museum?
-    - Kannst du mir bitte sagen, wo sich die Cafeteria im Museum befindet?
     - Wo kann ich die Cafeteria im Museum finden?
-    - Wo ist der Standort der Cafeteria des Museums?
-    - Wo befindet sich der Essbereich im Museum?
-    - Wo finde ich im Museum einen Ort, wo man etwas essen kann?
-    - An welchem genauen Ort befindet sich die Cafeteria im Museum?
-    - Könntest du mir bitte den Standort der Cafeteria im Museum mitteilen?
-    - In welchem Bereich des Museums findest du die Cafeteria?
     - Kannst du mir verraten, wo sich die Cafeteria im Museum befindet?
-    - Wo genau ist die Cafeteria im Museum zu finden?
-    - Könntest du mir bitte sagen, wo genau sich die Cafeteria im Museum befindet?
-    - Wo kann ich die Cafeteria im Museum auffinden?
-    - Wo befindet sich der Standort der Cafeteria des Museums?
-    - Wo finde ich den Essbereich im Museum?
-    - Wo kann ich im Museum einen Ort finden, an dem man etwas essen kann?
+    - Wo befindet sich die Cafeteria im Museum?
+    - Wo ist die Cafeteria im Museum?
+    - Wo liegt die Cafeteria im Museum?
+    - In welchem Bereich des Museums liegt die Cafeteria?
+    - Wo kann ich im Museum etwas zu essen oder trinken kaufen?
+    - Wo finde ich im Museum einen Ort, wo man etwas essen oder trinken kann?
+    - An welchem Ort befindet sich die Cafeteria im Museum?
+    - Kannst du mir Informationen zum Standort der Cafeteria geben?
+    - Kannst du mir die Adresse der Cafeteria sagen?
 
 - intent: cafeteria_oeffnungszeiten
   examples: |
-    - Wann hat die Cafeteria geöffnet?
-    - Könntest du mir bitte die Öffnungszeiten der Cafeteria mitteilen?
-    - Kannst du mir sagen, zu welchen Zeiten die Cafeteria geöffnet ist?
-    - Welche sind die Öffnungszeiten der Cafeteria?
-    - Wann kann man die Cafeteria besuchen?
-    - Wann kann man in der Cafeteria etwas zu essen bekommen?
-    - Zu welchen Uhrzeiten ist die Cafeteria in Betrieb?
-    - Könntest du mir bitte sagen, wann die Cafeteria geöffnet hat?
-    - Wann sind die Öffnungszeiten der Cafeteria?
-    - Könntest du mir bitte mitteilen, wann die Cafeteria geöffnet hat?
-    - Kannst du mir sagen, wann die Cafeteria zugänglich ist?
-    - Zu welchen Zeiten hat die Cafeteria geöffnet?
-    - Wann ist die Cafeteria für Besucher geöffnet?
-    - Könntest du mir bitte die Betriebszeiten der Cafeteria nennen?
-    - Kannst du mir sagen, wann man in der Cafeteria Essen bekommen kann?
-    - Welche Uhrzeiten gelten für den Betrieb der Cafeteria?
-    - Könntest du mir bitte mitteilen, zu welchen Zeiten die Cafeteria besucht werden kann?
-    - Wann hat die Cafeteria regulär geöffnet?
-    - Zu welchen Zeiten ist die Cafeteria geöffnet?
-    - Zu welchen Zeiten ist die Cafeteria des Museums geöffnet?
-    - Welche Öffnungszeiten hat die Cafeteria?
-    - Welche Öffnungszeiten gelten für die Cafeteria des Museums?
-    - Wie sind die Öffnungszeiten der Cafeteria im Museum?
-    - Zu welchen Tageszeiten hat die Cafeteria des Museums geöffnet?
-    - Wann ist die Cafeteria im Museum für Besucher zugänglich?
-    - In welchem Zeitraum kann man die Cafeteria im Museum aufsuchen?
-    - Zu welchen Stunden ist die Cafeteria des Museums geöffnet?
-    - Wann darf man die Cafeteria im Museum betreten?
-    - Wann hat die Cafeteria offen?
 
-- intent: fuehrungen_information
-  examples: |
-    - Wo kann ich Informationen über Führungen im Museum finden?
-    - Wo finde ich Informationen über Führungen im Museum?"
-    - An wen kann ich mich wenden, um Informationen über Führungen im Museum zu erhalten?
-    - Gibt es eine Quelle, wo ich Informationen über Führungen im Museum nachschlagen kann?
-    - Wo erhalte ich Auskunft über Führungen im Museum?
-    - Gibt es eine zentrale Informationsstelle für Führungen im Museum?
-    - Wo kann ich mich informieren, wenn ich mehr über die Führungen im Museum erfahren möchte?
-    - An wen kann ich mich wenden, um detaillierte Informationen über die Führungen im Museum zu erhalten?
-    - Wo kann ich Hinweise über die Führungen im Museum finden?
-    - Wo kann ich einen Überblick über die verschiedenen Führungen im Museum bekommen?
-    - Wo finde ich Infos zu Führungen?
-    - Wo erfahre ich mehr zu Führungen?
-    - Werden im Museum Führungen organisiert?
-    - Bietet das Museum Führungen an?
-    - Gibt es im Museum die Möglichkeit, an Führungen teilzunehmen?
-    - Werden im Museum Führungen für Besucher angeboten?
-    - Können Besucher im Museum an Führungen teilnehmen?
-    - Finden im Museum Führungen statt?
+    - Wann hat die Cafeteria geöffnet?
+    - Wann hat die Cafeteria offen?
+    - Zu welchen Zeiten ist die Cafeteria geöffnet?
+    - Was sind die Öffungszeiten der Cafeteria?
+    - Welche Öffnungszeiten hat die Cafeteria?
+    - Wie sind die Öffnungszeiten der Cafeteria im Museum?
+    - Kannst du mir die Öffnungszeiten der Cafeteria mitteilen?
+    - Wann macht die Cafeteria auf?
+    - Wann macht die Cafeteria zu?
+    - Bis wann ist die Cafeteria offen?
+    - Bis wann kann ich mir in der Cafeteria etwas kaufen?
+    - Was sind die Betriebszeiten der Cafeteria?
+    - Wann kann ich die Cafeteria besuchen?
+    - Zu welchen Uhrzeiten ist die Cafeteria in Betrieb?
+    - Welche Öffnungszeiten gelten für die Cafeteria des Museums?
 
 - intent: fuehrungen_ansprechpartner
   examples: |
@@ -478,8 +414,11 @@ nlu:
     - Mit wem kann ich mich in Verbindung setzen, um mehr über Führungen im Museum zu erfahren?
     - Gibt es eine Kontaktperson, die für Führungen im Museum zuständig ist?
     - Wen sollte ich kontaktieren, wenn ich Interesse an Führungen im Museum habe?
-    - An wen kann ich mich wenden, um einen Termin für eine Führung im Museum zu vereinbaren?
     - Wer kann mir weiterhelfen, wenn ich Fragen zu den angebotenen Führungen im Museum habe?
+    - Wer kann mir Details zu Führungen im Museum geben?
+    - Wer kann mir Fragen zu Buchungen von Führungen im Museum beantworten?
+    - Wen kann ich anschreiben, wenn ich mehr über Führungen im Museum erfahren möchte?
+    - Wer kann mir Auskunft über Führungen im Museum geben?
 
 - intent: fuehrungen_sprachen
   examples: |
