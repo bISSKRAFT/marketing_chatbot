@@ -327,7 +327,6 @@ nlu:
 
 - intent: barrier_free_see
   examples: |
-
     - Gibt es im Museum Angebote für Menschen, die nicht sehen können?
     - Lohnt es sich für meinen blinden Freund das Museum zu besuchen?
     - Stellt das Museum auch Inhalte für blinde oder sehbehinderte Menschen bereit?
@@ -378,8 +377,8 @@ nlu:
     - Kannst du mir die Speisekarte der Cafeteria des Museums zeigen?
     - Was wird in der Cafeteria des Museums verkauft?
     - Was gibt es in der Cafeteria zu essen und zu trinken?
-    - Gibt es eine Cafeteria im Museum?
-    - Hat das Museum eine Cafeteria?
+    - Was für Speisen und Getränke werden in der Cafeteria des Museums angeboten?
+    - Was für Speisen und Getränke gibt es in der Cafeteria des Museums?
 
 - intent: pupils
   examples: |

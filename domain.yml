@@ -41,9 +41,6 @@ responses:
   utter_goodbye:
   - text: "Viel Spaß und auf Wiedersehen!"
 
-  utter_prices:
-  - text: "Eine Übersicht unserer Preise findest Du unter https://www.kriminalmuseum.eu/besucherplaner/preise/."
-
   utter_arrival:
   - text: "Du kannst sowohl mit dem Auto als auch mit der Bahn anreisen. Leider besitzt das Museum keine eigenen Parkplätze, jedoch befindet sich ein Parkplatz in der Nähe des Museums. Du kannst mich nach möglichen Parkplätzen befragen!\n\nMit der Bahn ist das Musem vom Bahnhof Rothenburg aus in 15 Minuten zu Fuß zu erreichen."
 
