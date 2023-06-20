@@ -31,8 +31,8 @@ stories:
   - action: utter_child_friendly
   - intent: instruction_website
   - action: utter_instruction_website
-  - intent: greateful
-  - action: utter_greateful
+  - intent: greatful
+  - action: utter_greatful
   - intent: goodbye
   - action: utter_goodbye
 
@@ -54,8 +54,8 @@ stories:
   - action: utter_special_exhibition_archive
   - intent: instruction_website
   - action: utter_instruction_website
-  - intent: greateful
-  - action: utter_greateful
+  - intent: greatful
+  - action: utter_greatful
   - intent: contact
   - action: utter_contact
   - intent: goodbye
@@ -97,8 +97,8 @@ stories:
   - action: utter_departments
   - intent: tours_information
   - action: utter_tours_information
-  - intent: greateful
-  - action: utter_greateful
+  - intent: greatful
+  - action: utter_greatful
 
 - story: Manuela_35
   steps:
@@ -137,8 +137,8 @@ stories:
   - action: utter_cafeteria_information
   - intent: cafeteria_offer
   - action: utter_cafeteria_offer
-  - intent: greateful
-  - action: utter_greateful
+  - intent: greatful
+  - action: utter_greatful
 
 - story: Nam_Hae_e_26
   steps:
@@ -173,8 +173,8 @@ stories:
   - action: utter_cafeteria_information
   - intent: barrier_free_walk
   - action: utter_barrier_free_walk
-  - intent: greateful
-  - action: utter_greateful
+  - intent: greatful
+  - action: utter_greatful
 
 # Internet-Profi
 - story: Merlin_15
@@ -213,8 +213,8 @@ stories:
   - action: utter_arrival
   - intent: park_car
   - action: utter_park_car
-  - intent: greateful
-  - action: utter_greateful
+  - intent: greatful
+  - action: utter_greatful
 
 - story: Jeff_35
   steps:
@@ -253,8 +253,8 @@ stories:
   - action: utter_park_car
   - intent: park_bike
   - action: utter_park_bike
-  - intent: greateful
-  - action: utter_greateful
+  - intent: greatful
+  - action: utter_greatful
 
 - story: ask for barrier_free_walk
   steps:

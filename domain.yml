@@ -4,6 +4,7 @@ intents:
   - nlu_fallback
   - greet
   - goodbye
+  - greatful
   - opening_times
   - opening_times_christmas
   - opening_times_new_year
@@ -41,7 +42,7 @@ responses:
   utter_goodbye:
   - text: "Viel Spaß und auf Wiedersehen!"
 
-  utter_gearteful:
+  utter_greatful:
   - text: "Sehr gerne! Für weitere Fragen stehe ich dir weiterhin unten rechts auf der Webseite zur Verfügung."
 
   utter_arrival:

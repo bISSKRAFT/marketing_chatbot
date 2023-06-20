@@ -50,8 +50,8 @@ nlu:
     - Ich bin dann mal offline
     - Ich bin fertig, danke
 
-- intent: greateful
-  examples:
+- intent: greatful
+  examples: |
     - danke
     - danke für die Hilfe
     - danke für deine Hilfe

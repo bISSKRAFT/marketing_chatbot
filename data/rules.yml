@@ -17,10 +17,10 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: greateful
+- rule: greatful
   steps:
-  - intent: greateful
-  - action: utter_greateful
+  - intent: greatful
+  - action: utter_greatful
 
 - rule: opening_times
   steps:
