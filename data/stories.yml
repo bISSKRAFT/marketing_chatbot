@@ -260,7 +260,7 @@ stories:
   # - action: utter_goodbye
 
   - story: wenn nach Cafeteria gefragt wird
-  steps:
+    steps:
   - intent: greet
   - action: utter_greet
   - intent: cafeteria_offer
@@ -272,8 +272,8 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
-  -story: wenn nach Anreise gefragt wird
-  steps:
+  - story: wenn nach Anreise gefragt wird
+    steps:
   - intent: greet
   - action: utter_greet
   - intent: arrival
@@ -284,5 +284,3 @@ stories:
   - action: utter_park_bike
   - intent: goodbye
   - action: utter_goodbye
-
-  
