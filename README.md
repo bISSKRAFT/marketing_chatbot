@@ -1,6 +1,7 @@
-<!-- Add banner here -->
-
 # Chatbot for Rothenburg Kriminalmuseum
+
+<!-- Add banner here -->
+![Banner](https://www.ometrics.com/blog/wp-content/uploads/2017/12/chat_bot-01.jpg)
 
 <!-- If repo goes public
 ![GitHub last commit](https://img.shields.io/github/last-commit/bISSKRAFT/marketing_chatbot)
