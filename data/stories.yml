@@ -19,219 +19,221 @@ stories:
 # Internet-Anfänger
 - story: Helmut_76
   steps:
-  - intent: begruessung
-  - action: utter_begruessung
-  - intent: anleitung_bot
-  - action: utter_anleitung_bot
-  - intent: zeiten
+  - intent: greet
+  - action: utter_greet
+  - intent: instruction_bot
+  - action: utter_instruction_bot
+  - intent: opening_times
   - action: action_get_opening_times
-  - intent: preise
+  - intent: prices
   - action: action_get_price
-  - intent: kindgerecht
-  - action: utter_kindgerecht
-  - intent: anleitung_webseite
-  - action: utter_anleitung_webseite
-  - intent: verabschiedung
-  - action: utter_verabschiedung
+  - intent: child_friendly
+  - action: utter_child_friendly
+  - intent: instruction_website
+  - action: utter_instruction_website
+  - intent: goodbye
+  - action: utter_goodbye
 
 - story: Marlene_44
   steps:
-  - intent: begruessung
-  - action: utter_begruessung
-  - intent: anleitung_bot
-  - action: utter_anleitung_bot
-  - intent: zeiten
+  - intent: greet
+  - action: utter_greet
+  - intent: instruction_bot
+  - action: utter_instruction_bot
+  - intent: opening_times
   - action: action_get_opening_times
-  - intent: preise
+  - intent: prices
   - action: action_get_price
-  - intent: abteilungen
-  - action: utter_abteilungen
-  - intent: sonderausstellung_information
-  - action: utter_sonderausstellung_information
-  - intent: sonderausstellung_archiv
-  - action: utter_sonderausstellung_archiv
-  - intent: anleitung_webseite
-  - action: utter_anleitung_webseite
-  - intent: kontakt
-  - action: utter_kontakt
-  - intent: verabschiedung
-  - action: utter_verabschiedung
+  - intent: departments
+  - action: utter_departments
+  - intent: special_exhibition_information
+  - action: utter_special_exhibition_information
+  - intent: special_exhibition_archive
+  - action: utter_special_exhibition_archive
+  - intent: instruction_website
+  - action: utter_instruction_website
+  - intent: contact
+  - action: utter_contact
+  - intent: goodbye
+  - action: utter_goodbye
 
 - story: Ursula_73
   steps:
-  - intent: begruessung
-  - action: utter_begruessung
-  - intent: anleitung_bot
-  - action: utter_anleitung_bot
-  - intent: zeiten
+  - intent: greet
+  - action: utter_greet
+  - intent: instruction_bot
+  - action: utter_instruction_bot
+  - intent: opening_times
   - action: action_get_opening_times
-  - intent: preise
+  - intent: prices
   - action: action_get_price
   - intent: cafeteria_information
   - action: utter_cafeteria_information
-  - intent: cafeteria_angebot
-  - action: utter_cafeteria_angebot
-  - intent: anleitung_webseite
-  - action: utter_anleitung_webseite
-  - intent: kontakt
-  - action: utter_kontakt
-  - intent: verabschiedung
-  - action: utter_verabschiedung
+  - intent: cafeteria_offer
+  - action: utter_cafeteria_offer
+  - intent: instruction_website
+  - action: utter_instruction_website
+  - intent: contact
+  - action: utter_contact
+  - intent: goodbye
+  - action: utter_goodbye
 
 # Internet-Amateur
 - story: Beate_45
   steps:
-  - intent: begruessung
-  - action: utter_begruessung
-  - intent: zeiten
+  - intent: greet
+  - action: utter_greet
+  - intent: opening_times
   - action: action_get_opening_times
-  - intent: preise
+  - intent: prices
   - action: action_get_price
-  - intent: kindgerecht
-  - action: utter_kindgerecht
-  - intent: abteilungen
-  - action: utter_abteilungen
-  - intent: fuehrungen_information
-  - action: utter_fuehrungen_information
-  - intent: verabschiedung
-  - action: utter_verabschiedung
+  - intent: child_friendly
+  - action: utter_child_friendly
+  - intent: departments
+  - action: utter_departments
+  - intent: tours_information
+  - action: utter_tours_information
+  - intent: goodbye
+  - action: utter_goodbye
 
 - story: Manuela_35
   steps:
-  - intent: begruessung
-  - action: utter_begruessung
-  - intent: zeiten
+  - intent: greet
+  - action: utter_greet
+  - intent: opening_times
   - action: action_get_opening_times
-  - intent: preise
+  - intent: prices
   - action: action_get_price
-  - intent: kindgerecht
-  - action: utter_kindgerecht
-  - intent: abteilungen
-  - action: utter_abteilungen
+  - intent: child_friendly
+  - action: utter_child_friendly
+  - intent: departments
+  - action: utter_departments
   - intent: cafeteria_information
   - action: utter_cafeteria_information
-  - intent: cafeteria_angebot
-  - action: utter_cafeteria_angebot
-  - intent: verabschiedung
-  - action: utter_verabschiedung
+  - intent: cafeteria_offer
+  - action: utter_cafeteria_offer
+  - intent: goodbye
+  - action: utter_goodbye
 
 - story: Lena_29
   steps:
-  - intent: begruessung
-  - action: utter_begruessung
-  - intent: zeiten
+  - intent: greet
+  - action: utter_greet
+  - intent: opening_times
   - action: action_get_opening_times
-  - intent: preise
+  - intent: prices
   - action: action_get_price
-  - intent: kindgerecht
-  - intent: anreise
-  - action: utter_anreise
-  - action: utter_abteilungen
+  - intent: child_friendly
+  - action: utter_child_friendly
+  - intent: arrival
+  - action: utter_arrival
+  - intent: departments
+  - action: utter_departments
   - intent: cafeteria_information
   - action: utter_cafeteria_information
-  - intent: cafeteria_angebot
-  - action: utter_cafeteria_angebot
-  - intent: verabschiedung
-  - action: utter_verabschiedung
+  - intent: cafeteria_offer
+  - action: utter_cafeteria_offer
+  - intent: goodbye
+  - action: utter_goodbye
 
 - story: Nam_Hae_e_26
   steps:
-  - intent: begruessung
-  - action: utter_begruessung
-  - intent: zeiten
+  - intent: greet
+  - action: utter_greet
+  - intent: opening_times
   - action: action_get_opening_times
-  - intent: preise
+  - intent: prices
   - action: action_get_price
-  - intent: abteilungen
-  - action: utter_abteilungen
-  - intent: fuehrungen_information
-  - action: utter_fuehrungen_information
-  - intent: fuehrungen_sprachen
-  - action: utter_fuehrungen_sprachen
-  - intent: verabschiedung
-  - action: utter_verabschiedung
+  - intent: departments
+  - action: utter_departments
+  - intent: tours_information
+  - action: utter_tours_information
+  - intent: tours_languages
+  - action: utter_tours_languages
+  - intent: goodbye
+  - action: utter_goodbye
 
 - story: Peter_57
   steps:
-  - intent: begruessung
-  - action: utter_begruessung
-  - intent: zeiten
+  - intent: greet
+  - action: utter_greet
+  - intent: opening_times
   - action: action_get_opening_times
-  - intent: preise
+  - intent: prices
   - action: action_get_price
-  - intent: fuehrungen_information
-  - action: utter_fuehrungen_information
-  - intent: abteilungen
-  - action: utter_abteilungen
+  - intent: tours_information
+  - action: utter_tours_information
+  - intent: departments
+  - action: utter_departments
   - intent: cafeteria_information
   - action: utter_cafeteria_information
-  - intent: verabschiedung
-  - action: utter_verabschiedung
+  - intent: goodbye
+  - action: utter_goodbye
 
 # Internet-Profi
 - story: Merlin_15
   steps:
-  - intent: abteilungen
-  - action: utter_abteilungen
-  - intent: schueler
-  - action: utter_schueler
-  - intent: fuehrungen_information
-  - action: utter_fuehrungen_information
-  - intent: verabschiedung
-  - action: utter_verabschiedung
+  - intent: departments
+  - action: utter_departments
+  - intent: pupils
+  - action: utter_pupils
+  - intent: tours_information
+  - action: utter_tours_information
+  - intent: goodbye
+  - action: utter_goodbye
 
 - story: Patrick_29
   steps:
-  - intent: begruessung
-  - action: utter_begruessung
-  - intent: abteilungen
-  - action: utter_abteilungen
-  - intent: anleitung_bot
-  - action: utter_anleitung_bot
-  - intent: fuehrungen_information
-  - action: utter_fuehrungen_information
-  - intent: verabschiedung
-  - action: utter_verabschiedung
+  - intent: greet
+  - action: utter_greet
+  - intent: departments
+  - action: utter_departments
+  - intent: instruction_bot
+  - action: utter_instruction_bot
+  - intent: tours_information
+  - action: utter_tours_information
+  - intent: goodbye
+  - action: utter_goodbye
 
 - story: Nikola_25
   steps:
-  - intent: begruessung
-  - action: utter_begruessung
-  - intent: zeiten
+  - intent: greet
+  - action: utter_greet
+  - intent: opening_times
   - action: action_get_opening_times
-  - intent: preise
+  - intent: prices
   - action: action_get_price
-  - intent: anreise
-  - action: utter_anreise
-  - intent: parken_auto
-  - action: utter_parken_auto
-  - intent: verabschiedung
-  - action: utter_verabschiedung
+  - intent: arrival
+  - action: utter_arrival
+  - intent: park_car
+  - action: utter_park_car
+  - intent: goodbye
+  - action: utter_goodbye
 
 - story: Jeff_35
   steps:
-  - intent: begruessung
-  - action: utter_begruessung
-  - intent: zeiten
+  - intent: greet
+  - action: utter_greet
+  - intent: opening_times
   - action: action_get_opening_times
-  - intent: anreise
-  - action: utter_anreise
-  - intent: parken_auto
-  - action: utter_parken_auto
-  - intent: abteilungen
-  - action: utter_abteilungen
-  - intent: fuehrungen_sprache
-  - action: utter_fuehrungen_sprachen
-  - intent: verabschiedung
-  - action: utter_verabschiedung
+  - intent: arrival
+  - action: utter_arrival
+  - intent: park_car
+  - action: utter_park_car
+  - intent: departments
+  - action: utter_departments
+  - intent: tours_languages
+  - action: utter_tours_languages
+  - intent: goodbye
+  - action: utter_goodbye
 
 
 - story: wenn nach Kontaktmöglichkeiten gefragt wird
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: kontakt
-  - action: utter_kontakt
+  - intent: contact
+  - action: utter_contact
   - intent: goodbye
   - action: utter_goodbye
 
@@ -239,18 +241,18 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: kindgerecht
-  - action: utter_kindgerecht
-  - intent: barrierefrei_gehen
-  - action: utter_barrierefrei_gehen
-  - intent: cafeteria_angebot
-  - action: utter_cafeteria_angebot
-  - intent: fuehrungen_information
-  - action: utter_fuehrungen_information
-  - intent: preise
+  - intent: child_friendly
+  - action: utter_child_friendly
+  - intent: barrier_free_walk
+  - action: utter_barrier_free_walk
+  - intent: cafeteria_offer
+  - action: utter_cafeteria_offer
+  - intent: tours_information
+  - action: utter_tours_information
+  - intent: prices
   - action: action_get_price
-  - intent: fuehrungen_ansprechpartner
-  - action: utter_fuehrungen_ansprechpartner
+  - intent: tours_information
+  - action: utter_tours_information
 
   # - intent: mood_great
   # - action: utter_happy
@@ -261,12 +263,12 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: cafeteria_angebot
-  - action: utter_cafeteria_angebot
-  - intent: cafeteria_ort
-  - action: utter_cafeteria_ort
-  - intent: cafeteria_oefnungszeiten
-  - action: utter_cafeteria_oefnungszeiten
+  - intent: cafeteria_offer
+  - action: utter_cafeteria_offer
+  - intent: cafeteria_information
+  - action: utter_cafeteria_information
+  - intent: cafeteria_information
+  - action: utter_cafeteria_information
   - intent: goodbye
   - action: utter_goodbye
 
@@ -274,12 +276,12 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: anreise
-  - action: utter_anreise
-  - intent: parken_auto
-  - action: utter_parken_auto
-  - intent: parken_fahrrad
-  - action: utter_parken_fahrrad
+  - intent: arrival
+  - action: utter_arrival
+  - intent: park_car
+  - action: utter_park_car
+  - intent: park_bike
+  - action: utter_park_bike
   - intent: goodbye
   - action: utter_goodbye
 
