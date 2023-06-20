@@ -17,6 +17,11 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
+- rule: greateful
+  steps:
+  - intent: greateful
+  - action: utter_greateful
+
 - rule: opening_times
   steps:
   - intent: opening_times

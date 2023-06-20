@@ -41,6 +41,9 @@ responses:
   utter_goodbye:
   - text: "Viel Spaß und auf Wiedersehen!"
 
+  utter_gearteful:
+  - text: "Sehr gerne! Für weitere Fragen stehe ich dir weiterhin unten rechts auf der Webseite zur Verfügung."
+
   utter_arrival:
   - text: "Du kannst sowohl mit dem Auto als auch mit der Bahn anreisen. Leider besitzt das Museum keine eigenen Parkplätze, jedoch befindet sich ein Parkplatz in der Nähe des Museums. Du kannst mich nach möglichen Parkplätzen befragen!\n\nMit der Bahn ist das Musem vom Bahnhof Rothenburg aus in 15 Minuten zu Fuß zu erreichen."
 
@@ -72,7 +75,7 @@ responses:
   - text: "Für Schulklassen bietet das Museum altersgerechte Führungen von ca. 60 Minuten für Schulklassen und Jugendgruppen an. Für Führungen ist eine vorherige telefonische Anmeldung erforderlich. Zudem bietet das Museum eine kleine Kinderrallye an für Schüler der 3. bis 5. Klasse und eine große Kinderrallye für Schüler ab der 5. Klasse. Für weiter Informationen folge bitte folgendem Link https://www.kriminalmuseum.eu/bildung-forschung/schueler/"
 
   utter_tours_information:
-  - text: "Ansprechpartner sind Frau Elisabeth Rüb, Frau Katja Steger, Frau Anja Bergermann. Diese sind unter der Telefonnummer 09861/5359 zu errreichen. Führungen sind grundsätzlich nur für Gruppen möglich. Weitere Informationen zu Führungen findest Du unter https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/."
+  - text: "Das Museum bietet Führungen für Gruppen an. Ansprechpartner sind Frau Elisabeth Rüb, Frau Katja Steger, Frau Anja Bergermann. Diese sind unter der Telefonnummer 09861/5359 zu errreichen. Weitere Informationen zu Führungen findest Du unter https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/."
 
   utter_tours_languages:
   - text: "Die Führungen werden in deutscher und englischer Sprache angeboten."
