@@ -10,6 +10,7 @@
 
 - [Chatbot for Rothenburg Kriminalmuseum](#chatbot-for-rothenburg-kriminalmuseum)
 - [Installation](#installation)
+- [Usage](#usage)
 
 # Installation
 [(Back to top)](#table-of-contents)
@@ -24,12 +25,10 @@ git clone git@github.com:bISSKRAFT/marketing_chatbot.git
 ```
 
 <br />
-<br />
 
 **2. When using pip: Now you have to create a Python virtual environment. [create env](https://docs.python.org/3/library/venv.html)**
 > **Note**: the environment python version has to be 3.8.12
 
-<br />
 <br />
 
 **3. Install the required packages using the ```requirements.txt```**
@@ -47,7 +46,6 @@ pip install -r requirements.txt
 conda create --name <env_name> --file requirements.txt
 ```
 
-<br />
 <br />
 
 **4. Activate your virtual environment**
@@ -67,52 +65,46 @@ conda activate <env_name>
 ```
 
 
-# RUN
+# Usage
+[(Back to top)](#table-of-contents)
 
-- to start the server with connection to the front end
+There are two components that have to be in sync. First is the "Server Side" which handels the computation and the "Client Side" which handels the requests.
 
-```
+### Server Side
+
+**For using the chatbot there are two steps necessary**
+
+> **Note**: It is recommended to first start the chatbot then the action server
+
+- starting the chatbot itself:
+  
+```shell
 rasa run -m models --enable-api --cors "*" --debug
 ```
 
-- in the widet you have to use the correct url
-- you have to change the ip adress to the right one
-- if you don't want specify a port leave it default
+- starting the action server for executing custom actions:
 
-```
-http://localhost:5005
+```shell
+rasa run actions
 ```
 
-# TRAINING
-**to train on a specific GPU please use**
+- to use the chatbot in a website make sure in ```credentials.yml``` is socketio commented out
 
-```
-export CUDA_VISIBLE_DEVICES=X
-```
-- x is the GPU you want to invoke
-
-# Important Commands
-
-```
-rasa shell
-```
-- opens up a shell in which you can interact with the chatbot
-- the chatbot respons with the contents of the "utter_*" action
-
-```
-rasa shell nlu
+```yml
+socketio:
+ user_message_evt: user_uttered
+ bot_message_evt: bot_uttered
+ session_persistence: false
 ```
 
-- opens up a shell in which you can interact with the chatbot
-- the response is the possibility of the intent and the corresponding action
+### Client Side
 
+to use the chatbot on your website include the follwing HTML-file
+
+```html
+<div id="rasa-chat-widget" data-websocket-url="http://localhost:5005"></div>
+<script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
 ```
-rasa interactive
-```
 
-- opens up a shell for interaction
-- asks if the output is the desired or not
-- and if the action was the right one
-- can be used for interactive learning
-
+> **Note**: make sure the IP-Adress and Port are equal to the ones used on the Server Side
 
