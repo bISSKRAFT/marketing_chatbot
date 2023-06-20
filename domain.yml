@@ -1,6 +1,7 @@
 version: "3.1"
 
 intents:
+  - nlu_fallback
   - greet
   - goodbye
   - opening_times
@@ -31,6 +32,9 @@ entities:
 
 # all user-groups
 responses:
+  utter_rephrase_instruciton_bot:
+  - text: "Ich konnte dich leider nicht richtig verstehen, bitte formuliere deine Frage um oder frage mich nach einer Anleitung."
+
   utter_greet:
   - text: "Guten Tag, wie geht es Ihnen?"
   
