@@ -1,3 +1,7 @@
+<a href="https://github.com/bISSKRAFT/marketing_chatbot/tree/develop" target="_blank">
+    <img src="https://img.shields.io/github/last-commit/navendu-pottekkat/nsfw-filter?style=flat-square" alt="GitHub last commit">
+</a>
+
 # RUN
 
 - to start the server with connection to the front end
