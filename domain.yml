@@ -3,32 +3,33 @@ version: "3.1"
 intents:
   - greet
   - goodbye
-  - zeiten
-  - zeiten_weihnachten
-  - zeiten_silvester
-  - preise
-  - anreise
-  - parken_auto
-  - parken_fahrrad
-  - abteilungen
-  - kindgerecht
-  - barrierefrei_gehen
-  - barrierefrei_sehen
-  - cafeteria_angebot
+  - opening_times
+  - opening_times_christmas
+  - opening_times_new_year
+  - prices
+  - arrival
+  - park_car
+  - park_bike
+  - departments
+  - child_friendly
+  - barrier_free_walk
+  - barrier_free_see
   - cafeteria_information
-  - cafeteria_ort
-  - cafeteria_oeffnungszeiten
-  - fuehrungen_information
-  - fuehrungen_ansprechpartner
-  - fuehrungen_sprachen
-  - sonderausstellung_information
-  - sonderausstellung_archiv
-  - museumsshop
-  - kontakt
+  - cafeteria_offer
+  - pupils
+  - tours_information
+  - tours_languages
+  - special_exhibition_information
+  - special_exhibition_archive
+  - museum_shop
+  - contact
+  - instruction_bot
+  - instruction_website
 
 entities:
   - time
 
+# Alle User-Gruppen
 responses:
   utter_greet:
   - text: "Guten Tag, wie geht es Ihnen?"
@@ -36,75 +37,64 @@ responses:
   utter_goodbye:
   - text: "Viel Spaß und auf Wiedersehen!"
 
-  utter_did_that_help:
-  - text: "Hat Ihnen das weitergeholfen?"
-
-  utter_happy:
-  - text: "Freut mich, dass ich Dir helfen konnte!"
-
-  utter_preise:
+  utter_prices:
   - text: "Eine Übersicht unserer Preise findest Du unter https://www.kriminalmuseum.eu/besucherplaner/preise/."
 
-  utter_anreise:
+  utter_arrival:
   - text: "Du kannst sowohl mit dem Auto als auch mit der Bahn anreisen. Leider besitzt das Museum keine eigenen Parkplätze, jedoch befindet sich ein Parkplatz in der Nähe des Museums. Du kannst mich nach möglichen Parkplätzen befragen!\n\nMit der Bahn ist das Musem vom Bahnhof Rothenburg aus in 15 Minuten zu Fuß zu erreichen."
 
-  utter_parken_auto:
+  utter_park_car:
   - text: "Für Bus, LKW & PKW kannst Du den Parkplatz am Friedrich-Hörner-Weg nutzen https://goo.gl/maps/QAUyMY8E6LRvjZwb8?coh=178572&entry=tt \n\nFür Bus, PKW & Wohnmobil kannst Du den Parkplatz in der Nördlinger Straße verwenden https://goo.gl/maps/vXoczjg9xMiQ4yuE9 \n\nFür Bus, LKW, PKW und Wohnmobil kannst Du dein Fahrzeug in der Schweinsdorfer Straße parken https://goo.gl/maps/MPyJPBjUNSsrY3Zd8 \n\nFür nur PKW gibt es den Parkplatz am Hornburgweg https://goo.gl/maps/3GuW6t4Euq2WMejH6 \nsowie am Bezoldweg https://goo.gl/maps/8tBsLftVqXkmjhno9. "
 
-  utter_parken_fahrrad:
+  utter_park_bike:
   - text: "Das Museum bietet keine ausgewiesenen Stellplätze für Fahrräder an."
 
-  utter_abteilungen:
+  utter_departments:
   - text: "Unser Museum ist in folgende Abteilungen untergliedert:\n\t-Recht in alter Zeit\n\t-Eine Frage der Ehre\n\t-Verfahren und Folter\n\t-Urteil und Strafe\n\t-Hexen, Henker und Halunken\n\t-Kriche,Reich und Recht\n\t-Tiere in der Rechtsgeschichte\n\t-Mythos oder Wahrheit? Rechtsfantasien\n\nWeitere Informationen zu den Abteilungen findest Du unter https://www.kriminalmuseum.eu."
 
-  utter_kindgerecht:
+  utter_child_friendly:
   - text: "Das Museum eignet sich für alle Altersgruppen und ist kindgerecht."
 
-  utter_barrierefrei_gehen:
+  utter_barrier_free_walk:
   - text: "Bei dem Museum handelt es sich um ein denkmalgeschütztes Gebäude, daher konnte es leider nicht barrierefrei gestaltet werden."
 
-  utter_barrierefrei_sehen:
+  utter_barrier_free_see:
   - text: "Das Museum bietet aktuell keinen Audioguide. Führungen werden in deutscher und englischer Sprache angeboten. Weitere Informationen zu den Führungen findest Du unter https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/."
 
-  utter_cafeteria_angebot:
+  utter_cafeteria_information:
+  - text: "Das Museum hat eine Cafeteria. Diese befindet sich in der Johanniterscheune im Nebengebäude des Museums.Die Cafeteria ist am Dienstag, Mittwoch, Donnerstag, Samstag und Sonntag von 13-18 Uhr geöffnet. Für weitere Informationen klicke bitte folgenden Link https://www.kriminalmuseum.eu/besucherplaner/cafeteria/"
+
+  utter_cafeteria_offer:
   - text: "Die Cafeteria bietet Heiß- und Kaltgetränke sowie unsere hausgemachten „Kriminalmuseums“-Schneeballen in verschiedenen Größen und ein täglich wechselndes Kuchenangebot an (alles auch zum Mitnehmen). Zudem halten wir saisonale Erfrischungsgetränke wie etwa Holunderblütenschorle, Hugo und Aperol Spritz für dich bereit."
 
-  utter_cafeteria_information:
-  - text: "Alle Informationen rund um die Cafeteria findest Du unter https://www.kriminalmuseum.eu/besucherplaner/cafeteria/."
+  utter_pupils:
+  - text: "Für Schulklassen bietet das Museum altersgerechte Führungen von ca. 60 Minuten für Schulklassen und Jugendgruppen an. Für Führungen ist eine vorherige telefonische Anmeldung erforderlich. Zudem bietet das Museum eine kleine Kinderrallye an für Schüler der 3. bis 5. Klasse und eine große Kinderrallye für Schüler ab der 5. Klasse. Für weiter Informationen folge bitte folgendem Link https://www.kriminalmuseum.eu/bildung-forschung/schueler/"
 
-  utter_cafeteria_ort:
-  - text: "Die Cafeteria mit Museumsshop befindet sich in der Johanniterscheune im Nebengebäude des Museums."
+  utter_tours_information:
+  - text: "Ansprechpartner sind Frau Elisabeth Rüb, Frau Katja Steger, Frau Anja Bergermann. Diese sind unter der Telefonnummer 09861/5359 zu errreichen. Führungen sind grundsätzlich nur für Gruppen möglich. Weitere Informationen zu Führungen findest Du unter https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/."
 
-  utter_cafeteria_oeffnungszeiten:
-  - text: "Die Cafeteria ist am Dienstag, Mittwoch, Donnerstag, Samstag und Sonntag von 13-18 Uhr geöffnet."
-
-  utter_fuehrungen_information:
-  - text: "Alle Informationen zu den Führungen im Museum findest Du unter https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/."
-
-  utter_fuehrung_buchen:
-  - text: "Hier kannst Du deine Führungen durch das Museum buchen https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/."
-  
-  utter_fuehrungen_ansprechpartner:
-  - text: "Alle Ansprechpartner und weitere Informationen zu Führungen findest Du unter https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/."
-
-  utter_fuehrungen_sprachen:
+  utter_tours_languages:
   - text: "Die Führungen werden in deutscher und englischer Sprache angeboten."
 
-  utter_sonderausstellung_information:
-  - text: "Alle Informationen zu den aktuellen Sonderausstellungen findest Du unter https://www.kriminalmuseum.eu/sonderschauen/."
+  utter_special_exhibition_information:
+  - text: "Das Museum bietet in regelmäßigen Abständen Sonderausstellungen an. Alle Informationen zu den aktuellen Sonderausstellungen findest Du unter https://www.kriminalmuseum.eu/sonderschauen/."
 
-  utter_sonderausstellung_archiv:
+  utter_special_exhibition_archive:
   - text: "Ein Archiv der vergangenen Sonderausstellungen des Museums findest Du unter https://www.kriminalmuseum.eu/sonderschauen/."
 
-  utter_museumsshop:
+  utter_museum_shop:
   - text: "Der Museumsshop befindet sich in der Johanniterscheune im Nebengebäude des Museums. Alternativ kannst Du auch online unter https://kriminalmuseum.ticketfritz.de/ vorbeischauen."
 
-  utter_kontakt:
-<<<<<<< HEAD
-  - text: Du kannst uns unter der Telefonnummer +49 (0) 9861 5359 erreichen oder eine E-Mail an info@kriminalmuseum.eu schreiben.
-=======
+# Internet-Amateure
+  utter_contact:
   - text: "Du kannst uns unter der Telefonnummer +49 (0) 9861 5359 erreichen oder eine E-Mail an info@kriminalmuseum.eu schreiben. Weitere Informationen findest Du unter https://www.kriminalmuseum.eu/kontakt/."
->>>>>>> 31c93c2931742bfad62f3cec1e7d39a71805c168
+
+# Internet-Anfänger
+  utter_instruction_bot:
+  - text: "Ich bin ein Chatbot und basiere auf Rasa. Ich kann dir Informationen zu folgenden Themen geben: \n\t- Öffnungszeiten\n\t- Preise\n\t- Anreise\n\t- Parken\n\t- Abteilungen\n\t- Kindgerecht\n\t- Barrierefreiheit\n\t- Cafeteria\n\t- Führungen\n\t- Sonderausstellungen\n\t- Museumsshop\n\t- Kontakt\n\t- Anleitung Webseite\n\nDu kannst mich nach diesen Themen fragen, indem Du die entsprechenden Stichwörter verwendest. Für weiter Informationen bitte ich dich diese Webseite zu durchsuchen."
+
+  utter_instruction_website:
+  - text: "Diese Webseite enthält Infromationen zu folgenden Themen: \n\t- Home\n\t- Besucherinfo\n\t- Ueber Uns\n\t- Bildung\n\t- Sonderschauen\n\t- Presse\n\t- News\n\t- Kontakt\n\n Ueber die Reiter im oberen Bereich der Webseite, kann Unterthemen und genauere Informationen zu den genannten Themen finden."
 
 session_config:
   session_expiration_time: 60
