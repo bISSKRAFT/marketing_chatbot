@@ -517,8 +517,6 @@ nlu:
     - Kann man im Museum Souvenirs erwerben?
     - Gibt es einen Laden, wo man Kunstwerke und Bücher kaufen kann?
 
-
-# internet-amateur
 - intent: contact
   examples: |
       - Wie ist eure Telefonnummer?
@@ -537,7 +535,7 @@ nlu:
       - Wie kann ich einen Mitarbeiter kontaktieren?
       - Gibt es die Möglichkeit mit einem Mitarbeiter zu sprechen?
 
-# internet-beginner
+# internet-amateur
 - intent: instruction_bot
   examples:  |
       - Wie benutze ich diesen Chatbot?
@@ -557,6 +555,7 @@ nlu:
       - Wie verwende ich dich richtig?
       - Welche Aktionen kann ich mit diesem Chatbot durchführen?
 
+# internet-beginner
 - intent: instruction_website
   examples:  |
       - Welche Informationen finde ich auf dieser Website?
