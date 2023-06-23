@@ -37,13 +37,18 @@ responses:
   - text: "Ich konnte dich leider nicht richtig verstehen, bitte formuliere deine Frage um oder frage mich nach einer Anleitung."
 
   utter_greet:
-  - text: "Guten Tag, wie geht es Ihnen?"
+  - text: "Guten Tag, wie geht es dir?"
+  - text: "Hallo, wie kann ich dir helfen?"
   
   utter_goodbye:
   - text: "Viel Spaß und auf Wiedersehen!"
+  - text: "Bis bald!"
+  - text: "Bis dann, wir freuen uns auf deinen Besuch!"
 
   utter_greatful:
   - text: "Sehr gerne! Für weitere Fragen stehe ich dir weiterhin unten rechts auf der Webseite zur Verfügung."
+  - text: "Kein Problem! Für weitere Fragen stehe ich dir weiterhin unten rechts auf der Webseite zur Verfügung."
+  - text: "Gern geschehen! Für weitere Fragen stehe ich dir weiterhin unten rechts auf der Webseite zur Verfügung."
 
   utter_arrival:
   - text: "Du kannst sowohl mit dem Auto als auch mit der Bahn anreisen. Leider besitzt das Museum keine eigenen Parkplätze, jedoch befindet sich ein Parkplatz in der Nähe des Museums. Du kannst mich nach möglichen Parkplätzen befragen!\n\nMit der Bahn ist das Musem vom Bahnhof Rothenburg aus in 15 Minuten zu Fuß zu erreichen."
@@ -90,14 +95,14 @@ responses:
   utter_museum_shop:
   - text: "Der Museumsshop befindet sich in der Johanniterscheune im Nebengebäude des Museums. Alternativ kannst Du auch online unter https://kriminalmuseum.ticketfritz.de/ vorbeischauen."
 
-# internet-amateur
   utter_contact:
   - text: "Du kannst uns unter der Telefonnummer +49 (0) 9861 5359 erreichen oder eine E-Mail an info@kriminalmuseum.eu schreiben. Weitere Informationen findest Du unter https://www.kriminalmuseum.eu/kontakt/."
 
-# internet-beginner
+# internet-amateur
   utter_instruction_bot:
   - text: "Ich bin ein Chatbot und basiere auf Rasa. Ich kann dir Informationen zu folgenden Themen geben: \n\t- Öffnungszeiten\n\t- Preise\n\t- Anreise\n\t- Parken\n\t- Abteilungen\n\t- Kindgerecht\n\t- Barrierefreiheit\n\t- Cafeteria\n\t- Führungen\n\t- Sonderausstellungen\n\t- Museumsshop\n\t- Kontakt\n\t- Anleitung Webseite\n\nDu kannst mich nach diesen Themen fragen, indem Du die entsprechenden Stichwörter verwendest. Für weiter Informationen bitte ich dich diese Webseite zu durchsuchen."
 
+# internet-beginner
   utter_instruction_website:
   - text: "Diese Webseite enthält Infromationen zu folgenden Themen: \n\t- Home\n\t- Besucherinfo\n\t- Ueber Uns\n\t- Bildung\n\t- Sonderschauen\n\t- Presse\n\t- News\n\t- Kontakt\n\n Ueber die Reiter im oberen Bereich der Webseite, kann Unterthemen und genauere Informationen zu den genannten Themen finden."
 
