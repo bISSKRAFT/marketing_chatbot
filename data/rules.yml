@@ -122,18 +122,18 @@ rules:
   - intent: museum_shop
   - action: utter_museum_shop
 
-# internet-amateur
 - rule: contact
   steps:
   - intent: contact
   - action: utter_contact
 
-# internet-beginner
+# internet-amateur
 - rule: instruction_bot
   steps:
   - intent: instruction_bot
   - action: utter_instruction_bot
 
+# internet-beginner
 - rule: instruction_website
   steps:
   - intent: instruction_website
