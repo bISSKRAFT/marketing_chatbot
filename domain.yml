@@ -1,39 +1,121 @@
 version: "3.1"
 
 intents:
+  - nlu_fallback
   - greet
   - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - zeiten
-  - is_bot 
+  - greatful
+  - opening_times
+  - opening_times_christmas
+  - opening_times_new_year
+  - prices
+  - arrival
+  - arrival_train
+  - park_car
+  - park_bike
+  - departments
+  - child_friendly
+  - barrier_free_walk
+  - barrier_free_see
+  - cafeteria_information
+  - cafeteria_offer
+  - pupils
+  - tours_information
+  - tours_languages
+  - special_exhibition_information
+  - special_exhibition_archive
+  - museum_shop
+  - contact
+  - instruction_bot
+  - instruction_website
 
+entities:
+  - time
+
+# all user-groups
 responses:
+  utter_rephrase_instruciton_bot:
+  - text: "Ich konnte dich leider nicht richtig verstehen, bitte formuliere deine Frage um oder frage mich nach einer Anleitung."
+
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
+  - text: "Guten Tag, wie geht es dir?"
+  - text: "Hallo, wie kann ich dir helfen?"
+  
   utter_goodbye:
-  - text: "Bye"
+  - text: "Viel Spaß und auf Wiedersehen!"
+  - text: "Bis bald!"
+  - text: "Bis dann, wir freuen uns auf deinen Besuch!"
 
-  utter_iamabot:
-  - text: "Ja, ich bin ein Bot und wurde mit Rasa entwickelt." 
+  utter_greatful:
+  - text: "Sehr gerne! Für weitere Fragen stehe ich dir weiterhin unten rechts auf der Webseite zur Verfügung."
+  - text: "Kein Problem! Für weitere Fragen stehe ich dir weiterhin unten rechts auf der Webseite zur Verfügung."
+  - text: "Gern geschehen! Für weitere Fragen stehe ich dir weiterhin unten rechts auf der Webseite zur Verfügung."
 
-  utter_zeiten:
-  - text: "Der letzte Einlass ist immer 45 Minuten vor Schließung."
+  utter_arrival:
+  - text: "Du kannst sowohl mit dem Auto als auch mit der Bahn anreisen. Leider besitzt das Museum keine eigenen Parkplätze, jedoch befindet sich ein Parkplatz in der Nähe des Museums. Du kannst mich nach möglichen Parkplätzen befragen!"
+
+  utter_arrival_train:
+  - text: "Mit der Bahn ist das Musem vom Bahnhof Rothenburg aus in 15 Minuten zu Fuß zu erreichen. Bitte verwende diesen Bahnhof: https://goo.gl/maps/3Hpa86bL6yREuJko6"
+
+  utter_park_car:
+  - text: "Für Bus, LKW & PKW kannst Du den Parkplatz am Friedrich-Hörner-Weg nutzen https://goo.gl/maps/QAUyMY8E6LRvjZwb8?coh=178572&entry=tt \n\nFür Bus, PKW & Wohnmobil kannst Du den Parkplatz in der Nördlinger Straße verwenden https://goo.gl/maps/vXoczjg9xMiQ4yuE9 \n\nFür Bus, LKW, PKW und Wohnmobil kannst Du dein Fahrzeug in der Schweinsdorfer Straße parken https://goo.gl/maps/MPyJPBjUNSsrY3Zd8 \n\nFür nur PKW gibt es den Parkplatz am Hornburgweg https://goo.gl/maps/3GuW6t4Euq2WMejH6 \nsowie am Bezoldweg https://goo.gl/maps/8tBsLftVqXkmjhno9. "
+
+  utter_park_bike:
+  - text: "Das Museum bietet keine ausgewiesenen Stellplätze für Fahrräder an."
+
+  utter_departments:
+  - text: "Unser Museum ist in folgende Abteilungen untergliedert:\n\t-Recht in alter Zeit\n\t-Eine Frage der Ehre\n\t-Verfahren und Folter\n\t-Urteil und Strafe\n\t-Hexen, Henker und Halunken\n\t-Kriche,Reich und Recht\n\t-Tiere in der Rechtsgeschichte\n\t-Mythos oder Wahrheit? Rechtsfantasien\n\nWeitere Informationen zu den Abteilungen findest Du unter https://www.kriminalmuseum.eu."
+
+  utter_child_friendly:
+  - text: "Das Museum eignet sich für alle Altersgruppen und ist kindgerecht."
+
+  utter_barrier_free_walk:
+  - text: "Bei dem Museum handelt es sich um ein denkmalgeschütztes Gebäude, daher konnte es leider nicht barrierefrei gestaltet werden."
+
+  utter_barrier_free_see:
+  - text: "Das Museum bietet aktuell keinen Audioguide. Führungen werden in deutscher und englischer Sprache angeboten. Weitere Informationen zu den Führungen findest Du unter https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/."
+
+  utter_cafeteria_information:
+  - text: "Das Museum hat eine Cafeteria. Diese befindet sich in der Johanniterscheune im Nebengebäude des Museums.Die Cafeteria ist am Dienstag, Mittwoch, Donnerstag, Samstag und Sonntag von 13-18 Uhr geöffnet. Für weitere Informationen klicke bitte folgenden Link https://www.kriminalmuseum.eu/besucherplaner/cafeteria/"
+
+  utter_cafeteria_offer:
+  - text: "Die Cafeteria bietet Heiß- und Kaltgetränke sowie unsere hausgemachten „Kriminalmuseums“-Schneeballen in verschiedenen Größen und ein täglich wechselndes Kuchenangebot an (alles auch zum Mitnehmen). Zudem halten wir saisonale Erfrischungsgetränke wie etwa Holunderblütenschorle, Hugo und Aperol Spritz für dich bereit."
+
+  utter_pupils:
+  - text: "Für Schulklassen bietet das Museum altersgerechte Führungen von ca. 60 Minuten für Schulklassen und Jugendgruppen an. Für Führungen ist eine vorherige telefonische Anmeldung erforderlich. Zudem bietet das Museum eine kleine Kinderrallye an für Schüler der 3. bis 5. Klasse und eine große Kinderrallye für Schüler ab der 5. Klasse. Für weiter Informationen folge bitte folgendem Link https://www.kriminalmuseum.eu/bildung-forschung/schueler/"
+
+  utter_tours_information:
+  - text: "Das Museum bietet Führungen für Gruppen an. Ansprechpartner sind Frau Elisabeth Rüb, Frau Katja Steger, Frau Anja Bergermann. Diese sind unter der Telefonnummer 09861/5359 zu errreichen. Weitere Informationen zu Führungen findest Du unter https://www.kriminalmuseum.eu/besucherplaner/fuehrung-buchen/."
+
+  utter_tours_languages:
+  - text: "Die Führungen werden in deutscher und englischer Sprache angeboten."
+
+  utter_special_exhibition_information:
+  - text: "Das Museum bietet in regelmäßigen Abständen Sonderausstellungen an. Alle Informationen zu den aktuellen Sonderausstellungen findest Du unter https://www.kriminalmuseum.eu/sonderschauen/."
+
+  utter_special_exhibition_archive:
+  - text: "Ein Archiv der vergangenen Sonderausstellungen des Museums findest Du unter https://www.kriminalmuseum.eu/sonderschauen/."
+
+  utter_museum_shop:
+  - text: "Der Museumsshop befindet sich in der Johanniterscheune im Nebengebäude des Museums. Alternativ kannst Du auch online unter https://kriminalmuseum.ticketfritz.de/ vorbeischauen."
+
+  utter_contact:
+  - text: "Du kannst uns unter der Telefonnummer +49 (0) 9861 5359 erreichen oder eine E-Mail an info@kriminalmuseum.eu schreiben. Weitere Informationen findest Du unter https://www.kriminalmuseum.eu/kontakt/."
+
+# internet-amateur
+  utter_instruction_bot:
+  - text: "Ich bin ein Chatbot und basiere auf Rasa. Ich kann dir Informationen zu folgenden Themen geben: \n\t- Öffnungszeiten\n\t- Preise\n\t- Anreise\n\t- Parken\n\t- Abteilungen\n\t- Kindgerecht\n\t- Barrierefreiheit\n\t- Cafeteria\n\t- Führungen\n\t- Sonderausstellungen\n\t- Museumsshop\n\t- Kontakt\n\t- Anleitung Webseite\n\nDu kannst mich nach diesen Themen fragen, indem Du die entsprechenden Stichwörter verwendest. Für weiter Informationen bitte ich dich diese Webseite zu durchsuchen."
+
+# internet-beginner
+  utter_instruction_website:
+  - text: "Diese Webseite enthält Infromationen zu folgenden Themen: \n\t- Home\n\t- Besucherinfo\n\t- Ueber Uns\n\t- Bildung\n\t- Sonderschauen\n\t- Presse\n\t- News\n\t- Kontakt\n\n Ueber die Reiter im oberen Bereich der Webseite, kann Unterthemen und genauere Informationen zu den genannten Themen finden."
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+actions:
+- action_get_price
+- action_get_opening_times
+- action_get_christmas_opening_times
+- action_get_new_years_opening_times

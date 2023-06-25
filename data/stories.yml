@@ -2,39 +2,308 @@ version: "3.1"
 
 stories:
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+# Persona Stories
 
-- story: sad path 1
+# Internet-Anfänger
+- story: Helmut_76
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
+  - intent: instruction_bot
+  - action: utter_instruction_bot
+  - intent: opening_times
+  - action: action_get_opening_times
+  - intent: prices
+  - action: action_get_price
+  - intent: child_friendly
+  - action: utter_child_friendly
+  - intent: instruction_website
+  - action: utter_instruction_website
+  - intent: greatful
+  - action: utter_greatful
+  - intent: goodbye
   - action: utter_goodbye
 
-- story: ask if bot or not
+- story: Marlene_44
   steps:
-  - intent: is_bot
-  - action: utter_iamabot
+  - intent: greet
+  - action: utter_greet
+  - intent: instruction_bot
+  - action: utter_instruction_bot
+  - intent: opening_times
+  - action: action_get_opening_times
+  - intent: prices
+  - action: action_get_price
+  - intent: departments
+  - action: utter_departments
+  - intent: special_exhibition_information
+  - action: utter_special_exhibition_information
+  - intent: special_exhibition_archive
+  - action: utter_special_exhibition_archive
+  - intent: instruction_website
+  - action: utter_instruction_website
+  - intent: greatful
+  - action: utter_greatful
+  - intent: contact
+  - action: utter_contact
+  - intent: goodbye
+  - action: utter_goodbye
 
-# - story: ask zeiten
-#   steps:
-#   - intent: zeiten
-#   - action: utter_zeiten
+- story: Ursula_73
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: instruction_bot
+  - action: utter_instruction_bot
+  - intent: opening_times
+  - action: action_get_opening_times
+  - intent: prices
+  - action: action_get_price
+  - intent: cafeteria_information
+  - action: utter_cafeteria_information
+  - intent: cafeteria_offer
+  - action: utter_cafeteria_offer
+  - intent: instruction_website
+  - action: utter_instruction_website
+  - intent: contact
+  - action: utter_contact
+  - intent: goodbye
+  - action: utter_goodbye
+
+# Internet-Amateur
+- story: Beate_45
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: opening_times
+  - action: action_get_opening_times
+  - intent: prices
+  - action: action_get_price
+  - intent: child_friendly
+  - action: utter_child_friendly
+  - intent: departments
+  - action: utter_departments
+  - intent: tours_information
+  - action: utter_tours_information
+  - intent: greatful
+  - action: utter_greatful
+
+- story: Manuela_35
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: opening_times
+  - action: action_get_opening_times
+  - intent: prices
+  - action: action_get_price
+  - intent: child_friendly
+  - action: utter_child_friendly
+  - intent: departments
+  - action: utter_departments
+  - intent: cafeteria_information
+  - action: utter_cafeteria_information
+  - intent: cafeteria_offer
+  - action: utter_cafeteria_offer
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Lena_29
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: opening_times
+  - action: action_get_opening_times
+  - intent: prices
+  - action: action_get_price
+  - intent: child_friendly
+  - action: utter_child_friendly
+  - intent: arrival
+  - action: utter_arrival
+  - intent: departments
+  - action: utter_departments
+  - intent: cafeteria_information
+  - action: utter_cafeteria_information
+  - intent: cafeteria_offer
+  - action: utter_cafeteria_offer
+  - intent: greatful
+  - action: utter_greatful
+
+- story: Nam_Hae_e_26
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: opening_times
+  - action: action_get_opening_times
+  - intent: prices
+  - action: action_get_price
+  - intent: departments
+  - action: utter_departments
+  - intent: tours_information
+  - action: utter_tours_information
+  - intent: tours_languages
+  - action: utter_tours_languages
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Peter_57
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: opening_times
+  - action: action_get_opening_times
+  - intent: prices
+  - action: action_get_price
+  - intent: tours_information
+  - action: utter_tours_information
+  - intent: departments
+  - action: utter_departments
+  - intent: cafeteria_information
+  - action: utter_cafeteria_information
+  - intent: barrier_free_walk
+  - action: utter_barrier_free_walk
+  - intent: greatful
+  - action: utter_greatful
+
+# Internet-Profi
+- story: Merlin_15
+  steps:
+  - intent: departments
+  - action: utter_departments
+  - intent: pupils
+  - action: utter_pupils
+  - intent: tours_information
+  - action: utter_tours_information
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Patrick_29
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: departments
+  - action: utter_departments
+  - intent: instruction_bot
+  - action: utter_instruction_bot
+  - intent: tours_information
+  - action: utter_tours_information
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Nikola_25
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: opening_times
+  - action: action_get_opening_times
+  - intent: prices
+  - action: action_get_price
+  - intent: arrival
+  - action: utter_arrival
+  - intent: park_car
+  - action: utter_park_car
+  - intent: greatful
+  - action: utter_greatful
+
+- story: Jeff_35
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: opening_times
+  - action: action_get_opening_times
+  - intent: arrival
+  - action: utter_arrival
+  - intent: park_car
+  - action: utter_park_car
+  - intent: departments
+  - action: utter_departments
+  - intent: tours_languages
+  - action: utter_tours_languages
+  - intent: goodbye
+  - action: utter_goodbye
+
+# additional stories
+
+- story: holiday christmas
+  steps:
+  - intent: opening_times
+  - action: action_get_opening_times
+  - intent: opening_times_christmas
+  - action: action_get_christmas_opening_times
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: holiday new year
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: opening_times_new_year
+  - action: action_get_new_years_opening_times
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: shopping
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: opening_times
+  - action: action_get_opening_times
+  - intent: prices  
+  - action: action_get_price
+  - intent: museum_shop
+  - action: utter_museum_shop
+  - intent: greatful
+  - action: utter_greatful
+
+- story: arrival by train with bike
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: arrival
+  - action: utter_arrival
+  - intent: arrival_train
+  - action: utter_arrival_train
+  - intent: park_bike
+  - action: utter_park_bike
+  - intent: greatful
+  - action: utter_greatful
+
+- story: ask for contact
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: contact
+  - action: utter_contact
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: ask for arrival
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: arrival
+  - action: utter_arrival
+  - intent: park_car
+  - action: utter_park_car
+  - intent: park_bike
+  - action: utter_park_bike
+  - intent: greatful
+  - action: utter_greatful
+
+- story: ask for barrier_free_walk
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: barrier_free_walk
+  - action: utter_barrier_free_walk
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: ask for barrier_free_see
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: barrier_free_see
+  - action: utter_barrier_free_see
+  - intent: goodbye
+  - action: utter_goodbye
+  

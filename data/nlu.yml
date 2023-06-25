@@ -1,129 +1,555 @@
 version: "3.1"
 
 nlu:
+# all user-groups
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - Hallo du
-    - Guten Morgen
     - Guten Tag
-    - Guten Abend
-    - Grüß Gott
+    - Hallo
+    - Hi
+    - Hey
+    - Grüß Gott!
+    - Guten Morgen!
+    - Guten Abend!
+    - Moin
+    - Moin Moin
+    - Servus
     - Grüß dich
-    - Grüß Sie
-    - Grüß euch
-    - Grüß dich Gott
-    - Grüß Gott, Servus
-    - Grüß Gott, Grüß dich
-    - Grüß Gott, Grüß Sie
-    - Grüß Gott, Grüß euch
-    - grüße
-    - was geht?
-    - Hallo Meister
+    - Schönen guten Tag!
+    - Schönen guten Morgen!
+    - Hallo, kannst du mir helfen?
+    - Mahlzeit
+    - İyi günler
+    - iyi günler
+    - yawm jayid
+    - Hallo, Guten Tag
+    - Hallo und einen sonnigen Tag wünsche ich Ihnen!
+    - Herzlich willkommen und einen wundervollen Tag wünsche ich Ihnen
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-    - bis dann
-    - tüschselldorf
-    - bis später
-    - tschüss
-    - schleich dich
+    - Man sieht sich!
+    - Auf Wiedersehen
+    - Bis später
+    - Bis bald
+    - Bis dann
+    - Gute Nacht
+    - GN8
+    - Bye
+    - Tschüss
+    - Tschau
+    - Hab einen schönen Tag
+    - Bis dann
+    - Bis denne
+    - Mach's gut!
+    - Machs gut
+    - Ciao Kakao
+    - Vielen Dank, Tschüss
+    - Halt die Ohren steif
+    - Ich bin dann mal weg
+    - Ich bin dann mal offline
+    - Ich bin fertig, danke
 
-- intent: affirm
+- intent: greatful
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-    - ja
-    - richtig
-    - weitermachen
+    - danke
+    - danke für die Hilfe
+    - danke für deine Hilfe
+    - danke für die Unterstützung
+    - danke für deine Unterstützung
+    - danke für die Information
+    - vielen Dank für die Informationen
+    - vielen Dank für die Hilfe
+    - vielen Dank für deine Hilfe
+    - vielen Dank für die Unterstützung
+    - du hast mir weitergeholfen
+    - du hast mir sehr weitergeholfen
+    - du hast mir sehr geholfen
+    - du hast mir weitergeholfen
+    - das war hilfreich
+    - das war sehr hilfreich
 
-- intent: deny
+- intent: opening_times
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-    - nicht
-    - lass es
-    - ruhe
-    - schluss
+    - Wie sind ihre Öffnungszeiten?
+    - Wie sind die Öffnungszeiten des Museums?
+    - Wann hat das Museum geöffnet?
+    - Wann hat das Museum offen?
+    - Wann hat das Museum auf?
+    - Ist das Musem heute geschlossen?
+    - Ist das Museum heute offen?
+    - Ist das Museum heute geöffnet?
+    - Ist das Museum heute auf?
+    - Hat das Musem heute geöffnet?
+    - Hat das Museum heute offen?
+    - Hat das Museum heute auf?
+    - Ab wann hat das Museum heute geöffnet?
+    - Ab wann hat das Museum heute offen?
+    - Ab wann hat das Museum heute auf?
+    - Ist heute das Museum geöffnet?
+    - Wann ist das Museum geschlossen?
+    - Wann ist das Museum offen?
+    - Wann hat das Museum geschlossen?
+    - Ist heute geöffnet?
+    - Ist heute offen?
+    - Hat das Musem morgen offen?
+    - Ist das Musem morgen offen?
+    - Ist das Museum morgen geöffnet?
+    - Hat das Museum am Montag geöffnet?
+    - Hat das Museum am Dienstag geöffnet?
+    - Hat das Museum am Mittwoch geöffnet?
+    - Hat das Museum am Sonntag geöffnet?
 
-- intent: mood_great
+- intent: opening_times_christmas
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-    - ich bin glücklich
-    - mir geht es gut
-    - alles nice soweit
+    - Ist an Weihnachten geöffnet?
+    - Ist das Musem an Weihnachten geöffnet?
+    - Ist das Musem an Weihnachten offen?
+    - Ist das Musem an Weihnachten zu?
+    - Hat das Musem an Weihnachten geschlossen?
+    - Ist das Musem an Weihnachten geschlossen?
+    - Haben Sie an Weihnachten geöffnet?
+    - Haben Sie an Weihnachten offen?
+    - Haben Sie an Weihnachten zu?
+    - Haben Sie an Weihnachten geschlossen?
+    - Ist das Musem an Heiligabend geöffnet?
+    - Ist das Musem an Heiligabend offen?
+    - Ist das Musem an Heiligabend zu?
+    - Hat das Musem an Heiligabend geschlossen?
+    - Ist das Musem an Heiligabend geschlossen?
+    - Haben Sie am 24.12 geöffnet?
+    - Haben Sie an 24.12 offen?
+    - Haben Sie an 24.12 zu?
+    - Haben Sie an 24.12 geschlossen?
+    - Ist in den Weihnachtsferien geöffnet?
 
-- intent: mood_unhappy
+- intent: opening_times_new_year
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-    - ich bin traurig
-    - ich bin unzufrieden
-    - ich habe keine lust
-    - nerv nicht
+    - Ist an Silvester geöffnet?
+    - Ist das Musem an Silvester geöffnet?
+    - Ist das Musem an Silvester offen?
+    - Ist das Musem an Silvester zu?
+    - Hat das Musem an Silvester geschlossen?
+    - Ist das Musem an Silvester geschlossen?
+    - Haben Sie an Silvester geöffnet?
+    - Haben Sie an Silvester offen?
+    - Haben Sie an Silvester zu?
+    - Haben Sie an Silvester geschlossen?
+    - Hat das Musem an 31.12 geöffnet?
+    - Hat das Musem an 31.12 offen?
+    - Hat das Musem an 31.12 zu?
+    - Hat das Musem an 31.12 geschlossen?
+    - Ist das Musem an 31.12 geschlossen?
 
-- intent: bot_challenge
+- intent: prices
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-    - bist du ein bot?
-    - bist du eine maschine?
+    - Wie hoch ist der Eintrittspreis für das Museum?
+    - Welcher Betrag wird für den Museumseintritt verlangt?
+    - Wie viel kostet ein Besuch im Museum?
+    - Was kostet eine Karte fürs Musem?
+    - Welche Kosten fallen für den Besuch im Museum an?
+    - Kannst du mir sagen, wie teuer eine Karte für Erwachsene ist?
+    - Kannst du mir sagen, wie teuer eine Karte für Kinder ist?
+    - Welche Ticketkategorien gibt es?
+    - Wie viel Geld kostet der Eintritt?
+    - Welcher Eintrittspreis wird für das Museum erhoben?
+    - Mit welchen Kosten muss ich rechnen, wenn ich das Museum besuchen möchte?
+    - Wie hoch ist der Eintrittspreis?
+    - wie viel kostet der Einlass?
+    - Kannst du mir sagen, wie viel der Eintritt ins Museum kostet?
+    - Gibt es ermäßigte Preise für Studenten und Senioren?
+    - Wie hoch sind die Eintrittskosten?
+    - Wie teuer ist der Zutritt zum Museum?
+    - Können Kinder kostenlos ins Museum gehen?
+    - Was kostet mich ein Besuch?
+    - Wie viel kostet eine Familienkarte für das Museum?
+    - Welcher Preis wird für den Eintritt ins Museum berechnet?
+    - Mit welchem Eintrittspreis muss ich rechnen?
+    - Gibt es spezielle Eintrittspreise für Gruppen oder Touristen?
+    - Kannst du mir sagen, wie viel ich zahlen muss, um das Museum zu besichtigen?
+  
+- intent: arrival
+  examples: |
+    - Anreise?
+    - Wie gelange ich zum Museum?
+    - Wie finde ich den Weg zum Museum?
+    - Wie erreiche ich das Museum?
+    - Wie komme ich am besten zum Museum?
+    - Welche Verkehrsmittel kann ich nutzen, um zum Museum zu gelangen?
+    - Wie kann ich das Museum am einfachsten erreichen?
+    - Welche Informationen gibt es zur Anreise?
+    - Welche Transportmöglichkeiten stehen mir zur Verfügung?
+    - Was ist die beste Art und Weise, um zum Museum zu gelangen?
+    - Kannst du mir den Weg zum Museum erklären?
+    - Welche Wege führen zum Museum?
+    - Wie komme ich am schnellsten zum Museum?
+    - Welche Verkehrsanbindung gibt es?
+    - Wie sieht die Anfahrtsroute zum Museum aus?
+    - Welche Optionen habe ich, um das Museum zu erreichen?
+    - Ist das Museum mit öffentlichen Verkehrsmitteln erreichbar?
+    - Wie lautet die Adresse des Museums?
+    - Kannst du mir eine Wegbeschreibung zum Museum geben?
+    - Was ist die schnellste Route zum Museum?
+    - Wie finde ich zum Museum?
+    - Gibt es eine direkte Verbindung zum Museum?
+    - Wie komme ich zum Museum?
+    - Was sollte ich bei der Anreise beachten?
 
-- intent: zeiten
+- intent: arrival_train
   examples: |
-    - Öffnungszeiten?
-    - Wann habt ihr offen?
-    - Wann ist das museum geöffnet?
-    - Weihnachten auch offen?
-    - Silvester offen?
-    - Gönn Öffnungszeiten!
-    - Offen?
-    - Zu?
+    - Wie kann ich mit der Bahn anreisen?
+    - Wie finde ich mit der Bahn zum Musem?
+    - Wie komme ich mit der Bahn zum Musem?
+    - Ist eine Anreise mit der Bahn möglich?
+    - Welcher Bahnhof ist der näheste zum Musem?
+    - Ist es möglich mit der S-Bahn anzureisen?
+    - Gibt es eine S-Bahn-Station in der Nähe des Museums?
+    - Gibt es eine S-Bahn Verbindung?
+    - Wie komme ich mit der S-Bahn zum Musem?
+    - Welche S-Bahnverbindung gibt es?
+    - Wie komme ich mit der S-Bahn zum Musem?
+    - Wie weit ist es vom Bahnhof zum Musem?
+    - Welcher Bahnhöfe sind in der Nähe des Museums?
+    - Welche S-Bahn Stationen sind in der Nähe des Museums?
+    - Ist eine Anreise mit der S-Bahn möglich?
+    - Welcher S-Bahn Bahnhof ist der näheste zum Musem?
+    - Wie weit ist es zu Fuß vom Bahnhof zum Museum?
+
+
+- intent: park_car
+  examples: |
+    - Auto?
+    - parken?
+    - Wie kann ich parken?
+    - Wo kann ich mein Auto parken? 
+    - Gibt es einen Parkplatz in der Nähe des Museums?
+    - Gibt es Parkplätze in der Nähe des Museums?
+    - Wo ist der nächste Parkplatz?
+    - Wo kann ich mein Auto abstellen?
+    - Welche Parkmöglichkeiten stehen mir zur Verfügung, wenn ich mit dem Auto zum Museum komme?
+    - Gibt es Parkmöglichkeiten am Museum?
+    - Hat das Museum einen Parkplatz?
+    - Wo finde ich einen Parkplatz für mein Auto, wenn ich das Museum besuche?
+    - Wo kann ich mein Auto parken, wenn ich das Museum besuche?
+    - Wo kann ich mein Auto abstellen, wenn ich das Museum besichtige?
+    - Welche Parkmöglichkeiten gibt es?
+    - Wie ist die Parksitutation am Museum?
+    - Hat das Museum einen kostenlosen Parkplatz?
+    - Gibt es am Museum einen kostenfreien Parkplatz?
+    - Ich möchte mit dem Auto anreisen, wie finde ich Parkplätze? 
+
+
+- intent: park_bike
+  examples: |
+    - Fahrrad?
+    - Kann ich mein Rad abstellen?
+    - Kann ich mein Rad sicher abstellen?
+    - Wo kann ich mein Fahrrad abstellen?
+    - Gibt es einen Fahrradständer in der Nähe des Museums?
+    - Hat das Museum einen Fahrradständer?
+    - Bietet das Museum die Möglichkeit Fahrräder zu parken?
+    - Kann ich am Museum mein Fahrrad abstellen?
+    - Gibt es am Museum einen Fahrradständer?
+    - Wo kann ich mein Fahrrad abstellen, wenn ich das Museum besuche?
+    - Wo kann ich mein Fahrrad abstellen, wenn ich das Museum besichtige?
+    - Kann man am Museum gut Fährrader abstellen?
+    - kann man am Museum gut Räder abstellen? 
+    - Hat das Museum einen Fahrradparkplatz?
+    - Gibt es am Museum einen Fahrradparkplatz?
+    - Gibt es die Möglichkeit Fährrader am Museum gut und sicher abzustellen?
+    - Gibt es am Museum Parkmöglichkeiten für Fahrräder? 
+    - Wo kann ich am Museum mein Fahrrad parken?
+    - Wo kann ich am Museum ein E-Bike parken?
+    - Bietet das Museum die Möglichkeit E-Bikes zu laden? 
+
+- intent: departments
+  examples: |
+    - Themen?
+    - Was hat das Museum für Themen?
+    - Welche Abteilungen gibt es im Museum?
+    - Welche Themen werden im Museum abgedeckt?
+    - Welche Schwerpunkte behandelt das Museum?
+    - In welchen Bereichen setzt sich das Museum thematisch auseinander?
+    - Über welche Themen informiert das Museum?
+    - Welche thematischen Schwerpunkte gibt es im Museum?
+    - Was sind die Hauptthemen, die im Museum behandelt werden?
+    - Welche Themenbereiche werden im Museum abgedeckt?
+    - Über welche Aspekte wird im Museum berichtet?
+    - Welche Themen werden im Rahmen der Museumsausstellung behandelt?
+    - Welche Inhalte werden im Museum thematisiert?
+    - Kannst du mir sagen, welche Themen im Museum präsentiert werden?
+    - In welchen Bereichen des Museums werden spezifische Themen behandelt?
+    - Welche Themenfelder umfasst die Ausstellung im Museum?
+    - Was sind die zentralen Themen, die im Museum behandelt werden?
+    - Kannst du mir eine Übersicht über die behandelten Themen im Museum geben?
+
+- intent: child_friendly
+  examples: |
+    - Ist das Museum kinderfreundlich?
+    - Erfüllt das Museum die Bedürfnisse von Kindern?
+    - Ist das Museum für Kinder geeignet?
+    - Bietet das Museum kindgerechte Angebote?
+    - Ist das Museum auf die Bedürfnisse von Kindern abgestimmt?
+    - Gibt es im Museum Aktivitäten, die speziell für Kinder geeignet sind?
+    - Bietet das Museum kinderfreundliche Ausstellungen?
+    - Wurden bei der Gestaltung des Museums die Bedürfnisse von Kindern berücksichtigt?
+    - Ist das Museum für junge Besucher geeignet?
+    - Wird im Museum eine kinderfreundliche Umgebung geschaffen?
+    - Gibt es im Museum Veranstaltungen, die speziell für Kinder konzipiert sind?
+    - Erfahren Kinder im Museum eine angemessene Betreuung?
+    - Bietet das Museum interaktive Möglichkeiten für Kinder?
+    - Gibt es im Museum etwas, das Kinder anspricht?
+    - Gibt es im Museum Bildungsangebote für Kinder?
+    - Bietet das Museum altersgerechte Inhalte für Kinder?
+    - Erfahren Kinder im Museum eine ansprechende Präsentation der Ausstellungsstücke?
+    - Wird im Museum auf kindgerechte Sprache und Erklärungen geachtet?
+
+- intent: barrier_free_walk
+  examples: |
+    - Ist das Museum für Menschen mit Gehbehinderung geeignet?
+    - Ist das Museum für Rollstuhlfahrer geeignet?
+    - Kann mit dem Rollstuhl ins Musem?
+    - Gibt es im Museum barrierefreie Wege und Zugänge?
+    - Bietet das Museum Hilfsmittel für Menschen mit Behinderungen?
+    - Ist das Museum für Menschen mit eingeschränkter Mobilität geeignet?
+    - Gibt es im Museum Aufzüge oder Rampen für einen barrierefreien Zugang?
+    - Bietet das Museum barrierefreie Toiletten?
+    - Ist das Museum mit einem barrierefreien Parkplatz ausgestattet?
+    - Gibt es im Museum barrierefreie Sitzgelegenheiten?
+    - Ist das Museum für Besucher mit Gehhilfen geeignet?
+    - Gibt es im Museum ausreichend Platz für Rollstuhlfahrer und Gehhilfen?
+    - Erfahren Besucher mit körperlichen Einschränkungen eine angemessene Unterstützung im Museum?
+    - Bietet das Museum barrierefreie Zugänge für Menschen mit Gehbehinderung?
+    - Ist das Museum mit Aufzügen oder Rampen ausgestattet, um eine Zugänglichkeit für Menschen mit Gehbehinderung zu gewährleisten?
+    - Erfüllt das Museum die Bedürfnisse von Menschen mit Gehbehinderung in Bezug auf Zugänglichkeit und Barrierefreiheit?
+    - Ist das Museum für Menschen mit einer Gehbehinderung zugänglich?
+
+- intent: barrier_free_see
+  examples: |
+    - Blinde Menschen im Museum?
+    - Ist das Museum für Seebehinderte geeignet?
+    - Gibt es im Museum Angebote für Menschen, die nicht sehen können?
+    - Lohnt es sich für meinen blinden Freund das Museum zu besuchen?
+    - Stellt das Museum auch Inhalte für blinde oder sehbehinderte Menschen bereit?
+    - Kann man das Museum als blinder oder sehbehinderter Mensch besuchen?
+    - Ist das Museum für Menschen mit Sehbehinderung geeignet?
+    - Ist das Museum für sehbehinderte oder blinde Menschen geeignet?
+    - Eignet sich das Museum auch für Menschen mit Sehbehinderung?
+    - Ist das Museum barrierefrei für Menschen mit Sehbehinderung?
+    - Gibt es im Museum Angebote für Menschen mit Sehbehinderung?
+    - Kann man auch als blinder oder sehbehinderter Mensch das Museum gut erkunden?
+    - Werden Informationen auch in Blindenschrift angeboten? 
+    - Bietet das Museum Erklärungen in Brailleschrift für blinde Menschen an?
+    - Sind im Museum Hinweise in Brailleschrift für blinde Menschen vorhanden?
+    - Werden im Museum die Texte in Brailleschrift für blinde Menschen präsentiert?
+    - Gibt es im Museum Informationen in Brailleschrift für blinde Menschen?
+
+- intent: cafeteria_information
+  examples: |
+    - Hat das Museum eine Cafeteria?
+    - Wo ist die Cafeteria des Museum?
+    - Gibt es im Museum eine Cafeteria?
+    - Gibt es im Museum etwas zu essen?
+    - Bis wann ist die Cafeteria offen?
+    - Gibt es im Museum eine Cafeteria?
+    - Hat das Museum ein Café oder eine Cafeteria?
+    - Bietet das Museum gastronomische Einrichtungen wie eine Cafeteria?
+    - Ist im Museum eine Cafeteria vorhanden?
+    - Kann man im Museum etwas zu essen oder trinken bekommen?
+    - Gibt es im Museum einen Ort, an dem man sich verpflegen kann?
+    - Hat das Museum eine gastronomische Einrichtung wie eine Cafeteria?
+    - Gibt es im Museum einen Ort, an dem man eine Pause machen und etwas essen kann?
+    - Bietet das Museum eine Möglichkeit zur Verpflegung wie eine Cafeteria?
+    - Bis zu welcher Uhrzeit ist die Cafeteria im Museum geöffnet?
+
+
+- intent: cafeteria_offer
+  examples: |
+    - Was gibt es zu essen?
+    - Was gibt es zu trinken?
+    - Welche Angebote gibt es in der Cafeteria des Museums?
+    - Was kann man in der Cafeteria des Museums kaufen?
+    - Welche Speisen, Snacks und Getränke werden in der Cafeteria des Museums angeboten?
+    - Welche Auswahl gibt es in der Cafeteria des Museums?
+    - Was bietet die Cafeteria des Museums an?
+    - Was hat die Cafeteria für ein Angebot?
+    - Was gibt es alles in der Cafeteria des Museums?
+    - Was kann man in der Cafeteria des Museums zu essen oder trinken kaufen?
+    - Was für Essen und Getränke gibt es in der Cafeteria des Museums?
+    - Kannst du mir das Angebot der Cafeteria des Museums sagen?
+    - Kannst du mir die Speisekarte der Cafeteria des Museums zeigen?
+    - Was wird in der Cafeteria des Museums verkauft?
+    - Was gibt es in der Cafeteria zu essen und zu trinken?
+    - Was für Speisen und Getränke werden in der Cafeteria des Museums angeboten?
+    - Was für Speisen und Getränke gibt es in der Cafeteria des Museums?
+
+- intent: pupils
+  examples: |
+    - Gibt es spezielle Angebote für Schüler?
+    - Biete das Museum extra Angebote für Schüler?
+    - Gibt es im Museum spezielle Programme oder Angebote für Schulklassen?
+    - Werden im Museum spezielle Aktivitäten für Schüler angeboten?
+    - Bietet das Museum spezielle Bildungsangebote für Schüler?
+    - Gibt es im Museum spezielle Veranstaltungen, die sich an Schulklassen richten?
+    - Werden im Museum spezielle Führungen oder Workshops für Schüler angeboten?
+    - Gibt es im Museum spezielle Unterrichtsmaterialien für Klassen?
+    - Bietet das Museum Schulgruppen spezielle Tarife oder Rabatte an?
+    - Werden im Museum spezielle Aktionen oder Projekte für Schulklassen durchgeführt?
+    - Gibt es im Museum spezielle Lehrmaterialien oder Lehrpläne für Schüler?
+    - Bietet das Museum Schülern besondere Möglichkeiten zur Teilnahme oder Mitwirkung?
+    - Hat das Museum extra Programme für Klassen?
+    - Ist das Museum für Schüler geeignet?
+    - Ist das Museum für Schüler der 8. Klasse geeignet?
+
+- intent: tours_information
+  examples: |
+    - Wen kann ich bezüglich Führungen im Museum kontaktieren?
+    - An wen kann ich mich wenden, wenn ich Fragen zu Führungen im Museum habe?
+    - Wer ist der richtige Ansprechpartner für Informationen zu Führungen im Museum?
+    - Mit wem kann ich über Führungen im Museum sprechen?
+    - Bietet das Museum Führungen an?
+    - Macht das Museum Führungen?
+    - Werden im Museum Führungen angeboten?
+    - Kann man im Museum an Führungen teilnehmen?
+    - Gibt es im Museum die Möglichkeit, an Führungen teilzunehmen?
+    - Werden im Museum geführte Touren angeboten?
+    - Bietet das Museum Führungen für Besucher an?
+    - Gibt es im Museum spezielle Führungen?
+    - Werden im Museum Führungen durchgeführt?
+    - Kann man im Museum an einer Führung teilnehmen?
+    - Sind im Museum Führungen verfügbar?
+    - Gibt es im Museum die Option, an einer Führung teilzunehmen?
+
+- intent: tours_languages
+  examples: |
+    - In welchen Sprachen werden die Führungen angeboten?
+    - In welchen Sprachen werden die Führungen durchgeführt?
+    - Welche Sprachen werden bei den Führungen gesprochen?
+    - Welche Sprachen werden bei den Führungen verwendet?
+    - In welchen Sprachen werden die Führungen gehalten?
+    - Welche Sprachen werden für die Führungen angeboten?
+    - In welchen Sprachen sind die Führungen verfügbar?
+    - Für welche Sprachen gibt es Führungen?
+    - In welchen Sprachen werden die Führungen zur Verfügung gestellt?
+    - Welche Sprachoptionen werden für die Führungen angeboten?
+    - Welche Sprachen stehen für die Führungen zur Auswahl?
+    - Für welche Sprachen sind Führungen verfügbar?
+    - In welchen Sprachen werden die Führungen präsentiert?
+    - In welchen Sprachen gibt es die Führungen?
+    - Gibt es die Führung in anderen Sprachen außer Deutsch?
+
+- intent: special_exhibition_information
+  examples: |
+    - Wo kann ich mich über die neuesten Sonderausstellungen informieren?
+    - Wo kann ich mich über die Sonderausstellungen, die gerade stattfinden, informieren?
+    - Wo kann ich nachschauen, um Details über die gegenwärtigen Sonderausstellungen zu erhalten?
+    - Wo kann ich mich über die aktuellen Sonderausstellungen informieren und welche Werke gezeigt werden?
+    - Wo kann ich erfahren, welche Sonderausstellungen gerade stattfinden und welche Themen sie behandeln?
+    - Wo finde ich Informationen über die Sonderausstellungen, die derzeit geöffnet sind?
+    - Gibt es eine Webseite, die mir Auskunft über die aktuellen Sonderausstellungen geben kann?
+    - Wo kann ich nachsehen, welche Sonderausstellungen gerade stattfinden und wann sie enden?
+    - Wo finde ich eine Liste der aktuellen Sonderausstellungen und ihrer Austellungszeiten?
+    - Wo kann ich erfahren, welche besonderen Ausstellungen zurzeit präsentiert werden?
+    - Wo kann ich mich erkundigen, welche Sonderausstellungen gerade im Museum gezeigt werden?
+    - Welche Sonderausstellung findet momentan statt?
+    - Wo finde ich Informationen zu eurer Sonderausstellung?
+    - Wo finde ich Informationen zur aktuellen Sonderausstellung im Museum?
+    - Kannst du mir sagen, wo ich Informationen zur Sonderausstellung im Museum erhalten kann?
+
+- intent: special_exhibition_archive
+  examples: |
+    - Gibt es ein Archiv der vergangenen Sonderausstellungen?
+    - Gibt es ein Archiv der vergangenen Sonderschauen?
+    - Existiert ein Archiv vergangener Sonderausstellungen?
+    - Gibt es eine Sammlung vergangener Sonderausstellungen?
+    - Ist ein Archiv der früheren Sonderausstellungen vorhanden?
+    - Gibt es eine Aufzeichnung der vergangenen Sonderausstellungen?
+    - Besteht ein Archiv vergangener Sonderausstellungen?
+    - Sind die vergangenen Sonderausstellungen archiviert?
+    - Wird eine Dokumentation der vergangenen Sonderausstellungen geführt?
+    - Gibt es eine historische Sammlung der vergangenen Sonderausstellungen?
+    - Ist ein Archiv mit den vergangenen Sonderausstellungen verfügbar?
+    - Werden die vergangenen Sonderausstellungen archiviert?
+    - Gibt es Fotos oder Bilder vergangener Sonderausstellungen?
+    - Welche Sonderausstellungen gab es bisher?
+    - Wo finde ich das Archiv?
+
+- intent: museum_shop
+  examples: |
+    - Hat das Museum einen Shop?
+    - Museumsshop?
+    - Gibt es einen Shop im Museum?
+    - Gibt es einen Museumsshop?
+    - Bietet das Museum einen eigenen Shop an?
+    - Ist im Museum ein Geschäft vorhanden?
+    - Kann man im Museum etwas kaufen?
+    - Gibt es eine Einkaufsmöglichkeit innerhalb des Museums?
+    - Hat das Museum einen eigenen Laden?
+    - Gibt es einen Souvenirshop im Museum?
+    - Kann man im Museum Merchandise erwerben?
+    - Gibt es einen Laden, wo man Geschenke kaufen kann?
+    - Ist ein Shop für Museumssouvenirs vorhanden?
+    - Gibt es einen Geschenkeladen im Museum?
+    - Ist ein Museumsshop für Besucher zugänglich?
+    - Kann man im Museum Souvenirs erwerben?
+    - Gibt es einen Laden, wo man Kunstwerke und Bücher kaufen kann?
+
+- intent: contact
+  examples: |
+      - Was sind eure Kontaktdaten?
+      - Wie kann ich euch persönlich erreichen?
+      - Wie ist eure Telefonnummer?
+      - Wie ist die Telefonnummer vom Museum?
+      - An welche E-Mail-Adresse kann ich schreiben?
+      - Was ist die Mailadresse vom Museum?
+      - Wie kann ich das Museum kontaktieren?
+      - Kann ich mit einem Mitarbeiter sprechen?
+      - Kann ich mit einem Mitarbeiter chatten?
+      - Ich möchte mit einem Mitarbeiter sprechen.
+      - Wie kann ich mit einem echten Menschen sprechen?
+      - Wie kann ich euch kontaktieren?
+      - Gibt es eine Telefonnummer unter der ich sie erreichen kann?
+      - Wie kann ich einen Mitarbeiter des Museums kontaktieren?
+      - Unter welcher Nummer kann ich einen Mitarbeiter erreichen?
+      - Wie kann ich einen Mitarbeiter kontaktieren?
+      - Gibt es die Möglichkeit mit einem Mitarbeiter zu sprechen?
+
+# internet-amateur
+- intent: instruction_bot
+  examples:  |
+      - Wie kann ich mit dir kommunizieren?
+      - Wie benutze ich diesen Chatbot?
+      - Gebe mir eine Anleitung
+      - Wie funktioniert dieser Chatbot?
+      - Wie bediene ich diesen Chatbot?
+      - Wie kann ich diesen Bot nutzen?
+      - Wie interagiere ich mit diesem Chat?
+      - Was kannst du mir alles sagen?
+      - Was muss ich tun, um diesen Chatbot einzusetzen?
+      - Wie kann ich dieses Chatfenster effektiv einsetzen?
+      - Gibt es spezifische Anweisungen zur Nutzung dieses Chatbots?
+      - Wie kann ich von diesem Chatbot profitieren?
+      - Was kann ich dich alles fragen?
+      - Wie funktionierts du?
+      - Gebe mir eine Anleitung, wie ich mit dir reden muss.
+      - Wie verwende ich dich richtig?
+      - Welche Aktionen kann ich mit diesem Chatbot durchführen?
+
+# internet-beginner
+- intent: instruction_website
+  examples:  |
+      - Welche Informationen finde ich auf dieser Website?
+      - Wie navigiere ich durch diese Webseite?
+      - Was finde ich alles auf dieser Webseite?
+      - Wie verwende ich diese Webseite?
+      - Welche Funktionen bietet diese Webseite?
+      - Wie kann ich diese Webseite nutzen?
+      - Was kann ich auf dieser Webseite tun?
+      - Welche Inhalte sind auf dieser Webseite verfügbar?
+      - Welche Ressourcen finde ich auf dieser Webseite?
+      - Wie navigiere ich durch diese Webseite?
+      - Gibt es spezielle Anweisungen zur Verwendung dieser Webseite?
+      - Welche Abschnitte oder Seiten sind auf dieser Webseite vorhanden?
+      - Wie kann ich die Suchfunktion auf dieser Webseite nutzen?
+      - Welche Tools oder Dienste werden auf dieser Webseite angeboten?
+      - Gibt es Tutorials oder Anleitungen zur Verwendung dieser Webseite?
