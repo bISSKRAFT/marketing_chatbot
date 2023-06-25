@@ -230,7 +230,6 @@ nlu:
     - Wie finde ich zum Museum?
     - Gibt es eine direkte Verbindung zum Museum?
     - Wie komme ich zum Museum?
-    - Wie weit ist es zu Fuß vom Bahnhof zum Museum?
     - Was sollte ich bei der Anreise beachten?
 
 - intent: arrival_train
@@ -251,6 +250,7 @@ nlu:
     - Welche S-Bahn Stationen sind in der Nähe des Museums?
     - Ist eine Anreise mit der S-Bahn möglich?
     - Welcher S-Bahn Bahnhof ist der näheste zum Musem?
+    - Wie weit ist es zu Fuß vom Bahnhof zum Museum?
 
 
 - intent: park_car
@@ -267,17 +267,20 @@ nlu:
     - Gibt es Parkmöglichkeiten am Museum?
     - Hat das Museum einen Parkplatz?
     - Wo finde ich einen Parkplatz für mein Auto, wenn ich das Museum besuche?
-    - Wo kann ich mein Auto abstellen, wenn ich das Museum besuche?
     - Wo kann ich mein Auto parken, wenn ich das Museum besuche?
     - Wo kann ich mein Auto abstellen, wenn ich das Museum besichtige?
     - Welche Parkmöglichkeiten gibt es?
     - Wie ist die Parksitutation am Museum?
     - Hat das Museum einen kostenlosen Parkplatz?
     - Gibt es am Museum einen kostenfreien Parkplatz?
+    - Ich möchte mit dem Auto anreisen, wie finde ich Parkplätze? 
 
 
 - intent: park_bike
   examples: |
+    - Fahrrad?
+    - Kann ich mein Rad abstellen?
+    - Kann ich mein Rad sicher abstellen?
     - Wo kann ich mein Fahrrad abstellen?
     - Gibt es einen Fahrradständer in der Nähe des Museums?
     - Hat das Museum einen Fahrradständer?
@@ -286,7 +289,8 @@ nlu:
     - Gibt es am Museum einen Fahrradständer?
     - Wo kann ich mein Fahrrad abstellen, wenn ich das Museum besuche?
     - Wo kann ich mein Fahrrad abstellen, wenn ich das Museum besichtige?
-    - Kann man am Museum gut Fährrader abstellen? 
+    - Kann man am Museum gut Fährrader abstellen?
+    - kann man am Museum gut Räder abstellen? 
     - Hat das Museum einen Fahrradparkplatz?
     - Gibt es am Museum einen Fahrradparkplatz?
     - Gibt es die Möglichkeit Fährrader am Museum gut und sicher abzustellen?
@@ -530,6 +534,8 @@ nlu:
 
 - intent: museum_shop
   examples: |
+    - Hat das Museum einen Shop?
+    - Museumsshop?
     - Gibt es einen Shop im Museum?
     - Gibt es einen Museumsshop?
     - Bietet das Museum einen eigenen Shop an?
@@ -548,6 +554,8 @@ nlu:
 
 - intent: contact
   examples: |
+      - Was sind eure Kontaktdaten?
+      - Wie kann ich euch persönlich erreichen?
       - Wie ist eure Telefonnummer?
       - Wie ist die Telefonnummer vom Museum?
       - An welche E-Mail-Adresse kann ich schreiben?
@@ -567,6 +575,7 @@ nlu:
 # internet-amateur
 - intent: instruction_bot
   examples:  |
+      - Wie kann ich mit dir kommunizieren?
       - Wie benutze ich diesen Chatbot?
       - Gebe mir eine Anleitung
       - Wie funktioniert dieser Chatbot?
