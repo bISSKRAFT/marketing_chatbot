@@ -10,6 +10,7 @@ intents:
   - opening_times_new_year
   - prices
   - arrival
+  - arrival_train
   - park_car
   - park_bike
   - departments
@@ -51,7 +52,10 @@ responses:
   - text: "Gern geschehen! Für weitere Fragen stehe ich dir weiterhin unten rechts auf der Webseite zur Verfügung."
 
   utter_arrival:
-  - text: "Du kannst sowohl mit dem Auto als auch mit der Bahn anreisen. Leider besitzt das Museum keine eigenen Parkplätze, jedoch befindet sich ein Parkplatz in der Nähe des Museums. Du kannst mich nach möglichen Parkplätzen befragen!\n\nMit der Bahn ist das Musem vom Bahnhof Rothenburg aus in 15 Minuten zu Fuß zu erreichen."
+  - text: "Du kannst sowohl mit dem Auto als auch mit der Bahn anreisen. Leider besitzt das Museum keine eigenen Parkplätze, jedoch befindet sich ein Parkplatz in der Nähe des Museums. Du kannst mich nach möglichen Parkplätzen befragen!"
+
+  utter_arrival_train:
+  - text: "Mit der Bahn ist das Musem vom Bahnhof Rothenburg aus in 15 Minuten zu Fuß zu erreichen. Bitte suchen Sie nach diesem Bahnhof: https://goo.gl/maps/3Hpa86bL6yREuJko6"
 
   utter_park_car:
   - text: "Für Bus, LKW & PKW kannst Du den Parkplatz am Friedrich-Hörner-Weg nutzen https://goo.gl/maps/QAUyMY8E6LRvjZwb8?coh=178572&entry=tt \n\nFür Bus, PKW & Wohnmobil kannst Du den Parkplatz in der Nördlinger Straße verwenden https://goo.gl/maps/vXoczjg9xMiQ4yuE9 \n\nFür Bus, LKW, PKW und Wohnmobil kannst Du dein Fahrzeug in der Schweinsdorfer Straße parken https://goo.gl/maps/MPyJPBjUNSsrY3Zd8 \n\nFür nur PKW gibt es den Parkplatz am Hornburgweg https://goo.gl/maps/3GuW6t4Euq2WMejH6 \nsowie am Bezoldweg https://goo.gl/maps/8tBsLftVqXkmjhno9. "

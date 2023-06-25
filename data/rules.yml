@@ -47,6 +47,11 @@ rules:
   - intent: arrival
   - action: utter_arrival
 
+- rule: arrival_train
+  steps:
+  - intent: arrival_train
+  - action: utter_arrival_train
+
 - rule: park_car
   steps:
   - intent: park_car

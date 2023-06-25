@@ -207,6 +207,7 @@ nlu:
   
 - intent: arrival
   examples: |
+    - Anreise?
     - Wie gelange ich zum Museum?
     - Wie finde ich den Weg zum Museum?
     - Wie erreiche ich das Museum?
@@ -232,8 +233,31 @@ nlu:
     - Wie weit ist es zu Fuß vom Bahnhof zum Museum?
     - Was sollte ich bei der Anreise beachten?
 
+- intent: arrival_train
+  examples: |
+    - Wie kann ich mit der Bahn anreisen?
+    - Wie finde ich mit der Bahn zum Musem?
+    - Wie komme ich mit der Bahn zum Musem?
+    - Ist eine Anreise mit der Bahn möglich?
+    - Welcher Bahnhof ist der näheste zum Musem?
+    - Ist es möglich mit der S-Bahn anzureisen?
+    - Gibt es eine S-Bahn-Station in der Nähe des Museums?
+    - Gibt es eine S-Bahn Verbindung?
+    - Wie komme ich mit der S-Bahn zum Musem?
+    - Welche S-Bahnverbindung gibt es?
+    - Wie komme ich mit der S-Bahn zum Musem?
+    - Wie weit ist es vom Bahnhof zum Musem?
+    - Welcher Bahnhöfe sind in der Nähe des Museums?
+    - Welche S-Bahn Stationen sind in der Nähe des Museums?
+    - Ist eine Anreise mit der S-Bahn möglich?
+    - Welcher S-Bahn Bahnhof ist der näheste zum Musem?
+
+
 - intent: park_car
   examples: |
+    - Auto?
+    - parken?
+    - Wie kann ich parken?
     - Wo kann ich mein Auto parken? 
     - Gibt es einen Parkplatz in der Nähe des Museums?
     - Gibt es Parkplätze in der Nähe des Museums?
@@ -271,9 +295,10 @@ nlu:
     - Wo kann ich am Museum ein E-Bike parken?
     - Bietet das Museum die Möglichkeit E-Bikes zu laden? 
 
-
 - intent: departments
   examples: |
+    - Themen?
+    - Was hat das Museum für Themen?
     - Welche Abteilungen gibt es im Museum?
     - Welche Themen werden im Museum abgedeckt?
     - Welche Schwerpunkte behandelt das Museum?
@@ -304,6 +329,7 @@ nlu:
 
 - intent: child_friendly
   examples: |
+    - Ist das Museum kinderfreundlich?
     - Erfüllt das Museum die Bedürfnisse von Kindern?
     - Ist das Museum für Kinder geeignet?
     - Bietet das Museum kindgerechte Angebote?
@@ -354,6 +380,7 @@ nlu:
 
 - intent: barrier_free_see
   examples: |
+    - Blinde Menschen im Museum?
     - Ist das Museum für Seebehinderte geeignet?
     - Gibt es im Museum Angebote für Menschen, die nicht sehen können?
     - Lohnt es sich für meinen blinden Freund das Museum zu besuchen?
@@ -392,6 +419,8 @@ nlu:
 
 - intent: cafeteria_offer
   examples: |
+    - Was gibt es zu essen?
+    - Was gibt es zu trinken?
     - Welche Angebote gibt es in der Cafeteria des Museums?
     - Was kann man in der Cafeteria des Museums kaufen?
     - Welche Speisen, Snacks und Getränke werden in der Cafeteria des Museums angeboten?
