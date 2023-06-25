@@ -189,7 +189,7 @@ class ActionGetChristmasOpeningTimes(Action):
     
     def _msg_builder(self, text: str) -> str:
         date , time = split_date_and_time(text)
-        return f"Am {date} haben wir von {time} geöffnet.\nAndere Öffnungszeiten: {OPENING_TIMES}"
+        return f"{OPENING_TIMES}\n\nGEFUNDENE ÖFFNUNGSZEITEN:\nAm {date} haben wir von {time} geöffnet.\nWeitere Öffnungszeiten können vorherigen Nachrichten entnommen werden."
     
     def run(self, dispather: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         crawled_opening_times = crawl_opening_times()
@@ -204,7 +204,7 @@ class ActionGetNewYearsOpeningTimes(Action):
     
     def _msg_builder(self, text: str) -> str:
         date , time = split_date_and_time(text)
-        return f"Am {date} haben wir von {time} geöffnet.\nAndere Öffnungszeiten: {OPENING_TIMES}"
+        return f"{OPENING_TIMES}\n\nGEFUNDENE ÖFFNUNGSZEITEN:\nAm {date} haben wir von {time} geöffnet.\nWeitere Öffnungszeiten können vorherigen Nachrichten entnommen werden."
     
     def run(self, dispather: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         crawled_opening_times = crawl_opening_times()
