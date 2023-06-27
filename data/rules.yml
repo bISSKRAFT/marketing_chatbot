@@ -1,7 +1,12 @@
 version: "3.1"
 
 # all user-groups
-rules: 
+rules:
+- rule: session start
+  steps:
+  - intent: session_start
+  - action: utter_session_start
+
 - rule: rephrase and instruction
   steps:
   - intent: nlu_fallback

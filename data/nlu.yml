@@ -2,6 +2,10 @@ version: "3.1"
 
 nlu:
 # all user-groups
+- intent: session_start
+  examples: |
+    - Rindfleischettiketierungsübertragungsüberwachsungsgesetz
+
 - intent: greet
   examples: |
     - Guten Tag
