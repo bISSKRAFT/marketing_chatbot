@@ -2,10 +2,10 @@ version: "3.1"
 
 # all user-groups
 rules:
-- rule: session start
+- rule: start message
   steps:
-  - intent: session_start
-  - action: utter_session_start
+  - intent: start_message
+  - action: utter_start_message
 
 - rule: rephrase and instruction
   steps:
