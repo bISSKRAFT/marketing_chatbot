@@ -268,7 +268,16 @@ nlu:
 
 - intent: departments
   examples: |
+    - Abteilungen?
+    - welche ausstellungen gibt es?
     - Themen?
+    - was gibt es zu sehen?
+    - welche Inhalte werden behandelt?
+    - Welche Themenbereiche gibt es?
+    - Welche Themenbereiche hat das Museum?
+    - Themenbereiche?
+    - welche abteilungen gibt es?
+    - was kann ich mir dort anschauen?
     - Was hat das Museum für Themen?
     - Welche Abteilungen gibt es im Museum?
     - Welche Themen werden im Museum abgedeckt?
@@ -310,6 +319,7 @@ nlu:
 
 - intent: barrier_free_walk
   examples: |
+    - ist das mueseum barrierefrei?
     - Ist das Museum für Menschen mit Gehbehinderung geeignet?
     - Ist das Museum für Rollstuhlfahrer geeignet?
     - Kann mit dem Rollstuhl ins Musem?
@@ -389,6 +399,7 @@ nlu:
 
 - intent: pupils
   examples: |
+    - kann ich mit einer Schulklasse kommen?
     - Gibt es spezielle Angebote für Schüler?
     - Biete das Museum extra Angebote für Schüler?
     - Gibt es im Museum spezielle Programme oder Angebote für Schulklassen?
@@ -444,6 +455,7 @@ nlu:
 
 - intent: special_exhibition_information
   examples: |
+    - was gibt es besonderes zu sehen?
     - Wo kann ich mich über die neuesten Sonderausstellungen informieren?
     - Wo kann ich mich über die Sonderausstellungen, die gerade stattfinden, informieren?
     - Wo kann ich nachschauen, um Details über die gegenwärtigen Sonderausstellungen zu erhalten?
@@ -480,6 +492,7 @@ nlu:
 
 - intent: museum_shop
   examples: |
+    - gibt es dort einen souvenirshop?
     - Hat das Museum einen Shop?
     - Museumsshop?
     - Gibt es einen Shop im Museum?
@@ -500,6 +513,7 @@ nlu:
 
 - intent: contact
   examples: |
+      - welche ansprechpartner gibt es?
       - Was sind eure Kontaktdaten?
       - Wie kann ich euch persönlich erreichen?
       - Wie ist eure Telefonnummer?
