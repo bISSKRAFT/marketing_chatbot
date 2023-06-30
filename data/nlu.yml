@@ -434,6 +434,7 @@ nlu:
     - Kann man im Museum an einer Führung teilnehmen?
     - Sind im Museum Führungen verfügbar?
     - Gibt es im Museum die Option, an einer Führung teilzunehmen?
+    - Was kann ich im Museum alles sehen?
 
 - intent: tours_languages
   examples: |
