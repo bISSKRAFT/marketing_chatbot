@@ -122,6 +122,11 @@ rules:
   - intent: special_exhibition_archive
   - action: utter_special_exhibition_archive
 
+- rule: duration
+  steps:
+  - intent: duration
+  - action: utter_duration
+
 - rule: museum_shop
   steps:
   - intent: museum_shop

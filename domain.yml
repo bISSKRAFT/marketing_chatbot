@@ -25,6 +25,7 @@ intents:
   - tours_languages
   - special_exhibition_information
   - special_exhibition_archive
+  - duration
   - museum_shop
   - contact
   - instruction_bot
@@ -99,6 +100,9 @@ responses:
 
   utter_special_exhibition_archive:
   - text: "Ein Archiv der vergangenen Sonderausstellungen des Museums findest Du unter https://www.kriminalmuseum.eu/sonderschauen/."
+
+  utter_duration:
+  - text: "Eine Führung dauert, wenn nicht anders vereinbart, etwa 60 Minuten mit der Möglichkeit, im Anschluss die Ausstellung (innerhalb der Öffnungszeiten) noch einmal „auf eigene Faust“ zu erkunden."
 
   utter_museum_shop:
   - text: "Der Museumsshop befindet sich in der Johanniterscheune im Nebengebäude des Museums. Alternativ kannst Du auch online unter https://kriminalmuseum.ticketfritz.de/ vorbeischauen."

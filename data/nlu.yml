@@ -491,6 +491,22 @@ nlu:
     - Welche Sonderausstellungen gab es bisher?
     - Wo finde ich das Archiv?
 
+- intent: duration
+  examples: | 
+    - Wie lange dauert eine Führung?
+    - Wie lange dauert im durchschnitt eine Führung?
+    - Wie lange dauert eine Führung im Schnitt?
+    - Wie lange dauert eine Führung im Durchschnitt?
+    - Dauer einer Führung?
+    - Durchschnittliche Dauer einer Führung?
+    - Wie lange dauert der Besuch?
+    - Was ist die Dauer einer Führung?
+    - Was ist die durchschnittliche Dauer einer Führung?
+    - Wie lange dauert durchschnittlich der Besuch?
+    - Wie lange dauert der Aufenthalt im Museum?
+    - Wie lange dauert eine Besichtigung?
+    - Wie lange dauert durchschnittlich eine Besichtigung?
+
 - intent: museum_shop
   examples: |
     - gibt es dort einen souvenirshop?
@@ -553,6 +569,7 @@ nlu:
       - Gebe mir eine Anleitung, wie ich mit dir reden muss.
       - Wie verwende ich dich richtig?
       - Welche Aktionen kann ich mit diesem Chatbot durchführen?
+      - Was kannst du?
 
 # internet-beginner
 - intent: instruction_website
