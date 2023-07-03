@@ -37,7 +37,7 @@ entities:
 # all user-groups
 responses:
   utter_start_message:
-  - text: "Hallo, ich bin der Chatbot des Kriminalmuseums Rothenburg. Ich kann dir bei Fragen rund um das Museum helfen. Wie kann ich dir helfen?"
+  - text: "Hallo, ich bin der Chatbot des Kriminalmuseums Rothenburg. Ich kann dir bei Fragen rundum das Museum helfen. Wie kann ich dir helfen?"
 
   utter_rephrase_instruciton_bot:
   - text: "Ich konnte dich leider nicht richtig verstehen, bitte formuliere deine Frage um oder frage mich nach einer Anleitung."
