@@ -1,6 +1,7 @@
 version: "3.1"
 
 intents:
+  - start_message
   - nlu_fallback
   - greet
   - goodbye
@@ -24,6 +25,7 @@ intents:
   - tours_languages
   - special_exhibition_information
   - special_exhibition_archive
+  - duration
   - museum_shop
   - contact
   - instruction_bot
@@ -34,6 +36,9 @@ entities:
 
 # all user-groups
 responses:
+  utter_start_message:
+  - text: "Hallo, ich bin der Chatbot des Kriminalmuseums Rothenburg. Ich kann dir bei Fragen rund um das Museum helfen. Wie kann ich dir helfen?"
+
   utter_rephrase_instruciton_bot:
   - text: "Ich konnte dich leider nicht richtig verstehen, bitte formuliere deine Frage um oder frage mich nach einer Anleitung."
 
@@ -64,7 +69,7 @@ responses:
   - text: "Das Museum bietet keine ausgewiesenen Stellplätze für Fahrräder an."
 
   utter_departments:
-  - text: "Unser Museum ist in folgende Abteilungen untergliedert:\n\t-Recht in alter Zeit\n\t-Eine Frage der Ehre\n\t-Verfahren und Folter\n\t-Urteil und Strafe\n\t-Hexen, Henker und Halunken\n\t-Kriche,Reich und Recht\n\t-Tiere in der Rechtsgeschichte\n\t-Mythos oder Wahrheit? Rechtsfantasien\n\nWeitere Informationen zu den Abteilungen findest Du unter https://www.kriminalmuseum.eu."
+  - text: "Unser Museum ist in folgende Abteilungen untergliedert:\n\t-Recht in alter Zeit\n\t-Eine Frage der Ehre\n\t-Verfahren und Folter\n\t-Urteil und Strafe\n\t-Hexen, Henker und Halunken\n\t-Kirche,Reich und Recht\n\t-Tiere in der Rechtsgeschichte\n\t-Mythos oder Wahrheit? - Rechtsfantasien\n\nWeitere Informationen zu den Abteilungen findest Du unter https://www.kriminalmuseum.eu."
 
   utter_child_friendly:
   - text: "Das Museum eignet sich für alle Altersgruppen und ist kindgerecht."
@@ -96,6 +101,9 @@ responses:
   utter_special_exhibition_archive:
   - text: "Ein Archiv der vergangenen Sonderausstellungen des Museums findest Du unter https://www.kriminalmuseum.eu/sonderschauen/."
 
+  utter_duration:
+  - text: "Eine Führung dauert, wenn nicht anders vereinbart, etwa 60 Minuten mit der Möglichkeit, im Anschluss die Ausstellung (innerhalb der Öffnungszeiten) noch einmal „auf eigene Faust“ zu erkunden."
+
   utter_museum_shop:
   - text: "Der Museumsshop befindet sich in der Johanniterscheune im Nebengebäude des Museums. Alternativ kannst Du auch online unter https://kriminalmuseum.ticketfritz.de/ vorbeischauen."
 
@@ -104,11 +112,11 @@ responses:
 
 # internet-amateur
   utter_instruction_bot:
-  - text: "Ich bin ein Chatbot und basiere auf Rasa. Ich kann dir Informationen zu folgenden Themen geben: \n\t- Öffnungszeiten\n\t- Preise\n\t- Anreise\n\t- Parken\n\t- Abteilungen\n\t- Kindgerecht\n\t- Barrierefreiheit\n\t- Cafeteria\n\t- Führungen\n\t- Sonderausstellungen\n\t- Museumsshop\n\t- Kontakt\n\t- Anleitung Webseite\n\nDu kannst mich nach diesen Themen fragen, indem Du die entsprechenden Stichwörter verwendest. Für weiter Informationen bitte ich dich diese Webseite zu durchsuchen."
+  - text: "Ich bin ein Chatbot und basiere auf Rasa. Ich kann dir Informationen zu folgenden Themen geben: \n\t- Öffnungszeiten\n\t- Preise\n\t- Anreise\n\t- Parken\n\t- Themenbereiche\n\t- Kindgerecht\n\t- Barrierefreiheit\n\t- Cafeteria\n\t- Führungen\n\t- Sonderausstellungen\n\t- Museumsshop\n\t- Kontakt\n\t- Anleitung Webseite\n\nDu kannst mich nach diesen Themen fragen, indem Du die entsprechenden Stichwörter verwendest. Für weiter Informationen bitte ich dich diese Webseite zu durchsuchen."
 
 # internet-beginner
   utter_instruction_website:
-  - text: "Diese Webseite enthält Infromationen zu folgenden Themen: \n\t- Home\n\t- Besucherinfo\n\t- Ueber Uns\n\t- Bildung\n\t- Sonderschauen\n\t- Presse\n\t- News\n\t- Kontakt\n\n Ueber die Reiter im oberen Bereich der Webseite, kann Unterthemen und genauere Informationen zu den genannten Themen finden."
+  - text: "Diese Webseite enthält Informationen zu folgenden Themen: \n\t- Home\n\t- Besucherinfo\n\t- Ueber Uns\n\t- Bildung\n\t- Sonderschauen\n\t- Presse\n\t- News\n\t- Kontakt\n\n Ueber die Reiter im oberen Bereich der Webseite, kann man Unterthemen und genauere Informationen zu den genannten Themen finden."
 
 session_config:
   session_expiration_time: 60

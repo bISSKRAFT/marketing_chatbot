@@ -1,7 +1,12 @@
 version: "3.1"
 
 # all user-groups
-rules: 
+rules:
+- rule: start message
+  steps:
+  - intent: start_message
+  - action: utter_start_message
+
 - rule: rephrase and instruction
   steps:
   - intent: nlu_fallback
@@ -116,6 +121,11 @@ rules:
   steps:
   - intent: special_exhibition_archive
   - action: utter_special_exhibition_archive
+
+- rule: duration
+  steps:
+  - intent: duration
+  - action: utter_duration
 
 - rule: museum_shop
   steps:

@@ -2,6 +2,10 @@ version: "3.1"
 
 nlu:
 # all user-groups
+- intent: start_message
+  examples: |
+    - Rindfleischettiketierungsübertragungsüberwachsungsgesetz
+
 - intent: greet
   examples: |
     - Guten Tag
@@ -264,7 +268,16 @@ nlu:
 
 - intent: departments
   examples: |
+    - Abteilungen?
+    - welche ausstellungen gibt es?
     - Themen?
+    - was gibt es zu sehen?
+    - welche Inhalte werden behandelt?
+    - Welche Themenbereiche gibt es?
+    - Welche Themenbereiche hat das Museum?
+    - Themenbereiche?
+    - welche abteilungen gibt es?
+    - was kann ich mir dort anschauen?
     - Was hat das Museum für Themen?
     - Welche Abteilungen gibt es im Museum?
     - Welche Themen werden im Museum abgedeckt?
@@ -306,6 +319,7 @@ nlu:
 
 - intent: barrier_free_walk
   examples: |
+    - ist das mueseum barrierefrei?
     - Ist das Museum für Menschen mit Gehbehinderung geeignet?
     - Ist das Museum für Rollstuhlfahrer geeignet?
     - Kann mit dem Rollstuhl ins Musem?
@@ -385,6 +399,7 @@ nlu:
 
 - intent: pupils
   examples: |
+    - kann ich mit einer Schulklasse kommen?
     - Gibt es spezielle Angebote für Schüler?
     - Biete das Museum extra Angebote für Schüler?
     - Gibt es im Museum spezielle Programme oder Angebote für Schulklassen?
@@ -419,6 +434,7 @@ nlu:
     - Kann man im Museum an einer Führung teilnehmen?
     - Sind im Museum Führungen verfügbar?
     - Gibt es im Museum die Option, an einer Führung teilzunehmen?
+    - Was kann ich im Museum alles sehen?
 
 - intent: tours_languages
   examples: |
@@ -440,6 +456,7 @@ nlu:
 
 - intent: special_exhibition_information
   examples: |
+    - was gibt es besonderes zu sehen?
     - Wo kann ich mich über die neuesten Sonderausstellungen informieren?
     - Wo kann ich mich über die Sonderausstellungen, die gerade stattfinden, informieren?
     - Wo kann ich nachschauen, um Details über die gegenwärtigen Sonderausstellungen zu erhalten?
@@ -474,8 +491,25 @@ nlu:
     - Welche Sonderausstellungen gab es bisher?
     - Wo finde ich das Archiv?
 
+- intent: duration
+  examples: | 
+    - Wie lange dauert eine Führung?
+    - Wie lange dauert im durchschnitt eine Führung?
+    - Wie lange dauert eine Führung im Schnitt?
+    - Wie lange dauert eine Führung im Durchschnitt?
+    - Dauer einer Führung?
+    - Durchschnittliche Dauer einer Führung?
+    - Wie lange dauert der Besuch?
+    - Was ist die Dauer einer Führung?
+    - Was ist die durchschnittliche Dauer einer Führung?
+    - Wie lange dauert durchschnittlich der Besuch?
+    - Wie lange dauert der Aufenthalt im Museum?
+    - Wie lange dauert eine Besichtigung?
+    - Wie lange dauert durchschnittlich eine Besichtigung?
+
 - intent: museum_shop
   examples: |
+    - gibt es dort einen souvenirshop?
     - Hat das Museum einen Shop?
     - Museumsshop?
     - Gibt es einen Shop im Museum?
@@ -496,6 +530,7 @@ nlu:
 
 - intent: contact
   examples: |
+      - welche ansprechpartner gibt es?
       - Was sind eure Kontaktdaten?
       - Wie kann ich euch persönlich erreichen?
       - Wie ist eure Telefonnummer?
@@ -534,6 +569,7 @@ nlu:
       - Gebe mir eine Anleitung, wie ich mit dir reden muss.
       - Wie verwende ich dich richtig?
       - Welche Aktionen kann ich mit diesem Chatbot durchführen?
+      - Was kannst du?
 
 # internet-beginner
 - intent: instruction_website
